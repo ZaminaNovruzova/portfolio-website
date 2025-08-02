@@ -1,0 +1,32 @@
+@use "../variables";
+
+.services {
+  background-image: url("/assets/images/service-bg-details.png"),
+    url("/assets/images/service-bg.jpg");
+  background-repeat: no-repeat no-repeat;
+  background-position: center, center;
+  background-size: contain, cover;
+  //   padding: 116px 71px;
+  border-radius: 50px;
+  margin: 50px 0;
+  .container {
+    // padding: initial;
+    .row {
+      display: flex;
+      flex-direction: column;
+      .service-heading {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        h2 {
+        }
+      }
+      .service-cards {
+        display: flex;
+        .card {
+          width: 33%;
+        }
+      }
+    }
+  }
+}

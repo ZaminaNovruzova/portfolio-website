@@ -1,0 +1,29 @@
+@use "../variables";
+
+.experience {
+  .container {
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .heading {
+        padding: 85px 0;
+        h2 {
+          color: variables.$colorSlateGray;
+        }
+        .experience-datas {
+        
+
+          .exp-data {
+            h3 {
+              color: variables.$colorSlateGray;
+            }
+            p {
+             color: variables.$colorExperienceHireText; 
+            }
+          }
+        }
+      }
+    }
+  }
+}

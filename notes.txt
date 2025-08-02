@@ -17,3 +17,9 @@ ve aktive eedende avtomatik hemin sectiona surussun logo sola surussun
 header de gap 10px ve padding 0 10px i hara qoycam?
 logo da display block edende contact kenara surusur onu opacity ile vermek azimdir cox guman amma nece 
 logo hissesindeki problem duzelse hamsii duzelecek 
+
+
+edilmeli tasklar
+header responsiv
+hover edende logo adi deyissin author olsun
+bunu edende diger yazilar saga surusmesin

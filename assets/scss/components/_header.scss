@@ -18,40 +18,35 @@
             padding: 20px 40px;
             &:hover {
               @include mixins.btn(variables.$colorBtnHover);
+              transform: scale(1.1);
             }
-          }
-          .orange {
-            @include mixins.btn(variables.$colorOrange);
-            font-weight: 700;
           }
           a {
             color: variables.$colorWhite;
             font-size: 20px;
           }
           .logo {
-            //*bu hisse duzelisi lazimdir
+            padding-left: 5px;
+            padding-right: 5px;
             &:hover {
               background-color: initial;
+              transform: scale(1);
               .logo-name {
-                opacity: 0;
+                display: none;
               }
-              .logo-hover {
-                opacity: 1;
+              .logo-author {
                 display: block;
               }
             }
             a {
               display: flex;
               align-items: center;
-              .logo-png,.logo-name {
-                overflow: hidden;
-              }
+              gap: 10px;
               .logo-png {
                 width: 46px;
                 height: 46px;
               }
-              .logo-hover {
-                opacity: 0;
+              .logo-author {
                 display: none;
                 h5 {
                   font-weight: 600;
@@ -64,6 +59,14 @@
                   color: variables.$colorExperienceHireText;
                 }
               }
+            }
+          }
+          .orange {
+            @include mixins.btn(variables.$colorOrange);
+            font-weight: 700;
+            &:hover {
+              background-color: variables.$colorOrange;
+              transform: scale(1);
             }
           }
         }
