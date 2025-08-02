@@ -1,0 +1,43 @@
+@use "../variables";
+@use "../mixins";
+
+.hero {
+  .container {
+    .row {
+      .hero-heading {
+        .hello {
+            position: relative;
+          // border: 1px solid black;
+          .vector-1,
+          .vector-2 {
+            overflow: hidden;
+          }
+        //   .vector-1 {
+        //     position: absolute;
+        //     top: -20px;
+        //     left: 70px;
+
+        //   }
+          .button {
+            height: 45px;
+            .btn {
+              font-size: 20px;
+              font-weight: 500;
+              @include mixins.btn(variables.$colorBtnHover);
+              padding: 12.75px 25.49px;
+              border: 1px solid variables.$colorNav;
+            }
+          }
+        }
+        h1 {
+          font-weight: 600;
+          font-size: 95.57px;
+          font-family: "Urbanist";
+          .orange {
+            color: variables.$colorOrange;
+          }
+        }
+      }
+    }
+  }
+}

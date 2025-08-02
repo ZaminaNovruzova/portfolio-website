@@ -1,0 +1,73 @@
+@use "../variables";
+@use "../mixins";
+
+.header {
+  .container {
+    .row {
+      .nav-bar {
+        background-color: variables.$colorNav;
+        border-radius: 50px;
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          gap: 10px;
+          .btn {
+            font-weight: 400;
+            padding: 20px 40px;
+            &:hover {
+              @include mixins.btn(variables.$colorBtnHover);
+            }
+          }
+          .orange {
+            @include mixins.btn(variables.$colorOrange);
+            font-weight: 700;
+          }
+          a {
+            color: variables.$colorWhite;
+            font-size: 20px;
+          }
+          .logo {
+            //*bu hisse duzelisi lazimdir
+            &:hover {
+              background-color: initial;
+              .logo-name {
+                opacity: 0;
+              }
+              .logo-hover {
+                opacity: 1;
+                display: block;
+              }
+            }
+            a {
+              display: flex;
+              align-items: center;
+              .logo-png,.logo-name {
+                overflow: hidden;
+              }
+              .logo-png {
+                width: 46px;
+                height: 46px;
+              }
+              .logo-hover {
+                opacity: 0;
+                display: none;
+                h5 {
+                  font-weight: 600;
+                  font-size: 20px;
+                  text-wrap: nowrap;
+                }
+                span {
+                  font-size: 14px;
+                  font-weight: 400;
+                  color: variables.$colorExperienceHireText;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

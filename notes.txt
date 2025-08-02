@@ -1,0 +1,19 @@
+figmada my services de ilisdim 
+? dinamikliyi gormeliyem nece olacaq
+? kartlarin dizayninda her bir kart nece qurulacaq 
+
+testimonials ve heroda urbanist var project idea buttonlarda var
+blogpost seklin altindaki xirda yazilarda inter var 
+
+header
+eslinde header position fixed ya dasticky olmalidir ve z index olmalidir  amma burda bele deyil muellimden sorus
+
+1 normalda gorunusde font weight normal olsun logo xaric
+hover
+diger navlari hover edende ele bil sozlerin yeri deyisir bir az sol yuxari qalxir
+logo hover edende 2 soz gelsin alt alta 2 div
+ve aktive eedende avtomatik hemin sectiona surussun logo sola surussun
+2 hover edende arxa fon boz olsun active edende narinci ve activ edende font weight bold olsun
+header de gap 10px ve padding 0 10px i hara qoycam?
+logo da display block edende contact kenara surusur onu opacity ile vermek azimdir cox guman amma nece 
+logo hissesindeki problem duzelse hamsii duzelecek 

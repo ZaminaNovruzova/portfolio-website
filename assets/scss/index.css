@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Lufga";
+  src: url(../fonts/lufga-webfont/LufgaLight.woff);
+}
+* {
+  outline: 1px solid red;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Lufga", sans-serif;
+  transition: 0.5s ease;
+}
+
+body {
+  background-color: #ffffff;
+  padding: 40px 0;
+  line-height: 100%;
+  letter-spacing: -1.5%;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 71px;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  line-height: 100%;
+  letter-spacing: -1.5%;
+}
+
+.header .container .row .nav-bar {
+  background-color: #171717;
+  border-radius: 50px;
+}
+.header .container .row .nav-bar .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+}
+.header .container .row .nav-bar .buttons .btn {
+  font-weight: 400;
+  padding: 20px 40px;
+}
+.header .container .row .nav-bar .buttons .btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+}
+.header .container .row .nav-bar .buttons .orange {
+  background-color: #fd853a;
+  border-radius: 60px;
+  font-weight: 700;
+}
+.header .container .row .nav-bar .buttons a {
+  color: #ffffff;
+  font-size: 20px;
+}
+.header .container .row .nav-bar .buttons .logo:hover {
+  background-color: initial;
+}
+.header .container .row .nav-bar .buttons .logo:hover .logo-name {
+  opacity: 0;
+}
+.header .container .row .nav-bar .buttons .logo:hover .logo-hover {
+  opacity: 1;
+  display: block;
+}
+.header .container .row .nav-bar .buttons .logo a {
+  display: flex;
+  align-items: center;
+}
+.header .container .row .nav-bar .buttons .logo a .logo-png, .header .container .row .nav-bar .buttons .logo a .logo-name {
+  overflow: hidden;
+}
+.header .container .row .nav-bar .buttons .logo a .logo-png {
+  width: 46px;
+  height: 46px;
+}
+.header .container .row .nav-bar .buttons .logo a .logo-hover {
+  opacity: 0;
+  display: none;
+}
+.header .container .row .nav-bar .buttons .logo a .logo-hover h5 {
+  font-weight: 600;
+  font-size: 20px;
+  text-wrap: nowrap;
+}
+.header .container .row .nav-bar .buttons .logo a .logo-hover span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #98a2b3;
+}
+
+.footer {
+  background-color: #272727;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+.footer .container {
+  padding: 25px 71px;
+}
+.footer .container .row .footer-heading,
+.footer .container .row .footer-nav,
+.footer .container .row .copyright {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .container .row .footer-heading h2 {
+  font-size: 64px;
+  font-weight: 600;
+  color: #fcfcfd;
+}
+.footer .container .row .footer-heading .orange {
+  background-color: #fd853a;
+  border-radius: 60px;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .container .row .footer-heading .orange .arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+.footer .container .row .footer-heading .orange .arrow .arrow-right-up,
+.footer .container .row .footer-heading .orange .arrow .arrow-right {
+  color: #ffffff;
+  width: 17.5px;
+  height: 17.5px;
+}
+.footer .container .row .footer-nav h6 {
+  color: #fd853a;
+}
+.footer .container .row .footer-nav a {
+  color: #fcfcfd;
+}
+.footer .container .row .footer-nav .footer-text .logo {
+  width: 46px;
+  height: 46px;
+}
+
+.hero .container .row .hero-heading .hello {
+  position: relative;
+}
+.hero .container .row .hero-heading .hello .vector-1,
+.hero .container .row .hero-heading .hello .vector-2 {
+  overflow: hidden;
+}
+.hero .container .row .hero-heading .hello .button {
+  height: 45px;
+}
+.hero .container .row .hero-heading .hello .button .btn {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+  padding: 12.75px 25.49px;
+  border: 1px solid #171717;
+}
+.hero .container .row .hero-heading h1 {
+  font-weight: 600;
+  font-size: 95.57px;
+  font-family: "Urbanist";
+}
+.hero .container .row .hero-heading h1 .orange {
+  color: #fd853a;
+}/*# sourceMappingURL=index.css.map */
