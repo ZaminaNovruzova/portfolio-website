@@ -2,38 +2,127 @@
 @use "../mixins";
 
 .hero {
+  padding: 10px 0;
   .container {
     .row {
       .hero-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        h1 {
+          font-family: "Urbanist";
+          font-weight: 600;
+          font-size: 95.57px;
+        }
         .hello {
+          .vector-1 {
             position: relative;
-          // border: 1px solid black;
-          .vector-1,
-          .vector-2 {
-            overflow: hidden;
+            left: 90px;
+            top: 10px;
+            width: fit-content;
           }
-        //   .vector-1 {
-        //     position: absolute;
-        //     top: -20px;
-        //     left: 70px;
-
-        //   }
-          .button {
-            height: 45px;
-            .btn {
+          .btn {
+            border: 1px solid variables.$colorNav;
+            padding: 12.75px 25.49px;
+            border-radius: 38.24px;
+            a {
               font-size: 20px;
               font-weight: 500;
-              @include mixins.btn(variables.$colorBtnHover);
-              padding: 12.75px 25.49px;
-              border: 1px solid variables.$colorNav;
+              color: variables.$colorNav;
             }
           }
         }
-        h1 {
-          font-weight: 600;
-          font-size: 95.57px;
-          font-family: "Urbanist";
-          
+      }
+      //*vector 2 de problem var responsiv deyil
+      .vector-2 {
+        position: relative;
+        left: 140px;
+        top: -20px;
+        width: fit-content;
+      }
+      .hero-about {
+        display: flex;
+        justify-content: space-between;
+        .quote-card {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          width: 30%;
+          .quote-up {
+            width: 36px;
+            height: 36px;
+          }
+          .bold {
+            //*burda nese font weigth uygun gelmir
+            //* base de ki font face de de duzelis edende hamsinin weigthine tesir edir .arasdir
+            color: variables.$colorSlateGray;
+            font-weight: 500;
+          }
+        }
+        .experience-card {
+          display: flex;
+          flex-direction: column;
+          gap: 21px;
+          text-align: end;
+          .stars {
+            width: fit-content;
+          }
+          .experience-text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .year {
+              font-weight: 700;
+              font-size: 47px;
+              font-family: "Urbanist", sans-serif;
+            }
+            p {
+              font-weight: 400;
+              color: variables.$colorNav;
+            }
+          }
+        }
+      }
+      .person-img {
+        position: relative;
+        .ellipse {
+          display: flex;
+          justify-self: center;
+          width: fit-content;
+          position: relative;
+          z-index: 0;
+        }
+        .woman {
+          width: fit-content;
+          position: absolute;
+          transform: translateY(-100%);
+          z-index: 5;
+        }
+        .buttons {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          z-index: 10;
+          bottom: 100px;
+          border-radius: 50px;
+          // border: 2px solid radial-gradi;
+          // background: radial-gradient(
+          //   circle,
+          //   variables.$colorWhite,
+          //   variables.$colorGradient
+          // );
+          // filter: blur(30px);
+          .orange {
+            display: flex;
+            @include mixins.btn(variables.$colorOrange);
+            .arrow-up-right {
+              width: 42px;
+              height: 42px;
+            }
+          }
         }
       }
     }

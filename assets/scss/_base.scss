@@ -1,12 +1,26 @@
 @use "./variables";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
-  font-family: "Lufga";
-  src: url(../fonts/lufga-webfont/LufgaLight.woff);
+  font-family: "Lufga", sans-serif;
+  src: url("../fonts/lufga-webfont/LufgaRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "Lufga", sans-serif;
+  src: url("../fonts/lufga-webfont/LufgaMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga", sans-serif;
+  src: url("../fonts/lufga-webfont/LufgaBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
 * {
-  outline: 1px solid red;
+  // outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -23,12 +37,11 @@ body {
   letter-spacing: -1.5%;
 }
 img {
-  // width: 100%;
-  // height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 section {
-  width: 100vw;
   height: 100vh;
 }
 .container {
@@ -48,9 +61,18 @@ span {
   line-height: 100%;
   letter-spacing: -1.5%;
 }
+p,
+a {
+  font-size: 20px;
+}
 .orange {
   color: variables.$colorOrange;
 }
 h2 {
   font-size: 64px;
+}
+.btn {
+  a {
+    color: variables.$colorWhite;
+  }
 }

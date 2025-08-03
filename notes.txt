@@ -20,6 +20,19 @@ logo hissesindeki problem duzelse hamsii duzelecek
 
 
 edilmeli tasklar
-header responsiv
+header responsiv et
 hover edende logo adi deyissin author olsun
 bunu edende diger yazilar saga surusmesin
+header dasmaya sebeb olur
+
+hero
+qizin sekli bir az asagi enmelidir
+quote-up bold classinda font weight duz gelmir duzeldende diger yazilara tesir edir bunu arasdir
+vectorlar top left oldugu ucun responsiv deyil ve h1 de responsiv deyil olcusu ekran kicilende kicilsin
+buttonlar qaldi portfolio ve hire me
+herodaki hello button a hrefdir yoxsa prosta salamlamadir?
+ onun mentiqi nedir orda?
+ button responsiv deyil absolute a gore cox ehtimal
+
+ my-services
+ 

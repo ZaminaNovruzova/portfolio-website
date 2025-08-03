@@ -1,10 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
-  font-family: "Lufga";
-  src: url(../fonts/lufga-webfont/LufgaLight.woff);
+  font-family: "Lufga", sans-serif;
+  src: url("../fonts/lufga-webfont/LufgaRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga", sans-serif;
+  src: url("../fonts/lufga-webfont/LufgaMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga", sans-serif;
+  src: url("../fonts/lufga-webfont/LufgaBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 * {
-  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -22,12 +35,13 @@ body {
 }
 
 img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 section {
-  width: 100vw;
   height: 100vh;
 }
 
@@ -50,12 +64,21 @@ span {
   letter-spacing: -1.5%;
 }
 
+p,
+a {
+  font-size: 20px;
+}
+
 .orange {
   color: #fd853a;
 }
 
 h2 {
   font-size: 64px;
+}
+
+.btn a {
+  color: #ffffff;
 }
 
 .header .container .row .nav-bar {
@@ -77,10 +100,6 @@ h2 {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 60px;
   transform: scale(1.1);
-}
-.header .container .row .nav-bar .buttons a {
-  color: #ffffff;
-  font-size: 20px;
 }
 .header .container .row .nav-bar .buttons .logo {
   padding-left: 5px;
@@ -108,12 +127,12 @@ h2 {
 .header .container .row .nav-bar .buttons .logo a .logo-author {
   display: none;
 }
-.header .container .row .nav-bar .buttons .logo a .logo-author h5 {
+.header .container .row .nav-bar .buttons .logo a .logo-author .author-name {
   font-weight: 600;
   font-size: 20px;
   text-wrap: nowrap;
 }
-.header .container .row .nav-bar .buttons .logo a .logo-author span {
+.header .container .row .nav-bar .buttons .logo a .logo-author .made-by {
   font-size: 14px;
   font-weight: 400;
   color: #98a2b3;
@@ -128,6 +147,11 @@ h2 {
   transform: scale(1);
 }
 
+@media (max-width: 900px) {
+  .btn {
+    display: none;
+  }
+}
 .footer {
   background-color: #272727;
   border-top-left-radius: 24px;
@@ -180,28 +204,122 @@ h2 {
   height: 46px;
 }
 
-.hero .container .row .hero-heading .hello {
-  position: relative;
+.hero {
+  padding: 10px 0;
 }
-.hero .container .row .hero-heading .hello .vector-1,
-.hero .container .row .hero-heading .hello .vector-2 {
-  overflow: hidden;
-}
-.hero .container .row .hero-heading .hello .button {
-  height: 45px;
-}
-.hero .container .row .hero-heading .hello .button .btn {
-  font-size: 20px;
-  font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 60px;
-  padding: 12.75px 25.49px;
-  border: 1px solid #171717;
+.hero .container .row .hero-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
 }
 .hero .container .row .hero-heading h1 {
+  font-family: "Urbanist";
   font-weight: 600;
   font-size: 95.57px;
-  font-family: "Urbanist";
+}
+.hero .container .row .hero-heading .hello .vector-1 {
+  position: relative;
+  left: 90px;
+  top: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.hero .container .row .hero-heading .hello .btn {
+  border: 1px solid #171717;
+  padding: 12.75px 25.49px;
+  border-radius: 38.24px;
+}
+.hero .container .row .hero-heading .hello .btn a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #171717;
+}
+.hero .container .row .vector-2 {
+  position: relative;
+  left: 140px;
+  top: -20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.hero .container .row .hero-about {
+  display: flex;
+  justify-content: space-between;
+}
+.hero .container .row .hero-about .quote-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 30%;
+}
+.hero .container .row .hero-about .quote-card .quote-up {
+  width: 36px;
+  height: 36px;
+}
+.hero .container .row .hero-about .quote-card .bold {
+  color: #344054;
+  font-weight: 500;
+}
+.hero .container .row .hero-about .experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  text-align: end;
+}
+.hero .container .row .hero-about .experience-card .stars {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.hero .container .row .hero-about .experience-card .experience-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.hero .container .row .hero-about .experience-card .experience-text .year {
+  font-weight: 700;
+  font-size: 47px;
+  font-family: "Urbanist", sans-serif;
+}
+.hero .container .row .hero-about .experience-card .experience-text p {
+  font-weight: 400;
+  color: #171717;
+}
+.hero .container .row .person-img {
+  position: relative;
+}
+.hero .container .row .person-img .ellipse {
+  display: flex;
+  justify-self: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 0;
+}
+.hero .container .row .person-img .woman {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  transform: translateY(-100%);
+  z-index: 5;
+}
+.hero .container .row .person-img .buttons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  bottom: 100px;
+  border-radius: 50px;
+}
+.hero .container .row .person-img .buttons .orange {
+  display: flex;
+  background-color: #fd853a;
+  border-radius: 60px;
+}
+.hero .container .row .person-img .buttons .orange .arrow-up-right {
+  width: 42px;
+  height: 42px;
 }
 
 .services {

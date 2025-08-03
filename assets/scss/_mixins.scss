@@ -1,5 +1,6 @@
 @use "./variables";
 @mixin btn($bgcolor) {
     background-color: $bgcolor;
-    border-radius: 60px;  
+    border-radius: 60px; 
+ 
 }
