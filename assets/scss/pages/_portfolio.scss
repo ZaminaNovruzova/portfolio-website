@@ -1,0 +1,41 @@
+@use "../variables";
+@use "../mixins";
+
+.portfolio {
+  padding: 97px;
+  .container {
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+          font-weight: 600;
+          color: variables.$colorSlateGray;
+          width: 50%;
+        }
+        .btn {
+          @include mixins.btn(variables.$colorOrange);
+        }
+      }
+      .portfolio-details {
+        .portfolio-cards-dots {
+          .cards {
+            display: flex;
+            .card {
+              background-image: url("/assets/images/portfolio.png");
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          .dots {
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+}

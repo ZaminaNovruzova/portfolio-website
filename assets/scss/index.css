@@ -97,6 +97,8 @@ h2 {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 60px;
   padding: 20px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
   transform: scale(1.1);
 }
 .header .container .row .nav-bar .buttons .logo {
@@ -143,6 +145,8 @@ h2 {
   background-color: #fd853a;
   border-radius: 60px;
   padding: 20px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
   font-weight: 700;
 }
 .header .container .row .nav-bar .buttons .orange:hover {
@@ -178,6 +182,8 @@ h2 {
   background-color: #fd853a;
   border-radius: 60px;
   padding: 20px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 10px 20px;
   font-weight: 500;
   color: #ffffff;
@@ -328,6 +334,8 @@ h2 {
   background-color: #fd853a;
   border-radius: 60px;
   padding: 20px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .hero .container .row .person-img .buttons .orange .arrow-up-right {
   width: 42px;
@@ -357,10 +365,10 @@ h2 {
   color: #ffffff;
   font-weight: 500;
 }
-.services .container .row .service-heading .heading-2 {
+.services .container .row .service-heading .title {
   flex: 0 0 55%;
 }
-.services .container .row .service-heading .heading-2 h2 {
+.services .container .row .service-heading .title h2 {
   font-size: 48px;
 }
 .services .container .row .service-heading .heading-text {
@@ -400,21 +408,21 @@ h2 {
   flex-direction: column;
   gap: 10px;
 }
-.experience .container .row .heading {
+.experience .container .row .title {
   padding: 85px 0;
   display: flex;
   justify-content: center;
 }
-.experience .container .row .heading h2 {
+.experience .container .row .title h2 {
   color: #344054;
   font-weight: 500;
 }
-.experience .container .row .heading .experience-datas .exp-data .job {
+.experience .container .row .title .experience-datas .exp-data .job {
   color: #344054;
   font-size: 40px;
   font-weight: 600;
 }
-.experience .container .row .heading .experience-datas .exp-data .date {
+.experience .container .row .title .experience-datas .exp-data .date {
   color: #98a2b3;
   font-size: 24px;
   font-weight: 400;
@@ -482,4 +490,42 @@ h2 {
 }
 .why-hire .container .row .hire-text .btn:hover a {
   color: #ffffff;
+}
+
+.portfolio {
+  padding: 97px;
+}
+.portfolio .container .row {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.portfolio .container .row .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolio .container .row .heading h2 {
+  font-weight: 600;
+  color: #344054;
+  width: 50%;
+}
+.portfolio .container .row .heading .btn {
+  background-color: #fd853a;
+  border-radius: 60px;
+  padding: 20px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.portfolio .container .row .portfolio-details .portfolio-cards-dots .cards {
+  display: flex;
+}
+.portfolio .container .row .portfolio-details .portfolio-cards-dots .cards .card {
+  background-image: url("/assets/images/portfolio.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.portfolio .container .row .portfolio-details .portfolio-cards-dots .dots {
+  width: -moz-fit-content;
+  width: fit-content;
 }/*# sourceMappingURL=index.css.map */
