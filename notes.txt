@@ -21,8 +21,8 @@ logo hissesindeki problem duzelse hamsii duzelecek
 
 edilmeli tasklar
 header responsiv et
-hover edende logo adi deyissin author olsun
-bunu edende diger yazilar saga surusmesin
+hover edende logo adi deyissin author olsun bunun kecidi yumsaq olsun
+
 header dasmaya sebeb olur
 
 hero
@@ -33,6 +33,28 @@ buttonlar qaldi portfolio ve hire me
 herodaki hello button a hrefdir yoxsa prosta salamlamadir?
  onun mentiqi nedir orda?
  button responsiv deyil absolute a gore cox ehtimal
+ asagida nese bosluq qalir sebebini arasdir
+
 
  my-services
- 
+hero ve serivces ortaq ozelliyi gradientdir
+ondan sonra ox olan hissede seklin gorunusu itmelidir 
+sonda slide kimi noqtler elave olunmalidir 
+arxa fon seklinde animasiya
+cardlara hover edende gradient reng narinci olmalidir ve scale boyumelidr arrow lar rengi hoverde narinci olmaliidri
+slide goruntusu var amma funksional deyil 
+
+my work experience
+2 div heading ve experience 
+2ci divin icinde 3 div flex 33% justify content space between
+responsivlikde ortadaki sekil yoxa cixac aq ve yazilar alt alta olacaq 
+
+
+why-hire
+
+sekli hover edende arxada halqa gelsin
+gaplar ve mesafeler padding nese tam deyil bir de bax
+
+portfolio 6 div
+1cisi heading flex 50%
+2ci div icinde sekil div sekiller ustune hover edende ox narinci olur

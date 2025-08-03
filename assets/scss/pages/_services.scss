@@ -5,27 +5,60 @@
     url("/assets/images/service-bg.jpg");
   background-repeat: no-repeat no-repeat;
   background-position: center, center;
-  background-size: contain, cover;
-  //   padding: 116px 71px;
+  background-size: cover, cover;
   border-radius: 50px;
-  margin: 50px 0;
+  padding: 116px 71px;
+
   .container {
-    // padding: initial;
     .row {
       display: flex;
       flex-direction: column;
+      gap: 39px;
       .service-heading {
-        color: white;
+        h2,
+        p {
+          color: variables.$colorWhite;
+          font-weight: 500;
+        }
         display: flex;
         justify-content: space-between;
-        h2 {
+        flex-wrap: wrap;
+        .heading-2 {
+          flex: 0 0 55%;
+          h2 {
+            font-size: 48px;
+          }
+        }
+        .heading-text {
+          flex: 0 0 45%;
         }
       }
       .service-cards {
         display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        // flex-wrap: wrap;
         .card {
-          width: 33%;
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 33%;
+          h4 {
+            color: variables.$colorWhite;
+            font-size: 32px;
+            font-weight: 500;
+          }
+          .card-img {
+            width: fit-content;
+          }
+          .arrow-right-up {
+            width: 114px;
+            height: 114px;
+          }
         }
+      }
+      .dots {
+        width: fit-content;
+        align-self: center;
       }
     }
   }

@@ -50,7 +50,7 @@
           display: flex;
           flex-direction: column;
           gap: 24px;
-          width: 30%;
+          width: 25%;
           .quote-up {
             width: 36px;
             height: 36px;
@@ -91,30 +91,32 @@
         .ellipse {
           display: flex;
           justify-self: center;
+
           width: fit-content;
           position: relative;
           z-index: 0;
         }
         .woman {
-          width: fit-content;
+          height: 700px;
+          justify-self: center;
           position: absolute;
           transform: translateY(-100%);
           z-index: 5;
         }
         .buttons {
+          width: fit-content;
           display: flex;
-          justify-content: center;
+          justify-self: center;
+          // align-self: center;
           position: relative;
           z-index: 10;
           bottom: 100px;
           border-radius: 50px;
-          // border: 2px solid radial-gradi;
-          // background: radial-gradient(
-          //   circle,
-          //   variables.$colorWhite,
-          //   variables.$colorGradient
-          // );
-          // filter: blur(30px);
+          border: 2px solid variables.$colorWhite;
+          background-color: white;
+          .btn {
+            padding: 10px 20px;
+          }
           .orange {
             display: flex;
             @include mixins.btn(variables.$colorOrange);

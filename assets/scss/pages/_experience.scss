@@ -8,18 +8,24 @@
       gap: 10px;
       .heading {
         padding: 85px 0;
+        display: flex;
+        justify-content: center;
         h2 {
           color: variables.$colorSlateGray;
+          font-weight: 500;
         }
         .experience-datas {
-        
-
+       
           .exp-data {
-            h3 {
+            .job {
               color: variables.$colorSlateGray;
+              font-size: 40px;
+              font-weight: 600;
             }
-            p {
-             color: variables.$colorExperienceHireText; 
+            .date {
+              color: variables.$colorExperienceHireText;
+              font-size: 24px;
+              font-weight: 400;
             }
           }
         }

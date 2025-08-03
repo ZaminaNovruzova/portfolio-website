@@ -1,0 +1,68 @@
+@use "../variables";
+
+.why-hire {
+  background-color: variables.$colorLightGray;
+  border-radius: 50px;
+  padding: 122px 0;
+  .container {
+    .row {
+      display: flex;
+      justify-content: space-between;
+      .woman-img {
+        flex: 0 0 40%;
+      }
+      .hire-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //*gap duz deyil sanki birde bax
+        gap: 47px;
+        flex: 0 0 55%;
+        h2 {
+          color: variables.$colorSlateGray;
+        }
+        p {
+          color: variables.$colorExperienceHireText;
+          font-weight: 400;
+          width: 60%;
+        }
+        .statistics {
+          display: flex;
+          gap: 10px;
+          .completed-project {
+            flex: 0 0 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .number {
+              font-size: 36px;
+              color: variables.$colorCharcoalBlue;
+              //*hero text de olan eyni bold problemi bunda da var 100%font face e baxmaq lazimdir
+              font-weight: 500;
+            }
+            p {
+              color: variables.$colorHireSpan;
+            }
+          }
+        }
+        .btn {
+          width: fit-content;
+          border: 1px solid variables.$colorHireButton;
+          border-radius: 32px;
+          padding: 33px 59px;
+          a {
+            color: variables.$colorHireButton;
+            font-weight: 600;
+            font-size: 32px;
+          }
+          &:hover {
+            background-color: variables.$colorHireButton;
+            a {
+              color: variables.$colorWhite;
+            }
+          }
+        }
+      }
+    }
+  }
+}
