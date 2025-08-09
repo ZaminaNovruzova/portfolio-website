@@ -20,7 +20,7 @@
   font-style: normal;
 }
 * {
-  outline: 1px solid red;
+  // outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -72,5 +72,19 @@ h2 {
 .btn {
   a {
     color: variables.$colorWhite;
+  }
+}
+main {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    padding: 0 5px;
   }
 }

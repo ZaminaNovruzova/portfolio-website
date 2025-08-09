@@ -19,11 +19,16 @@ logo da display block edende contact kenara surusur onu opacity ile vermek azimd
 logo hissesindeki problem duzelse hamsii duzelecek 
 
 
+
 edilmeli tasklar
 header responsiv et
 hover edende logo adi deyissin author olsun bunun kecidi yumsaq olsun
-
+logo hover edende diger navlar da 
 header dasmaya sebeb olur
+header burger click edende menu gelecek js de yaz onclick ile add-active ile amma acilandan sonra da iceride dizayn deyisecek
+ekran olcusu kicilende div altdan reski boyuyubb sonra balacalasir bu kecidi yox et
+1215 ele bil ki tezdir e eburger kecmek ucun cox bosluq qalir
+
 
 hero
 qizin sekli bir az asagi enmelidir
