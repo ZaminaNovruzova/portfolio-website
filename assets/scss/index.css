@@ -24,7 +24,7 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Lufga", sans-serif;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 body {
@@ -32,6 +32,10 @@ body {
   padding: 40px 0;
   line-height: 100%;
   letter-spacing: -1.5%;
+}
+
+main {
+  position: relative;
 }
 
 img {
@@ -43,7 +47,6 @@ img {
 
 .container {
   width: 100%;
-  height: 100%;
   padding: 0 71px;
 }
 
@@ -62,6 +65,7 @@ span {
 
 p,
 a {
+  font-weight: 500;
   font-size: 20px;
 }
 
@@ -77,13 +81,17 @@ h2 {
   color: #ffffff;
 }
 
-main {
-  position: relative;
+.orangeBtn {
+  background-color: #fd853a;
+  border-radius: 60px;
+  padding: 20px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container {
-    padding: 0 10px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 320px) {
@@ -91,22 +99,22 @@ main {
     padding: 0 5px;
   }
 }
-.header .container .row .nav-bar {
+.header .container .row .navBar {
   background-color: #171717;
   border-radius: 50px;
 }
-.header .container .row .nav-bar .buttons {
+.header .container .row .navBar .buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
   gap: 10px;
 }
-.header .container .row .nav-bar .buttons .btn {
+.header .container .row .navBar .buttons .btn {
   font-weight: 400;
   padding: 20px 40px;
 }
-.header .container .row .nav-bar .buttons .btn:hover {
+.header .container .row .navBar .buttons .btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 60px;
   padding: 20px 40px;
@@ -114,7 +122,7 @@ main {
   width: fit-content;
   transform: scale(1.1);
 }
-.header .container .row .nav-bar .buttons .logo {
+.header .container .row .navBar .buttons .logo {
   padding-left: 5px;
   padding-right: 5px;
   width: -moz-max-content;
@@ -123,63 +131,58 @@ main {
   display: flex;
   justify-content: center;
 }
-.header .container .row .nav-bar .buttons .logo:hover {
+.header .container .row .navBar .buttons .logo:hover {
   background-color: initial;
   transform: scale(1);
 }
-.header .container .row .nav-bar .buttons .logo:hover .logo-name {
+.header .container .row .navBar .buttons .logo:hover .logoName {
   display: none;
 }
-.header .container .row .nav-bar .buttons .logo:hover .logo-author {
+.header .container .row .navBar .buttons .logo:hover .logoAuthor {
   display: block;
 }
-.header .container .row .nav-bar .buttons .logo a {
+.header .container .row .navBar .buttons .logo a {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.header .container .row .nav-bar .buttons .logo a .logo-png {
+.header .container .row .navBar .buttons .logo a .logoPng {
   width: 46px;
   height: 46px;
 }
-.header .container .row .nav-bar .buttons .logo a .logo-author {
+.header .container .row .navBar .buttons .logo a .logoAuthor {
   display: none;
 }
-.header .container .row .nav-bar .buttons .logo a .logo-author .author-name {
+.header .container .row .navBar .buttons .logo a .logoAuthor .authorName {
   font-weight: 600;
   font-size: 20px;
   text-wrap: nowrap;
 }
-.header .container .row .nav-bar .buttons .logo a .logo-author .made-by {
+.header .container .row .navBar .buttons .logo a .logoAuthor .madeBy {
   font-size: 14px;
   font-weight: 400;
   color: #98a2b3;
 }
-.header .container .row .nav-bar .buttons .orange {
-  background-color: #fd853a;
-  border-radius: 60px;
-  padding: 20px 40px;
-  width: -moz-fit-content;
-  width: fit-content;
+.header .container .row .navBar .buttons .orangeBtn {
   font-weight: 700;
 }
-.header .container .row .nav-bar .buttons .orange:hover {
+.header .container .row .navBar .buttons .orangeBtn:hover {
   background-color: #fd853a;
   transform: scale(1);
 }
 
-@media (max-width: 1250px) {
-  .header .container .row .nav-bar {
+@media (max-width: 1230px) {
+  .header .container .row .navBar {
     display: flex;
     justify-content: space-between;
   }
-  .header .container .row .nav-bar .buttons .btn {
+  .header .container .row .navBar .buttons .btn {
     display: none;
   }
-  .header .container .row .nav-bar .buttons .logo {
+  .header .container .row .navBar .buttons .logo {
     display: block;
   }
-  .header .container .row .nav-bar .burger {
+  .header .container .row .navBar .burger {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -187,7 +190,7 @@ main {
     padding: 20px 40px;
     gap: 8px;
   }
-  .header .container .row .nav-bar .burger span {
+  .header .container .row .navBar .burger span {
     display: block;
     width: 40px;
     height: 2px;
@@ -251,133 +254,196 @@ main {
 }
 
 .hero {
-  padding: 10px 0;
+  margin-top: 40px;
 }
-.hero .container .row .hero-heading {
+.hero .container .row {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hero .container .row .aboutMe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   gap: 10px;
 }
-.hero .container .row .hero-heading h1 {
-  font-family: "Urbanist";
-  font-weight: 600;
-  font-size: 95.57px;
-}
-.hero .container .row .hero-heading .hello .vector-1 {
+.hero .container .row .aboutMe .helloBtn {
   position: relative;
-  left: 90px;
-  top: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
 }
-.hero .container .row .hero-heading .hello .btn {
+.hero .container .row .aboutMe .helloBtn .vectorOne {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  left: 90px;
+  bottom: 35px;
+}
+.hero .container .row .aboutMe .helloBtn .btn {
   border: 1px solid #171717;
   padding: 12.75px 25.49px;
   border-radius: 38.24px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.hero .container .row .hero-heading .hello .btn a {
+.hero .container .row .aboutMe .helloBtn .btn a {
   font-size: 20px;
   font-weight: 500;
   color: #171717;
 }
-.hero .container .row .vector-2 {
+.hero .container .row .aboutMe .aboutTitle {
   position: relative;
-  left: 140px;
-  top: -20px;
+}
+.hero .container .row .aboutMe .aboutTitle h1 {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 95.57px;
+}
+.hero .container .row .aboutMe .aboutTitle .vectorTwo {
   width: -moz-fit-content;
   width: fit-content;
+  position: absolute;
+  height: 70px;
+  left: -50px;
+  top: 170px;
 }
-.hero .container .row .hero-about {
+.hero .container .row .aboutText {
   display: flex;
   justify-content: space-between;
+  margin: 30px 0;
 }
-.hero .container .row .hero-about .quote-card {
+.hero .container .row .aboutText .quoteCard {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   width: 25%;
+  gap: 24px;
+  position: relative;
+  z-index: 5;
 }
-.hero .container .row .hero-about .quote-card .quote-up {
+.hero .container .row .aboutText .quoteCard .quoteUp {
   width: 36px;
   height: 36px;
 }
-.hero .container .row .hero-about .quote-card .bold {
+.hero .container .row .aboutText .quoteCard .quoteUp img {
   color: #344054;
-  font-weight: 500;
 }
-.hero .container .row .hero-about .experience-card {
+.hero .container .row .aboutText .quoteCard p {
+  color: #344054;
+}
+.hero .container .row .aboutText .experienceCard {
+  text-wrap: nowrap;
   display: flex;
   flex-direction: column;
   gap: 21px;
   text-align: end;
 }
-.hero .container .row .hero-about .experience-card .stars {
-  width: -moz-fit-content;
-  width: fit-content;
+.hero .container .row .aboutText .experienceCard .stars {
+  width: -moz-max-content;
+  width: max-content;
 }
-.hero .container .row .hero-about .experience-card .experience-text {
+.hero .container .row .aboutText .experienceCard .experienceText {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.hero .container .row .hero-about .experience-card .experience-text .year {
+.hero .container .row .aboutText .experienceCard .experienceText .year {
   font-weight: 700;
   font-size: 47px;
   font-family: "Urbanist", sans-serif;
 }
-.hero .container .row .hero-about .experience-card .experience-text p {
+.hero .container .row .aboutText .experienceCard .experienceText .experience {
   font-weight: 400;
   color: #171717;
 }
-.hero .container .row .person-img {
-  position: relative;
-}
-.hero .container .row .person-img .ellipse {
+.hero .container .row .personDetails {
   display: flex;
-  justify-self: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-  z-index: 0;
+  justify-content: center;
+  transform: translateY(-50%);
 }
-.hero .container .row .person-img .woman {
-  height: 700px;
-  justify-self: center;
+.hero .container .row .personDetails .personImg {
+  width: -moz-max-content;
+  width: max-content;
+}
+.hero .container .row .personDetails .personImgIcons {
+  display: none;
+}
+.hero .container .row .personDetails .buttons {
   position: absolute;
-  transform: translateY(-100%);
+  bottom: 50px;
   z-index: 5;
-}
-.hero .container .row .person-img .buttons {
-  width: -moz-fit-content;
-  width: fit-content;
   display: flex;
-  justify-self: center;
-  position: relative;
-  z-index: 10;
-  bottom: 100px;
-  border-radius: 50px;
+  justify-content: center;
   border: 2px solid #ffffff;
-  background-color: white;
+  border-radius: 50px;
+  gap: 10px;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(5%);
+          backdrop-filter: blur(5%);
 }
-.hero .container .row .person-img .buttons .btn {
+.hero .container .row .personDetails .buttons .btn {
+  display: flex;
+  align-items: center;
   padding: 10px 20px;
 }
-.hero .container .row .person-img .buttons .orange {
-  display: flex;
+.hero .container .row .personDetails .buttons .btn:hover {
   background-color: #fd853a;
   border-radius: 60px;
   padding: 20px 40px;
   width: -moz-fit-content;
   width: fit-content;
+  padding: 10px 20px;
 }
-.hero .container .row .person-img .buttons .orange .arrow-up-right {
+.hero .container .row .personDetails .buttons .btn:hover .orangeBtn {
+  background: none;
+}
+.hero .container .row .personDetails .buttons .btn .arrowUpRight {
   width: 42px;
   height: 42px;
 }
 
+@media (max-width: 1024px) {
+  .hero .container .row .aboutMe .aboutTitle h1 {
+    font-size: 70px;
+  }
+  .hero .container .row .aboutMe .aboutTitle .vectorTwo {
+    top: 120px;
+  }
+  .hero .container .row .aboutText .quoteCard {
+    width: 35%;
+  }
+  .hero .container .row .personDetails .personImg {
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+@media (max-width: 768px) {
+  .hero .container .row .aboutMe .aboutTitle h1 {
+    font-size: 50px;
+  }
+  .hero .container .row .aboutMe .aboutTitle .vectorTwo {
+    top: 80px;
+  }
+  .hero .container .row .aboutText {
+    display: none;
+  }
+  .hero .container .row .personDetails {
+    transform: translateY(-20%);
+  }
+}
+@media (max-width: 500px) {
+  .hero .container .row .aboutMe .aboutTitle h1 {
+    font-size: 35px;
+  }
+  .hero .container .row .aboutMe .aboutTitle .vectorTwo {
+    top: 60px;
+    left: -40px;
+    height: 50px;
+  }
+  .hero .container .row .aboutText {
+    display: none;
+  }
+}
 .services {
   background-image: url("/assets/images/service-bg-details.png"), url("/assets/images/service-bg.jpg");
   background-repeat: no-repeat no-repeat;

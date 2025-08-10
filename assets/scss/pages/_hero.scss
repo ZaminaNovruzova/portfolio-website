@@ -1,76 +1,93 @@
-@use "../variables";
-@use "../mixins";
+@use "../variables" as *;
+@use "../mixins" as *;
 
 .hero {
-  padding: 10px 0;
+  margin-top: 40px;
+  // overflow: hidden;
   .container {
     .row {
-      .hero-heading {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      gap: 30px;
+      .aboutMe {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
         gap: 10px;
-        h1 {
-          font-family: "Urbanist";
-          font-weight: 600;
-          font-size: 95.57px;
-        }
-        .hello {
-          .vector-1 {
-            position: relative;
+        .helloBtn {
+          position: relative;
+          .vectorOne {
+            width: max-content;
+            position: absolute;
             left: 90px;
-            top: 10px;
-            width: fit-content;
+            bottom: 35px;
           }
           .btn {
-            border: 1px solid variables.$colorNav;
+            border: 1px solid $colorNav;
             padding: 12.75px 25.49px;
             border-radius: 38.24px;
+            width: fit-content;
             a {
               font-size: 20px;
               font-weight: 500;
-              color: variables.$colorNav;
+              color: $colorNav;
             }
           }
         }
-      }
-      //*vector 2 de problem var responsiv deyil
-      .vector-2 {
-        position: relative;
-        left: 140px;
-        top: -20px;
-        width: fit-content;
-      }
-      .hero-about {
-        display: flex;
-        justify-content: space-between;
-        .quote-card {
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          width: 25%;
-          .quote-up {
-            width: 36px;
-            height: 36px;
+        .aboutTitle {
+          position: relative;
+          h1 {
+            font-family: "Urbanist";
+            font-weight: 600;
+            font-size: 95.57px;
           }
-          .bold {
-            //*burda nese font weigth uygun gelmir
-            //* base de ki font face de de duzelis edende hamsinin weigthine tesir edir .arasdir
-            color: variables.$colorSlateGray;
-            font-weight: 500;
+          //*vector 2 de problem var responsiv deyil
+          .vectorTwo {
+            width: fit-content;
+            position: absolute;
+            height: 70px;
+            left: -50px;
+            top: 170px;
           }
         }
-        .experience-card {
+      }
+      .aboutText {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+        .quoteCard {
+          display: flex;
+          flex-direction: column;
+          width: 25%;
+          gap: 24px;
+          position: relative;
+          z-index: 5;
+          //*burda nese font weigth uygun gelmir
+          //* base de ki font face de de duzelis edende hamsinin weigthine tesir edir .arasdir
+          .quoteUp {
+            width: 36px;
+            height: 36px;
+            img {
+              color: $colorSlateGray;
+            }
+          }
+          p {
+            color: $colorSlateGray;
+          }
+        }
+        .experienceCard {
+          text-wrap: nowrap;
           display: flex;
           flex-direction: column;
           gap: 21px;
           text-align: end;
+
           .stars {
-            width: fit-content;
+            width: max-content;
           }
-          .experience-text {
+          .experienceText {
             display: flex;
             flex-direction: column;
             gap: 5px;
@@ -79,52 +96,159 @@
               font-size: 47px;
               font-family: "Urbanist", sans-serif;
             }
-            p {
+            .experience {
               font-weight: 400;
-              color: variables.$colorNav;
+              color: $colorNav;
             }
           }
         }
       }
-      .person-img {
-        position: relative;
-        .ellipse {
-          display: flex;
-          justify-self: center;
-
-          width: fit-content;
-          position: relative;
-          z-index: 0;
+      .personDetails {
+        display: flex;
+        justify-content: center;
+        //*asagidaki bosluq transforma gore olur
+        transform: translateY(-50%);
+        .personImg {
+          width: max-content;
         }
-        .woman {
-          height: 700px;
-          justify-self: center;
-          position: absolute;
-          transform: translateY(-100%);
-          z-index: 5;
+        //*nece edim ki hover edende diger sekil gelsin
+        // .personImg:hover {
+        //   opacity: 0;
+        //   .personImgIcons {
+        //     display: block;
+        //   }
+        // }
+        .personImgIcons {
+          display: none;
         }
         .buttons {
-          width: fit-content;
+          //*bunu yuxari nece cekim
+          position: absolute;
+          bottom: 50px;
+          z-index: 5;
           display: flex;
-          justify-self: center;
-          // align-self: center;
-          position: relative;
-          z-index: 10;
-          bottom: 100px;
+          justify-content: center;
+          border: 2px solid $colorWhite;
           border-radius: 50px;
-          border: 2px solid variables.$colorWhite;
-          background-color: white;
+          gap: 10px;
+          align-items: center;
+          padding: 5px;
+          background-color: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(5%);
           .btn {
-            padding: 10px 20px;
-          }
-          .orange {
             display: flex;
-            @include mixins.btn(variables.$colorOrange);
-            .arrow-up-right {
+            align-items: center;
+            padding: 10px 20px;
+            &:hover {
+              @include btn($colorOrange);
+              padding: 10px 20px;
+              .orangeBtn {
+                background: none;
+              }
+            }
+            .arrowUpRight {
               width: 42px;
               height: 42px;
             }
           }
+        }
+        //   //*blur vere bilmedim
+      }
+    }
+  }
+}
+//*nece edim ki responsive olsun
+
+@media (max-width: 1024px) {
+  .hero {
+    .container {
+      .row {
+        .aboutMe {
+          .aboutTitle {
+            h1 {
+              font-size: 70px;
+            }
+            .vectorTwo {
+              top: 120px;
+            }
+          }
+        }
+        .aboutText {
+          .quoteCard {
+            width: 35%;
+          }
+        }
+        .personDetails {
+          .personImg {
+            width: max-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+//*bunlara tekrar bax mentordan meslehet al
+
+@media (max-width: 768px) {
+  .hero {
+    .container {
+      .row {
+        .aboutMe {
+          .aboutTitle {
+            h1 {
+              font-size: 50px;
+            }
+            .vectorTwo {
+              top: 80px;
+            }
+          }
+        }
+        .aboutText {
+          //*nece edim ki yaazilar qalsin amma seliqeli gorunsun?
+          display: none;
+          // flex-direction: column; // Məzmunu sütun formatına keçir
+          // gap: 20px; // Hissələr arasındakı boşluğu azaldır
+
+          // .quoteCard {
+          //   width: 100%; // quoteCard elementini tam genişlikdə göstər
+          //   margin-bottom: 20px; // Alt hissədə boşluq əlavə et
+          // }
+        }
+        .personDetails {
+          transform: translateY(-20%);
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:500px){
+    .hero {
+    .container {
+      .row {
+        .aboutMe {
+          .aboutTitle {
+            h1 {
+              font-size: 35px;
+            }
+            .vectorTwo {
+              top: 60px;
+              left: -40px;
+              height: 50px;
+            }
+          }
+        }
+        .aboutText {
+          //*nece edim ki yaazilar qalsin amma seliqeli gorunsun?
+          display: none;
+          // flex-direction: column; // Məzmunu sütun formatına keçir
+          // gap: 20px; // Hissələr arasındakı boşluğu azaldır
+
+          // .quoteCard {
+          //   width: 100%; // quoteCard elementini tam genişlikdə göstər
+          //   margin-bottom: 20px; // Alt hissədə boşluq əlavə et
+          // }
         }
       }
     }

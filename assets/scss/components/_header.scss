@@ -1,13 +1,13 @@
-@use "../variables";
-@use "../mixins";
+@use "../variables" as *;
+@use "../mixins" as *;
 
 .header {
+  // height: 86px;
   .container {
     .row {
-      .nav-bar {
-        background-color: variables.$colorNav;
+      .navBar {
+        background-color: $colorNav;
         border-radius: 50px;
-
         .buttons {
           display: flex;
           justify-content: space-between;
@@ -18,7 +18,7 @@
             font-weight: 400;
             padding: 20px 40px;
             &:hover {
-              @include mixins.btn(variables.$colorBtnHover);
+              @include btn($colorBtnHover);
               transform: scale(1.1);
             }
           }
@@ -32,10 +32,10 @@
             &:hover {
               background-color: initial;
               transform: scale(1);
-              .logo-name {
+              .logoName {
                 display: none;
               }
-              .logo-author {
+              .logoAuthor {
                 display: block;
               }
             }
@@ -43,30 +43,30 @@
               display: flex;
               align-items: center;
               gap: 10px;
-              .logo-png {
+              .logoPng {
                 width: 46px;
                 height: 46px;
               }
-              .logo-author {
+              .logoAuthor {
                 display: none;
-                .author-name {
+                .authorName {
                   font-weight: 600;
                   font-size: 20px;
                   text-wrap: nowrap;
                 }
-                .made-by {
+                .madeBy {
                   font-size: 14px;
                   font-weight: 400;
-                  color: variables.$colorExperienceHireText;
+                  color: $colorExperienceHireText;
                 }
               }
             }
           }
-          .orange {
-            @include mixins.btn(variables.$colorOrange);
+          .orangeBtn {
             font-weight: 700;
             &:hover {
-              background-color: variables.$colorOrange;
+              //*bunun rengi deyismemelidir 
+              background-color: $colorOrange;
               transform: scale(1);
             }
           }
@@ -75,11 +75,11 @@
     }
   }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1230px) {
   .header {
     .container {
       .row {
-        .nav-bar {
+        .navBar {
           display: flex;
           justify-content: space-between;
           .buttons {
@@ -97,7 +97,6 @@
             justify-content: center;
             padding: 20px 40px;
             gap: 8px;
-
             span {
               display: block;
               width: 40px;
@@ -111,4 +110,3 @@
     }
   }
 }
-
