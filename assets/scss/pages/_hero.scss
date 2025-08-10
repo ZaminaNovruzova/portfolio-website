@@ -3,12 +3,10 @@
 
 .hero {
   margin-top: 40px;
-  // overflow: hidden;
   .container {
     .row {
       display: flex;
       flex-direction: column;
-      // justify-content: space-between;
       gap: 30px;
       .aboutMe {
         display: flex;
@@ -83,7 +81,6 @@
           flex-direction: column;
           gap: 21px;
           text-align: end;
-
           .stars {
             width: max-content;
           }
@@ -152,11 +149,11 @@
             }
           }
         }
-        //   //*blur vere bilmedim
       }
     }
   }
 }
+
 //*nece edim ki responsive olsun
 
 @media (max-width: 1024px) {
@@ -223,8 +220,8 @@
   }
 }
 
-@media(max-width:500px){
-    .hero {
+@media (max-width: 500px) {
+  .hero {
     .container {
       .row {
         .aboutMe {
