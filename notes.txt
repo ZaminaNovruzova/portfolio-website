@@ -6,22 +6,10 @@ testimonials ve heroda urbanist var project idea buttonlarda var
 blogpost seklin altindaki xirda yazilarda inter var 
 
 header
-eslinde header position fixed ya dasticky olmalidir ve z index olmalidir  amma burda bele deyil muellimden sorus
-
-1 normalda gorunusde font weight normal olsun logo xaric
-hover
+eslinde header position fixed ya dasticky olmalidir ve z index olmalidir  amma burda bele deyil 
+muellimden sorus
 diger navlari hover edende ele bil sozlerin yeri deyisir bir az sol yuxari qalxir
-logo hover edende 2 soz gelsin alt alta 2 div
-ve aktive eedende avtomatik hemin sectiona surussun logo sola surussun
-2 hover edende arxa fon boz olsun active edende narinci ve activ edende font weight bold olsun
-header de gap 10px ve padding 0 10px i hara qoycam?
-logo da display block edende contact kenara surusur onu opacity ile vermek azimdir cox guman amma nece 
-logo hissesindeki problem duzelse hamsii duzelecek 
-
-
-
-edilmeli tasklar
-header responsiv et
+ve aktive eedende avtomatik hemin sectiona surussun active edende narinci ve activ edende font weight bold olsun 
 hover edende logo adi deyissin author olsun bunun kecidi yumsaq olsun
 logo hover edende diger navlar da 
 header dasmaya sebeb olur
@@ -31,23 +19,28 @@ ekran olcusu kicilende div altdan reski boyuyubb sonra balacalasir bu kecidi yox
 
 
 hero
-qizin sekli bir az asagi enmelidir
+.personDetails transform translateY vermissem deye asagida bosluq qalir postiob absolute da top da islemir 
 quote-up bold classinda font weight duz gelmir duzeldende diger yazilara tesir edir bunu arasdir
-vectorlar top left oldugu ucun responsiv deyil ve h1 de responsiv deyil olcusu ekran kicilende kicilsin
-buttonlar qaldi portfolio ve hire me
-herodaki hello button a hrefdir yoxsa prosta salamlamadir?
- onun mentiqi nedir orda?
- button responsiv deyil absolute a gore cox ehtimal
- asagida nese bosluq qalir sebebini arasdir
+sehife acilanda portfolio statik goruntusunde olsun amma hire hover edende portfolio clasin gorunusu baglansin hire acilsin sonra portfolio ednede de onun gorunusu acilsin hire baglansin yeqin bu js dir
+herodaki hello button a hrefdir yoxsa prosta salamlamadir? onun mentiqi nedir orda?
+button bottom u faizle vermeyi yoxla
+seklin uzerine hover edende iconlar altdan cixsin
 
 
  my-services
-hero ve serivces ortaq ozelliyi gradientdir
+ arxa fon background img necese opacity vermek lazimdir ki ancaq sekle tesir etsin diger elemetlere yox
 ondan sonra ox olan hissede seklin gorunusu itmelidir 
-sonda slide kimi noqtler elave olunmalidir 
-arxa fon seklinde animasiya
+arxa fon seklinde hover transform x ile rotate olsun 45 derece
 cardlara hover edende gradient reng narinci olmalidir ve scale boyumelidr arrow lar rengi hoverde narinci olmaliidri
 slide goruntusu var amma funksional deyil 
+asagidan padding cox verilib amma figmada azdir baxmayaraq ki bottom 116px teyin olunub
+bu sekil niyese gore servic3 cardin icinden dasir 
+responsivlik slide movzusune yeni js e gedib cixsdgi ucun bunu saxlayiram
+hele bu section un responsivliyi qalib
+responsiv 1024 olanda 3cu card yoxa cixsin ve slide da gorunsun 
+umumiyyetle slide verek olcu kicildikce surusme olsun 
+ortadki card niye asagi dusur olcu kicilende-max content verende tekce yoxa cixir onda da responsivlik gedir? slide hell ede biler?
+
 
 my work experience
 2 div heading ve experience 

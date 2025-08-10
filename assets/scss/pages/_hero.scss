@@ -131,7 +131,7 @@
           align-items: center;
           padding: 5px;
           background-color: rgba(255, 255, 255, 0.3);
-          backdrop-filter: blur(5%);
+
           .btn {
             display: flex;
             align-items: center;
@@ -139,15 +139,23 @@
             &:hover {
               @include btn($colorOrange);
               padding: 10px 20px;
-              .orangeBtn {
-                background: none;
-              }
+              // .orangeBtn {
+              //   background: none;
+              // }
             }
             .arrowUpRight {
               width: 42px;
               height: 42px;
             }
           }
+          // .hire {
+          //   .arrowUpRight {
+          //     display: none;
+          //     &:hover {
+          //       display: block;
+          //     }
+          //   }
+          // }
         }
       }
     }
@@ -214,6 +222,14 @@
         }
         .personDetails {
           transform: translateY(-20%);
+          .buttons {
+            .btn {
+              padding: 0px 10px;
+              a {
+                font-size: 14px;
+              }
+            }
+          }
         }
       }
     }
@@ -246,6 +262,14 @@
           //   width: 100%; // quoteCard elementini tam genişlikdə göstər
           //   margin-bottom: 20px; // Alt hissədə boşluq əlavə et
           // }
+        }
+        .personDetails {
+          .buttons {
+            bottom: 20px;
+          }
+          .personImg{
+            width: 100%;
+          }
         }
       }
     }
