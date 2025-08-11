@@ -675,70 +675,199 @@ h4 {
     font-size: 32px;
   }
 }
-.why-hire {
+.whyHire {
+  margin: 60px 0;
   background-color: #f2f4f7;
   border-radius: 50px;
   padding: 122px 0;
 }
-.why-hire .container .row {
+.whyHire .container .row {
   display: flex;
   justify-content: space-between;
+  gap: 96px;
 }
-.why-hire .container .row .woman-img {
-  flex: 0 0 40%;
+.whyHire .container .row .womanImg {
+  flex: 0 0 48%;
 }
-.why-hire .container .row .hire-text {
+.whyHire .container .row .hireTextCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 47px;
-  flex: 0 0 55%;
+  flex: 0 0 48%;
 }
-.why-hire .container .row .hire-text h2 {
+.whyHire .container .row .hireTextCard .title {
   color: #344054;
+  font-weight: 600;
 }
-.why-hire .container .row .hire-text p {
+.whyHire .container .row .hireTextCard .hireText {
   color: #98a2b3;
   font-weight: 400;
-  width: 60%;
+  width: 68%;
 }
-.why-hire .container .row .hire-text .statistics {
+.whyHire .container .row .hireTextCard .statistics {
   display: flex;
   gap: 10px;
 }
-.why-hire .container .row .hire-text .statistics .completed-project {
+.whyHire .container .row .hireTextCard .statistics .completedProject {
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.why-hire .container .row .hire-text .statistics .completed-project .number {
+.whyHire .container .row .hireTextCard .statistics .completedProject .number {
   font-size: 36px;
   color: #1d2939;
   font-weight: 500;
 }
-.why-hire .container .row .hire-text .statistics .completed-project p {
+.whyHire .container .row .hireTextCard .statistics .completedProject .completedText {
   color: #667085;
 }
-.why-hire .container .row .hire-text .btn {
+.whyHire .container .row .hireTextCard .btn {
   width: -moz-fit-content;
   width: fit-content;
   border: 1px solid #151515;
   border-radius: 32px;
   padding: 33px 59px;
 }
-.why-hire .container .row .hire-text .btn a {
+.whyHire .container .row .hireTextCard .btn a {
   color: #151515;
   font-weight: 600;
   font-size: 32px;
 }
-.why-hire .container .row .hire-text .btn:hover {
+.whyHire .container .row .hireTextCard .btn:hover {
   background-color: #151515;
 }
-.why-hire .container .row .hire-text .btn:hover a {
+.whyHire .container .row .hireTextCard .btn:hover a {
   color: #ffffff;
 }
 
+@media (max-width: 1100px) {
+  .whyHire .container .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .whyHire .container .row .womanImg {
+    flex: 0 0 50%;
+  }
+  .whyHire .container .row .hireTextCard {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    flex: 0 0 55%;
+  }
+  .whyHire .container .row .hireTextCard .title {
+    color: #344054;
+    font-weight: 600;
+  }
+  .whyHire .container .row .hireTextCard .hireText {
+    color: #98a2b3;
+    font-weight: 400;
+    width: 60%;
+  }
+  .whyHire .container .row .hireTextCard .statistics {
+    display: flex;
+    gap: 10px;
+  }
+  .whyHire .container .row .hireTextCard .statistics .completedProject {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .whyHire .container .row .hireTextCard .statistics .completedProject .number {
+    font-size: 36px;
+    color: #1d2939;
+    font-weight: 500;
+  }
+  .whyHire .container .row .hireTextCard .statistics .completedProject .completedText {
+    color: #667085;
+  }
+  .whyHire .container .row .hireTextCard .btn {
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 1px solid #151515;
+    border-radius: 32px;
+    padding: 33px 59px;
+  }
+  .whyHire .container .row .hireTextCard .btn a {
+    color: #151515;
+    font-weight: 600;
+    font-size: 32px;
+  }
+  .whyHire .container .row .hireTextCard .btn:hover {
+    background-color: #151515;
+  }
+  .whyHire .container .row .hireTextCard .btn:hover a {
+    color: #ffffff;
+  }
+}
+@media (max-width: 768px) {
+  .whyHire {
+    margin: 60px 0;
+    background-color: #f2f4f7;
+    border-radius: 50px;
+    padding: 122px 0;
+  }
+  .whyHire .container .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .whyHire .container .row .womanImg {
+    flex: 0 0 50%;
+  }
+  .whyHire .container .row .hireTextCard {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    flex: 0 0 55%;
+  }
+  .whyHire .container .row .hireTextCard .title {
+    color: #344054;
+    font-weight: 600;
+  }
+  .whyHire .container .row .hireTextCard .hireText {
+    color: #98a2b3;
+    font-weight: 400;
+    width: 60%;
+  }
+  .whyHire .container .row .hireTextCard .statistics {
+    display: flex;
+    gap: 10px;
+  }
+  .whyHire .container .row .hireTextCard .statistics .completedProject {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .whyHire .container .row .hireTextCard .statistics .completedProject .number {
+    font-size: 36px;
+    color: #1d2939;
+    font-weight: 500;
+  }
+  .whyHire .container .row .hireTextCard .statistics .completedProject .completedText {
+    color: #667085;
+  }
+  .whyHire .container .row .hireTextCard .btn {
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 1px solid #151515;
+    border-radius: 32px;
+    padding: 33px 59px;
+  }
+  .whyHire .container .row .hireTextCard .btn a {
+    color: #151515;
+    font-weight: 600;
+    font-size: 32px;
+  }
+  .whyHire .container .row .hireTextCard .btn:hover {
+    background-color: #151515;
+  }
+  .whyHire .container .row .hireTextCard .btn:hover a {
+    color: #ffffff;
+  }
+}
 .portfolio {
   padding: 97px;
 }

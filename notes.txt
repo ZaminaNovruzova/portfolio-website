@@ -48,6 +48,8 @@ why-hire
 
 sekli hover edende arxada halqa gelsin
 gaplar ve mesafeler padding nese tam deyil bir de bax
+olcu ile bagli problemler 
+responsivlik
 
 portfolio 6 div
 1cisi heading flex 50%
