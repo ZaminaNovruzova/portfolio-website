@@ -267,11 +267,16 @@
           .buttons {
             bottom: 20px;
           }
-          .personImg{
+          .personImg {
             width: 100%;
           }
         }
       }
     }
+  }
+}
+@media (max-width: 375px) {
+  .vectorTwo {
+    display: none;
   }
 }

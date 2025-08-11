@@ -10,16 +10,18 @@
       display: flex;
       justify-content: space-between;
       gap: 96px;
-      // flex-wrap: wrap;
       .womanImg {
         flex: 0 0 48%;
+        width: max-content;
+        img {
+          object-fit: contain;
+        }
       }
       .hireTextCard {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 47px;
-        flex: 0 0 48%;
         .title {
           color: $colorSlateGray;
           font-weight: 600;
@@ -27,7 +29,7 @@
         .hireText {
           color: $colorExperienceHireText;
           font-weight: 400;
-          width: 68%;
+          width: 72%;
         }
         .statistics {
           display: flex;
@@ -45,6 +47,7 @@
             }
             .completedText {
               color: $colorHireSpan;
+              text-wrap: wrap;
             }
           }
         }
@@ -70,66 +73,20 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .whyHire {
     .container {
       .row {
-        display: flex;
-        justify-content: space-between;
-        //*gap 96px hardadir?
-        .womanImg {
-          flex: 0 0 50%;
-        }
         .hireTextCard {
-          display: flex;
-          flex-direction: column;
-          // justify-content: center;
-          //*gap duz deyil sanki birde bax
-          gap: 47px;
-          flex: 0 0 55%;
           .title {
-            color: $colorSlateGray;
-            font-weight: 600;
+            font-size: 40px;
           }
           .hireText {
-            color: $colorExperienceHireText;
-            font-weight: 400;
-            width: 60%;
-          }
-          .statistics {
-            display: flex;
-            gap: 10px;
-            .completedProject {
-              flex: 0 0 50%;
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-              .number {
-                font-size: 36px;
-                color: $colorCharcoalBlue;
-                //*hero text de olan eyni bold problemi bunda da var 100%font face e baxmaq lazimdir
-                font-weight: 500;
-              }
-              .completedText {
-                color: $colorHireSpan;
-              }
-            }
+            width: 100%;
           }
           .btn {
-            width: fit-content;
-            border: 1px solid $colorHireButton;
-            border-radius: 32px;
-            padding: 33px 59px;
             a {
-              color: $colorHireButton;
-              font-weight: 600;
-              font-size: 32px;
-            }
-            &:hover {
-              background-color: $colorHireButton;
-              a {
-                color: $colorWhite;
-              }
+              font-size: 22px;
             }
           }
         }
@@ -137,74 +94,60 @@
     }
   }
 }
- @media (max-width:768px) {
-    .whyHire {
-    margin: 60px 0;
-    background-color: $colorLightGray;
-    border-radius: 50px;
-    padding: 122px 0;
+
+@media (max-width: 768px) {
+  .whyHire {
+    padding: 50px 0;
     .container {
       .row {
-        display: flex;
-        justify-content: space-between;
-        //*gap 96px hardadir?
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
         .womanImg {
-          flex: 0 0 50%;
+          flex: 0 0 100%;
         }
         .hireTextCard {
-          display: flex;
-          flex-direction: column;
-          // justify-content: center;
-          //*gap duz deyil sanki birde bax
-          gap: 47px;
-          flex: 0 0 55%;
-          .title {
-            color: $colorSlateGray;
-            font-weight: 600;
-          }
-          .hireText {
-            color: $colorExperienceHireText;
-            font-weight: 400;
-            width: 60%;
-          }
+          align-items: center;
+          text-align: center;
+          flex: 0 0 100%;
+
           .statistics {
-            display: flex;
-            gap: 10px;
-            .completedProject {
-              flex: 0 0 50%;
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-              .number {
-                font-size: 36px;
-                color: $colorCharcoalBlue;
-                //*hero text de olan eyni bold problemi bunda da var 100%font face e baxmaq lazimdir
-                font-weight: 500;
-              }
-              .completedText {
-                color: $colorHireSpan;
-              }
-            }
-          }
-          .btn {
-            width: fit-content;
-            border: 1px solid $colorHireButton;
-            border-radius: 32px;
-            padding: 33px 59px;
-            a {
-              color: $colorHireButton;
-              font-weight: 600;
-              font-size: 32px;
-            }
-            &:hover {
-              background-color: $colorHireButton;
-              a {
-                color: $colorWhite;
-              }
-            }
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
           }
         }
       }
     }
   }
- }
+}
+
+@media (max-width: 375px) {
+  .whyHire {
+    padding: 30px 0;
+    .container {
+      .row {
+        .hireTextCard {
+          .title {
+            font-size: 32px;
+          }
+          .statistics {
+            gap: 25px;
+            .completedProject {
+              .number {
+                font-size: 26px;
+              }
+              .completedText {
+                text-wrap: nowrap;
+                font-size: 18px;
+              }
+            }
+          }
+          .btn {
+            padding: 16px 30px;
+          }
+        }
+      }
+    }
+  }
+}
