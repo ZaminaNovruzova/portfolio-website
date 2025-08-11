@@ -24,7 +24,7 @@
 }
 
 * {
-  // outline: 1px solid red;
+  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -70,7 +70,9 @@ span {
 }
 
 p,
-a {
+a,
+h2,
+h4 {
   font-weight: 500;
   font-size: 20px;
 }

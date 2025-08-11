@@ -18,6 +18,7 @@
   font-style: normal;
 }
 * {
+  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -64,7 +65,9 @@ span {
 }
 
 p,
-a {
+a,
+h2,
+h4 {
   font-weight: 500;
   font-size: 20px;
 }
@@ -583,30 +586,95 @@ a {
   }
 }
 .experience .container .row {
-  display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .experience .container .row .title {
   padding: 85px 0;
-  display: flex;
-  justify-content: center;
-}
-.experience .container .row .title h2 {
+  text-align: center;
   color: #344054;
   font-weight: 500;
+  text-wrap: nowrap;
 }
-.experience .container .row .title .experience-datas .exp-data .job {
-  color: #344054;
+.experience .container .row .experienceCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.experience .container .row .experienceCard .expInfosLeft,
+.experience .container .row .experienceCard .expInfosRight {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 33%;
+}
+.experience .container .row .experienceCard .expInfosLeft {
+  gap: 102px;
+}
+.experience .container .row .experienceCard .expInfosRight {
+  gap: 48px;
+}
+.experience .container .row .experienceCard .expData {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.experience .container .row .experienceCard .expData .job {
   font-size: 40px;
+  color: #344054;
   font-weight: 600;
+  text-wrap: nowrap;
 }
-.experience .container .row .title .experience-datas .exp-data .date {
-  color: #98a2b3;
+.experience .container .row .experienceCard .expData .date {
   font-size: 24px;
   font-weight: 400;
+  color: #98a2b3;
+}
+.experience .container .row .experienceCard .circleLine {
+  height: 400px;
+}
+.experience .container .row .experienceCard .circleLine img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
+@media (max-width: 1200px) {
+  .experience .container .row .title {
+    padding: 65px 0;
+  }
+  .experience .container .row .experienceCard .expInfosLeft,
+  .experience .container .row .experienceCard .expInfosRight {
+    flex: 0 0 45%;
+  }
+  .experience .container .row .experienceCard .expData .job {
+    font-size: 32px;
+    text-wrap: wrap;
+  }
+  .experience .container .row .experienceCard .circleLine {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .experience .container .row .title {
+    padding: 45px 0;
+    font-size: 48px;
+    text-wrap: wrap;
+  }
+  .experience .container .row .experienceCard {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .experience .container .row .experienceCard .expInfosLeft,
+  .experience .container .row .experienceCard .expInfosRight {
+    flex: 0 0 100%;
+  }
+  .experience .container .row .experienceCard .expInfosLeft,
+  .experience .container .row .experienceCard .expInfosRight {
+    gap: 35px;
+  }
+  .experience .container .row .experienceCard .expData .job {
+    font-size: 32px;
+  }
+}
 .why-hire {
   background-color: #f2f4f7;
   border-radius: 50px;

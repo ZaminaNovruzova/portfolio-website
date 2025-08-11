@@ -1,31 +1,110 @@
-@use "../variables";
+@use "../variables" as *;
 
 .experience {
   .container {
     .row {
-      display: flex;
       flex-direction: column;
       gap: 10px;
       .title {
         padding: 85px 0;
+        text-align: center;
+        color: $colorSlateGray;
+        font-weight: 500;
+        text-wrap: nowrap;
+      }
+      .experienceCard {
         display: flex;
-        justify-content: center;
-        h2 {
-          color: variables.$colorSlateGray;
-          font-weight: 500;
+        justify-content: space-between;
+        gap: 30px;
+        .expInfosLeft,
+        .expInfosRight {
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 33%;
         }
-        .experience-datas {
-       
-          .exp-data {
+        .expInfosLeft {
+          gap: 102px;
+        }
+        .expInfosRight {
+          gap: 48px;
+        }
+        .expData {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          .job {
+            font-size: 40px;
+            color: $colorSlateGray;
+            font-weight: 600;
+            text-wrap: nowrap;
+          }
+          .date {
+            font-size: 24px;
+            font-weight: 400;
+            color: $colorExperienceHireText;
+          }
+        }
+        .circleLine {
+          height: 400px;
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .experience {
+    .container {
+      .row {
+        .title {
+          padding: 65px 0;
+        }
+        .experienceCard {
+          .expInfosLeft,
+          .expInfosRight {
+            flex: 0 0 45%;
+          }
+          .expData {
             .job {
-              color: variables.$colorSlateGray;
-              font-size: 40px;
-              font-weight: 600;
+              font-size: 32px;
+              text-wrap: wrap;
             }
-            .date {
-              color: variables.$colorExperienceHireText;
-              font-size: 24px;
-              font-weight: 400;
+          }
+          .circleLine {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    .container {
+      .row {
+        .title {
+          padding: 45px 0;
+          font-size: 48px;
+          text-wrap: wrap;
+        }
+        .experienceCard {
+          flex-wrap: wrap;
+          text-align: center;
+          .expInfosLeft,
+          .expInfosRight {
+            flex: 0 0 100%;
+          }
+          .expInfosLeft,
+          .expInfosRight {
+            gap: 35px;
+          }
+          .expData {
+            .job {
+              font-size: 32px;
             }
           }
         }

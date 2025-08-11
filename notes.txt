@@ -41,12 +41,8 @@ responsiv 1024 olanda 3cu card yoxa cixsin ve slide da gorunsun
 umumiyyetle slide verek olcu kicildikce surusme olsun 
 ortadki card niye asagi dusur olcu kicilende-max content verende tekce yoxa cixir onda da responsivlik gedir? slide hell ede biler?
 
-
-my work experience
-2 div heading ve experience 
-2ci divin icinde 3 div flex 33% justify content space between
-responsivlikde ortadaki sekil yoxa cixac aq ve yazilar alt alta olacaq 
-
+experience 
+job basliq kicilende title sanki cox boyuk qalir 
 
 why-hire
 
