@@ -30,51 +30,7 @@
               transform: scale(1.1);
             }
           }
-          .logo {
-            padding-left: 5px;
-            padding-right: 5px;
-            height: 86px;
-            display: flex;
-            justify-content: center;
-            &:hover {
-              background-color: initial;
-              transform: scale(1);
-              .logoName {
-                display: none;
-              }
-              .logoAuthor {
-                display: block;
-              }
-            }
-            a {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              .logoPng {
-                width: 46px;
-                height: 46px;
-                background-color: $colorOrange;
-                border-radius: 50px;
-                padding: 5px;
-                img {
-                  object-fit: contain;
-                }
-              }
-              .logoAuthor {
-                display: none;
-                .authorName {
-                  font-weight: 600;
-                  font-size: 20px;
-                  text-wrap: nowrap;
-                }
-                .madeBy {
-                  font-size: 14px;
-                  font-weight: 400;
-                  color: $colorExperienceHireText;
-                }
-              }
-            }
-          }
+        
           .orangeBtn {
             font-weight: 700;
             &:hover {

@@ -36,7 +36,7 @@
 
 body {
   background-color: $colorWhite;
-  padding: 40px 0;
+  padding-top: 40px;
 }
 
 main {
@@ -72,7 +72,6 @@ span {
 
 p,
 a,
-h2,
 h4 {
   font-weight: 500;
   font-size: 20px;
@@ -80,7 +79,7 @@ h4 {
 .orange {
   color: $colorOrange;
 }
-.title {
+h2 {
   font-size: 64px;
 }
 
@@ -123,6 +122,53 @@ svg {
   stroke: $colorWhite;
   width: 42px;
   height: 42px;
+}
+
+.logo {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 86px;
+  display: flex;
+  &:hover {
+    background-color: initial;
+    transform: scale(1);
+    .logoName {
+      display: none;
+    }
+    .logoAuthor {
+      display: block;
+    }
+  }
+ 
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $colorWhite;
+    .logoPng {
+      width: 46px;
+      height: 46px;
+      background-color: $colorOrange;
+      border-radius: 50px;
+      padding: 5px;
+      img {
+        object-fit: contain;
+      }
+    }
+    .logoAuthor {
+      display: none;
+      .authorName {
+        font-weight: 600;
+        font-size: 20px;
+        text-wrap: nowrap;
+      }
+      .madeBy {
+        font-size: 14px;
+        font-weight: 400;
+        color: $colorExperienceHireText;
+      }
+    }
+  }
 }
 //*done
 

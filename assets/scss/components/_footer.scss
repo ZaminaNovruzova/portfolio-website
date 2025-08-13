@@ -10,66 +10,219 @@
     padding-bottom: 25px;
     .row {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 15px;
+      a,
+      p {
+        color: $colorTestimonialHeadings;
+      }
+
+      h6 {
+        color: $colorOrange;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .footerHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        .titleWhite {
+          font-weight: 600;
+          flex: 1 1 75%;
+          text-wrap: nowrap;
+        }
+        .orangeBtn {
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          text-wrap: nowrap;
+
+          &:hover {
+            a {
+              svg {
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+      }
+      .line {
+        margin: 20px 0;
+        border: 2px solid $colorFooterLine;
+      }
+      .footerNav {
+        .navList,
+        .contact {
+          a {
+            font-size: 16px;
+            &:hover {
+              color: $colorOrange;
+            }
+          }
+        }
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+        flex-wrap: wrap;
+        .footerText {
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 40%;
+          .logo {
+            padding-left: 0;
+            padding-right: 0;
+          }
+          .socials {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+            .socialItem {
+              fill: $colorWhite;
+              svg {
+                width: 22px;
+                height: 22px;
+              }
+            }
+            .socialItem:hover {
+              fill: black;
+            }
+          }
+        }
+        .navList,
+        .contact,
+        .latestInfo {
+          display: flex;
+          flex-direction: column;
+          gap: 28px;
+        }
+        .navList .navLinks,
+        .contact .contactList {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .latestInfo {
+          form {
+            display: flex;
+            input {
+              background-color: $colorWhite;
+              border-top-left-radius: 14px;
+              border-bottom-left-radius: 14px;
+              padding: 13px 14px;
+              height: 51px;
+              width: min-content;
+              &::placeholder {
+                font-size: 16px;
+                color: $colorBlack;
+              }
+            }
+            .infoBtn {
+              background-color: $colorOrange;
+              padding: 10px 8px;
+              border-top-right-radius: 14px;
+              border-bottom-right-radius: 14px;
+              height: 51px;
+              &:hover {
+                opacity: 0.7;
+                cursor: pointer;
+              }
+              svg {
+                fill: $colorWhite;
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+      }
+      .copyright {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
     }
   }
 }
-// .footer {
-//   background-color: variables.$colorFooter;
-//   border-top-left-radius: 24px;
-//   border-top-right-radius: 24px;
-//   .container {
-//     padding: 25px 71px;
-//     .row {
-//       .footer-heading,
-//       .footer-nav,
-//       .copyright {
-//         display: flex;
-//         justify-content: space-between;
-//       }
-//       .footer-heading {
-//         h2 {
-//           font-size: 64px;
 
-//           font-weight: 600;
-//           color: variables.$colorTestimonialHeadings;
-//         }
-//         .orange {
-//           @include mixins.btn(variables.$colorOrange);
-//           padding: 10px 20px;
-//           font-weight: 500;
-//           color: variables.$colorWhite;
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-//           .arrow {
-//             width: 42px;
-//             height: 42px;
-//             display: flex;
-//             align-items: center;
-//             .arrow-right-up,
-//             .arrow-right {
-//               color: variables.$colorWhite;
-//               width: 17.5px;
-//               height: 17.5px;
-//             }
-//           }
-//         }
-//       }
-//       .footer-nav {
-//         h6 {
-//             color: variables.$colorOrange;
-//         }
-//         a {
-//           color: variables.$colorTestimonialHeadings;
-//         }
-//         .footer-text {
-//             .logo {
-//                 width: 46px;
-//                 height: 46px;
+@media (max-width: 830px) {
+  .footer {
+    .container {
+      .row {
+        .footerHeading {
+          flex-wrap: wrap;
+          .titleWhite {
+            font-size: 48px;
+          }
+          .orangeBtn {
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+        .footerNav {
+          .footerText,
+          .contact,
+          .latestInfo {
+            flex: 1 1 43%;
+          }
+        }
+      }
+    }
+  }
+}
 
-//             }
-//         }
-//       }
-//     }
-//   }
-// }
+@media (max-width: 500px) {
+  .footer {
+    .container {
+      .row {
+        .footerHeading {
+          justify-content: center;
+          .titleWhite {
+            font-size: 32px;
+            text-wrap: wrap;
+            text-align: center;
+          }
+        }
+        .footerNav {
+          flex-direction: column;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          .footerText,
+          .contact,
+          .latestInfo {
+            flex: 1 1 100%;
+          }
+          .footerText {
+            align-items: center;
+            p {
+              font-size: 16px;
+            }
+            .socials {
+              .socialItem {
+                svg {
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+            }
+          }
+        }
+        .copyright {
+          justify-content: center;
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//*done
