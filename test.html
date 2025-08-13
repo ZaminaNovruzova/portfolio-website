@@ -1,119 +1,32 @@
-<!-- @use "../variables";
-@use "../mixins";
+    <script src="https://kit.fontawesome.com/c18bc20aed.js" crossorigin="anonymous"></script>
 
-.header {
-  position: fixed;
-  z-index: 100;
-  .container {
-    .row {
-      .nav-bar {
-        background-color: variables.$colorNav;
-        border-radius: 50px;
-        border: 1px solid variables.$colorNav;
-        display: flex;
-        justify-content: space-between;
-        .buttons {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 10px;
-          gap: 10px;
-          .btn {
-            font-weight: 400;
-            padding: 20px 40px;
-            &:hover {
-              @include mixins.btn(variables.$colorBtnHover);
-              transform: scale(1.1);
-            }
-          }
-          .logo {
-            padding-left: 5px;
-            padding-right: 5px;
-            width: 307px;
-            height: 86px;
-            display: flex;
-            justify-content: center;
-            &:hover {
-              background-color: initial;
-              transform: scale(1);
-              .logo-name {
-                display: none;
-              }
-              .logo-author {
-                display: block;
-              }
-            }
-            a {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              .logo-png {
-                width: 46px;
-                height: 46px;
-              }
-              .logo-author {
-                display: none;
-                .author-name {
-                  font-weight: 600;
-                  font-size: 20px;
-                  text-wrap: nowrap;
-                }
-                .made-by {
-                  font-size: 14px;
-                  font-weight: 400;
-                  color: variables.$colorExperienceHireText;
-                }
-              }
-            }
-          }
-          .orange {
-            @include mixins.btn(variables.$colorOrange);
-            font-weight: 700;
-            &:hover {
-              background-color: variables.$colorOrange;
-              transform: scale(1);
-            }
-          }
-        }
-      }
-      .burger {
-        display: none;
-      }
-    }
-  }
-}
+    
+    <script>
+        let swiper;
 
-@media (max-width: 1300px) {
-  .header {
-    .container {
-      .row {
-        .nav-bar {
-          .buttons {
-            .btn {
-              display: none;
+        function initSwiper() {
+            const isMobile = window.innerWidth <= 768;
+
+            if (swiper) {
+                swiper.destroy(true, true);
             }
-            .logo {
-              display: block;
-            }
-          }
-          .burger {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-            padding: 20px 40px;
-            gap: 10px;
-            width: fit-content;
-            span {
-              display: block;
-              width: 40px;
-              height: 2px;
-              border: 2px solid white;
-              border-radius: 10px;
-            }
-          }
+
+            swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: isMobile,
+                allowTouchMove: isMobile,
+                autoplay: isMobile ? {
+                    delay: 4000,
+                    disableOnInteraction: true,
+                } : false,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
         }
-      }
-    }
-  }
-} -->
+
+        initSwiper();
+        window.addEventListener("resize", initSwiper);
+    </script>

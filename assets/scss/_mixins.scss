@@ -13,3 +13,16 @@
   font-family: "Inter", sans-serif;
   text-wrap: nowrap;
 }
+
+@mixin arrowbtn() {
+  width: 114px;
+  height: 114px;
+  border-radius: 100%;
+  background-color: $colorSlateGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 21px;
+  gap: 10px;
+
+}

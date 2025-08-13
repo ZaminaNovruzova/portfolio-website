@@ -116,7 +116,6 @@
         .personImg {
           position: absolute;
           bottom: 0;
-          width: 700px;
         }
         .ellipse {
           z-index: -2;
@@ -147,11 +146,7 @@
             a {
               color: $colorWhite;
             }
-            svg {
-              stroke: $colorWhite;
-              width: 42px;
-              height: 42px;
-            }
+           
           }
           .hire {
             svg {

@@ -1,18 +1,17 @@
 @use "../variables" as *;
+@use "../mixins" as *;
 
 .services {
-  background-image: url("/assets/images/service-bg-details.png"),
-    url("/assets/images/service-bg.jpg");
-  background-repeat: no-repeat no-repeat;
-  background-position: center, center;
-  background-size: cover, cover;
+  background-image: url("/assets/images/service-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 50px;
-  overflow: hidden;
+
   .container {
     padding-top: 116px;
     padding-bottom: 116px;
-    background-color: $colorNav;
-    // opacity: 20%;
+
     .row {
       display: flex;
       flex-direction: column;
@@ -49,43 +48,34 @@
             border-radius: 35px;
             border: 2px solid $colorWhite;
             overflow: hidden;
-            &:hover {
-              background-color: $colorOrange;
+            .cardTitle {
+              font-size: 32px;
+              font-weight: 500;
+              color: $colorWhite;
+              padding: 37px;
+              text-wrap: nowrap;
+            }
+            .cardImg {
+              .img {
+                border-radius: 35px;
+                overflow: hidden;
+              }
               .arrowCircle {
-                //*svg yuklemisem amma bunun backgroundu orange olmur indi men de yeqin ki ancaq arroq verib  background ozum verecem
-                img {
-                  color: $colorOrange;
-                }
-              }
-              //*carda hover edende sekil saqqiz kimi uzanmasin normal ancaq yuxarisi uzansin
-              .cardImg {
-                img {
-                  transform: scaleY(1.1);
+                @include arrowbtn();
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                svg {
+                  width: 72px;
+                  height: 72px;
                 }
               }
             }
-            .serviceDetails {
-              .cardTitle {
-                font-size: 32px;
-                font-weight: 500;
-                color: $colorWhite;
-                padding: 37px;
-                text-wrap: nowrap;
-              }
-              .cardImg::before {
-                content: "";
-
-                border: 2px solid rgba(249, 250, 251, 0.3);
-                display: block;
-                margin: 23px 0;
-              }
-            }
-            .arrowCircle {
-              width: 114px;
-              height: 114px;
-              position: absolute;
-              bottom: 0;
-              right: 0;
+            .cardImg::before {
+              content: "";
+              border: 2px solid rgba(249, 250, 251, 0.3);
+              display: block;
+              margin: 23px 0;
             }
           }
         }
@@ -98,70 +88,78 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .services {
-    .container {
-      padding-top: 70px;
-      padding-bottom: 70px;
-      .row {
-        gap: 70px;
-        .serviceHeading {
-          .title,
-          .text {
-            flex: 0 0 100%;
-          }
-        }
-        .serviceSlide {
-          .serviceCards {
-            .card {
-              .serviceDetails {
-                .cardTitle {
-                  font-size: 24px;
-                  padding: 37px;
-                  text-wrap: nowrap;
-                }
-              }
-              .arrowCircle {
-                width: 74px;
-                height: 74px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 1024px) {
+//   .services {
+//     .container {
+//       padding-top: 70px;
+//       padding-bottom: 70px;
+//       .row {
+//         gap: 70px;
+//         .serviceHeading {
+//           .title,
+//           .text {
+//             flex: 0 0 100%;
+//           }
+//         }
+//         .serviceSlide {
+//           .serviceCards {
+//             .card {
+//               .serviceDetails {
+//                 .cardTitle {
+//                   font-size: 24px;
+//                   padding: 37px;
+//                   text-wrap: nowrap;
+//                 }
+//               }
+//               .arrowCircle {
+//                 width: 74px;
+//                 height: 74px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-//*768den-320 e qeder normal deyil  sonra kartlar slide olmaga baslasin ve 768 de aralrindaki gap azalsin 
-//* done
+// //*768den-320 e qeder normal deyil  sonra kartlar slide olmaga baslasin ve 768 de aralrindaki gap azalsin
+// //* done
 
-@media (max-width: 425px) {
-  .services {
-    .container {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      .row {
-        gap: 50px;
-        .serviceHeading {
-          text-align: center;
-          .title {
-            font-size: 40px;
-          }
-        }
-        .serviceSlide {
-          .serviceCards {
-            .deactive {
-              display: none;
-            }
-            .card {
-              .cardTitle {
-                text-align: center;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 425px) {
+//   .services {
+//     .container {
+//       padding-top: 50px;
+//       padding-bottom: 50px;
+//       .row {
+//         gap: 50px;
+//         .serviceHeading {
+//           text-align: center;
+//           .title {
+//             font-size: 40px;
+//           }
+//         }
+//         .serviceSlide {
+//           .serviceCards {
+//             .deactive {
+//               display: none;
+//             }
+//             .card {
+//               .cardTitle {
+//                 text-align: center;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+//*seklin arxasinda shadow var 3qatli 3 div ust uste ve herbirine z index background color ve olcu de inherit veri duzelde bilerem
+
+//*responsivlikde slide lazim 
+//*buttonlar olan yerde kesilme olmalidir
+//*background img rotate 
+//*opacity var bacground img in ustunde 
