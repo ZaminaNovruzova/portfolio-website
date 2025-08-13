@@ -19,12 +19,13 @@ ekran olcusu kicilende div altdan reski boyuyubb sonra balacalasir bu kecidi yox
 
 
 hero
-.personDetails transform translateY vermissem deye asagida bosluq qalir postiob absolute da top da islemir 
-quote-up bold classinda font weight duz gelmir duzeldende diger yazilara tesir edir bunu arasdir
-sehife acilanda portfolio statik goruntusunde olsun amma hire hover edende portfolio clasin gorunusu baglansin hire acilsin sonra portfolio ednede de onun gorunusu acilsin hire baglansin yeqin bu js dir
-herodaki hello button a hrefdir yoxsa prosta salamlamadir? onun mentiqi nedir orda?
-button bottom u faizle vermeyi yoxla
-seklin uzerine hover edende iconlar altdan cixsin
+
+//* icon qaldi
+//* icon hover edende h1 yoxa cixsin ve quote card flex start olsun
+//* seklin olcusu teyin olunmalidir
+//*buttonlar ucun js tetbiq edeceyik birine hover edende digerinden active classsi remove olsun hover edilene elave olunsun
+//*responsivlik qaldi
+
 
 
  my-services
@@ -43,14 +44,29 @@ ortadki card niye asagi dusur olcu kicilende-max content verende tekce yoxa cixi
 
 experience 
 job basliq kicilende title sanki cox boyuk qalir 
+birde 375 den asagi olcude yazilarin olcusu cox boyukdur 
 
 why-hire
-
 sekli hover edende arxada halqa gelsin
-gaplar ve mesafeler padding nese tam deyil bir de bax
-olcu ile bagli problemler 
-responsivlik
 
-portfolio 6 div
-1cisi heading flex 50%
-2ci div icinde sekil div sekiller ustune hover edende ox narinci olur
+
+portfolio 
+sekiller niye ortada qalib 
+figmada verilen bu statik olculer ne qeder dogrudur 
+hover edende yazi gelsin
+responsivlik
+arrow buttonlar component olacaq sonda qayit onu bir de duzelt sabahin taski 
+
+testimonials
+
+
+portfoliodan asagi hisselere qalib 
+responsive olmasi ucun boyuk olculere width faizle ver ve container i faizle deyis 
+
+
+header
+
+label elave etmeliyem ve burger menuya klik edende gelen hisseni duzeltmeliyem
+ 
+
+

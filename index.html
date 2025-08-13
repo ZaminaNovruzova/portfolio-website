@@ -13,6 +13,7 @@
         <div class="container">
             <div class="row">
                 <nav class="navBar">
+                    <input type="checkbox" name="checked" id="checked">
                     <ul class="buttons">
                         <li class="btn orangeBtn"><a href="index.html">Home</a></li>
                         <li class="btn"><a href="#about">About</a></li>
@@ -30,9 +31,11 @@
                         <li class="btn"><a href="#contact">Contact</a></li>
                     </ul>
                     <div class="burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <label for="checked" class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
                     </div>
                 </nav>
             </div>
@@ -44,23 +47,23 @@
                 <div class="row">
                     <div class="aboutMe">
                         <div class="helloBtn">
-                            <div class="vectorOne"><img src="assets/images/hero-vector.png" alt="vector"></div>
+                            <div class="vectorOne"><img src="assets/images/vector-one.png" alt="vector"></div>
                             <div class="btn"><a href="#">Hello!</a></div>
                         </div>
                         <div class="aboutTitle">
                             <h1>I’m <span class="orange">Jenny</span>,<br>Product Designer</h1>
-                            <div class="vectorTwo"><img src="assets/images/hero-vector-2.png" alt="vector"></div>
+                            <div class="vectorTwo"><img src="assets/images/vector-two.png" alt="vector"></div>
 
                         </div>
                     </div>
                     <div class="aboutText">
                         <div class="quoteCard">
-                            <div class="quoteUp"><img src="assets/images/quote-up.svg" alt="quote"></div>
+                            <div class="quoteUp"><img src="assets/images/quote-up.png" alt="quote"></div>
                             <p class="text">Jenny’s Exceptional product design ensure our website’s success. Highly
                                 Recommended</p>
                         </div>
                         <div class="experienceCard">
-                            <div class="stars"><img src="assets/images/stars.png" alt="stars"></div>
+                            <div class="stars"><img src="assets/images/stars-five.png" alt="stars"></div>
                             <div class="experienceText">
                                 <span class="year">10 Years</span>
                                 <p class="experience">Experience</p>
@@ -68,19 +71,33 @@
                         </div>
                     </div>
                     <div class="personDetails">
-                        <div class="personImg"><img src="assets/images/woman-with-ellipse.svg" alt="woman"></div>
-                        <div class="personImgIcons"><img src="assets/images/woman-with-icons.svg" alt="woman"></div>
+                        <div class="ellipse"><img src="assets/images/hero-ellipse.png" alt="image"></div>
+                        <div class="personImgIcons"><img src="assets/images/hero-img-icons.png" alt="woman"></div>
+                        <div class="personImg"><img src="assets/images/hero-woman.png" alt="woman"></div>
                         <div class="buttons blurred">
                             <div class="btn orangeBtn">
-                                <a href="#" target="_blank">Portfolio</a>
-                                <a href="#" target="_blank" class="arrowUpRight">
-                                    <img src="assets/images/arrow-up-right.svg" alt="arrow-up-right">
+                                <a href="#" target="_blank">Portfolio
                                 </a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" 
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path d="M7.17 17L17 7"  stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M7 7H17V17"  stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+
                             </div>
                             <div class="btn hire">
-                                <a href="#">Hire me</a>
-                                <a href="#" target="_blank" class="arrowUpRight"> <img
-                                        src="assets/images/arrow-up-right.svg" alt="arrow-up-right">
+                                <a href="#">Hire me
+                                </a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" 
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
@@ -92,7 +109,7 @@
             <div class="container">
                 <div class="row">
                     <div class="serviceHeading">
-                        <h2 class="title">My <span class="orange">Services</span></h2>
+                        <h2 class="titleWhite">My <span class="orange">Services</span></h2>
                         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
                             posuere in
                             justo vulputate, bibendum sodales</p>
@@ -189,7 +206,8 @@
                     <div class="womanImg"><img src="assets/images/hire-img.png" alt="woman"></div>
                     <div class="hireTextCard">
                         <h2 class="title">Why <span class="orange">Hire me</span>?</h2>
-                        <p class="hireText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo
+                        <p class="hireText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
+                            posuere in justo
                             vulputate,
                             bibendum sodales </p>
                         <div class="statistics">
@@ -207,54 +225,55 @@
                     </div>
                 </div>
             </div>
-        </section>  
-        <!-- <section class="portfolio">
+        </section>
+        <section class="portfolio">
             <div class="container">
                 <div class="row">
-                    <div class="heading">
-                        <h2>Lets have a look at my <span class="orange">Portfolio</span></h2>
-                        <div class="btn"><a href="#" target="_blank">See All</a></div>
+                    <div class="portfolioHeading">
+                        <h2 class="title">Lets have a look at my <span class="orange">Portfolio</span></h2>
+                        <div class="orangeBtn"><a href="#" target="_blank">See All</a></div>
                     </div>
-                    <div class="portfolio-details">
-                        <div class="portfolio-cards-dots">
-                            <div class="cards">
+                    <div class="portfolioDetails">
+                        <div class="portfolioSlide">
+                            <div class="portfolioCards">
                                 <div class="card">
-                                    <div class="arrow-white"><img src="assets/images/arrow-right-white.svg" alt="">
+                                    <div class="arrowRight"><img src="assets/images/arrow-right-white.svg" alt="">
                                     </div>
                                     <div class="lirante">
-                                        <h3>Lirante</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum
+                                        <h3 class="liranteTitle">Lirante</h3>
+                                        <p class="liranteText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed congue interdum
                                             ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Sed
                                             lobortis orci elementum egestas lobortis.</p>
                                     </div>
                                 </div>
                                 <div class="card">
-                                    <div class="arrow-white"><img src="assets/images/arrow-right-white.svg" alt="">
+                                    <div class="arrowRight"><img src="assets/images/arrow-right-white.svg" alt="">
                                     </div>
                                     <div class="lirante">
-                                        <h3>Lirante</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum
+                                        <h3 class="liranteTitle">Lirante</h3>
+                                        <p class="liranteText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed congue interdum
                                             ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Sed
                                             lobortis orci elementum egestas lobortis.</p>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="dots"><img src="assets/images/dots.svg" alt="dots"></div>
                         </div>
-                        <ul class="design-links">
-                            <li class="btn"><a href="#" target="_blank">Landing Page</a></li>
-                            <li class="btn"><a href="#" target="_blank">Product Design</a></li>
-                            <li class="btn"><a href="#" target="_blank">Animation</a></li>
-                            <li class="btn"><a href="#" target="_blank">Glassmorphism</a></li>
-                            <li class="btn"><a href="#" target="_blank">Cards</a></li>
+                        <ul class="portfolioLinks">
+                            <li class="grayBtn"><a href="#" target="_blank">Landing Page</a></li>
+                            <li class="grayBtn"><a href="#" target="_blank">Product Design</a></li>
+                            <li class="grayBtn"><a href="#" target="_blank">Animation</a></li>
+                            <li class="grayBtn"><a href="#" target="_blank">Glassmorphism</a></li>
+                            <li class="grayBtn"><a href="#" target="_blank">Cards</a></li>
                         </ul>
-                        <div class="about-lirante">
+                        <div class="aboutLirante">
                             <div class="subtitle">
                                 <h4>Lirante - Food Delivery Solution</h4>
-                                <div class="arrow-up-right">
+                                <div class="arrowUpRight">
                                     <img src="assets/images/services-arrow.svg" alt="arrow" a>
                                 </div>
                             </div>
@@ -265,32 +284,121 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+        <section class="testimonials"></section>
+        <section class="projectIdea" id="project">
+            <div class="container">
+                <div class="row">
+                    <h2 class="title">Have an Awesome Project Idea? <span class="orange">Let’s Discuss</span></h2>
+                    <div class="projectCard">
+                        <div class="emailForm">
+                            <div class="emailIcon"><img src="assets/images/sms.svg" alt="image"></div>
+                            <form>
+                                <input class="emailInput" type="email" placeholder="Enter Email Address" required>
+                                <button class="orangeBtn" type="submit">Send</button>
+                            </form>
+                        </div>
+                        <div class="projectIdeaInfos">
+                            <div class="ideaInfo">
+                                <div class="infoImg"><img src="assets/images/star.png" alt="image"></div>
+                                <span>4.9/5 Average Ratings</span>
+                            </div>
+                            <div class="ideaInfo">
+                                <div class="infoImg"><img src="assets/images/award.png" alt="image"></div>
+                                <span>25+ Winning Awards</span>
+                            </div>
+                            <div class="ideaInfo">
+                                <div class="infoImg"><img src="assets/images/shield-tick.png" alt="image"></div>
+                                <span>Certified Product Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="component">
+            <div class="componentImg">
+                <img src="assets/images/Component 11.png" alt="">
+            </div>
+        </section>
+        <section class="blogPost">
+            <div class="container">
+                <div class="row">
+                    <div class="blogHeading">
+                        <h2 class="title">From my blog post</h2>
+                        <a href="#" target="_blank" class="orangeBtn">See All</a>
+                    </div>
+                    <div class="blogDetails">
+                        <div class="blogCard">
+                            <div class="cardImg">
+                                <div class="img"><img src="assets/images/blog-1.jpg" alt="image"></div>
+                                <div class="arrowIcon"><img src="assets/images/arrow-up-right.svg" alt="image"></div>
+                            </div>
+                            <div class="cardText">
+                                <a href="#" target="_blank" class="grayBtn">UI/ UX Design</a>
+                                <ul class="releaseInfo">
+                                    <li>Jayesh Patil</li>
+                                    <li>10 Nov, 2023</li>
+                                </ul>
+                                <p class="blogText">Design Unraveled: Behind the Scenes of UI/UX Magic</p>
+                            </div>
+                        </div>
+                        <div class="blogCard">
+                            <div class="cardImg">
+                                <div class="img"><img src="assets/images/blog-1.jpg" alt="image"></div>
+                                <div class="arrowIcon"><img src="assets/images/arrow-up-right.svg" alt="image"></div>
+                            </div>
+                            <div class="cardText">
+                                <a href="#" target="_blank" class="grayBtn">UI/ UX Design</a>
+                                <ul class="releaseInfo">
+                                    <li>Jayesh Patil</li>
+                                    <li>10 Nov, 2023</li>
+                                </ul>
+                                <p class="blogText">Design Unraveled: Behind the Scenes of UI/UX Magic</p>
+                            </div>
+                        </div>
+                        <div class="blogCard">
+                            <div class="cardImg">
+                                <div class="img"><img src="assets/images/blog-1.jpg" alt="image"></div>
+                                <div class="arrowIcon"><img src="assets/images/arrow-up-right.svg" alt="image"></div>
+                            </div>
+                            <div class="cardText">
+                                <a href="#" target="_blank" class="grayBtn">UI/ UX Design</a>
+                                <ul class="releaseInfo">
+                                    <li>Jayesh Patil</li>
+                                    <li>10 Nov, 2023</li>
+                                </ul>
+                                <p class="blogText">Design Unraveled: Behind the Scenes of UI/UX Magic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!-- <footer class="footer">
+    <!-- <footer class="footer" id="contact">
         <div class="container">
             <div class="row">
-                <div class="footer-heading">
-                    <h2>Lets Connect there</h2>
-                    <a href="#" class="btn orange">
+                <div class="footerHeading">
+                    <h2 class="title">Lets Connect there</h2>
+                    <a href="#" class="btnOrange">
                         Hire me
                         <div class="arrow">
-                            <div class="arrow-right-up"><img src="assets/images/arrow-right-up.png" alt="arrow"></div>
-                            <div class="arrow-right"><img src="assets/images/arrow-right.png" alt="arrow"></div>
+                            <div class="arrowRightUp"><img src="assets/images/arrow-up-right.svg" alt="arrow"></div>
                         </div>
                     </a>
                 </div>
                 <hr>
-                <div class="footer-nav">
-                    <div class="footer-text">
+                <div class="footerNav">
+                    <div class="footerText">
                         <a href="index.html">
                             <div class="logo">
-                                <div class="logo-png"><img src="assets/images/Frame 55.png" alt="logo-png"></div>
-                                <div class="logo-hover">
-                                    <span class="made-by">Made by</span>
-                                    <h5 class="author-name">Jayesh Patil</h5>
+                                <div class="logoPng"><img src="assets/images/Frame 55.png" alt="logo-png"></div>
+                                <div class="logoHover">
+                                    <span class="madeBy">Made by</span>
+                                    <h5 class="authorName">Jayesh Patil</h5>
                                 </div>
-                                <div class="logo-name"><img src="assets/images/typo.png" alt="logo-name"></div>
+                                <div class="logoName"><img src="assets/images/typo.png" alt="logo-name"></div>
                             </div>
                         </a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a
@@ -298,21 +406,21 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas
                             lobortis.</p>
                         <ul class="socials">
-                            <li class="social-item"><a href="#" target="_blank">i</a></li>
-                            <li class="social-item"><a href="#" target="_blank">i</a></li>
-                            <li class="social-item"><a href="#" target="_blank">i</a></li>
-                            <li class="social-item"><a href="#" target="_blank">i</a></li>
-                            <li class="social-item"><a href="#" target="_blank">i</a></li>
+                            <li class="socialItem"><a href="#" target="_blank">i</a></li>
+                            <li class="socialItem"><a href="#" target="_blank">i</a></li>
+                            <li class="socialItem"><a href="#" target="_blank">i</a></li>
+                            <li class="socialItem"><a href="#" target="_blank">i</a></li>
+                            <li class="socialItem"><a href="#" target="_blank">i</a></li>
                         </ul>
                     </div>
                     <div class="nav-list">
                         <h6>Navigation</h6>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a href="#">Home</a></li>
-                            <li class="nav-item"><a href="#">About Us</a></li>
-                            <li class="nav-item"><a href="#">Service</a></li>
-                            <li class="nav-item"><a href="#">Resume</a></li>
-                            <li class="nav-item"><a href="#">Project</a></li>
+                        <ul class="navList">
+                            <li class="navItem"><a href="index.html">Home</a></li>
+                            <li class="navItem"><a href="#abo">About Us</a></li>
+                            <li class="navItem"><a href="#">Service</a></li>
+                            <li class="navItem"><a href="#">Resume</a></li>
+                            <li class="navItem"><a href="#">Project</a></li>
                         </ul>
                     </div>
                     <div class="contact">
@@ -326,9 +434,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="latest-info">
+                    <div class="latestInfo">
                         <h6>Get the latest information</h6>
-                        burda email formu olacaq
+                        <form> 
+                            <input type="email" name="email" id="email" placeholder="Email Address">
+                            <button class="orangeBtn"></button>
+                        </form>
                     </div>
                 </div>
                 <hr>

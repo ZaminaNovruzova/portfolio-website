@@ -37,8 +37,6 @@
 body {
   background-color: $colorWhite;
   padding: 40px 0;
-  line-height: 100%;
-  letter-spacing: -1.5%;
 }
 
 main {
@@ -52,7 +50,11 @@ img {
 
 .container {
   width: 100%;
+  height: 100%;
   padding: 0 71px;
+}
+.row {
+  height: 100%;
 }
 
 a,
@@ -81,16 +83,41 @@ h4 {
 .title {
   font-size: 64px;
 }
-.btn {
-  a {
-    color: $colorWhite;
-  }
-}
 
 .orangeBtn {
   @include btn($colorOrange);
+  border: none;
+  color: $colorWhite;
+  a {
+    color: $colorWhite;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
+.grayBtn {
+  @include buttonGray();
+  color: $colorBlack;
+
+  a {
+    color: $colorBlack;
+  }
+  &:hover {
+    background-color: $colorBlack;
+    color: $colorWhite;
+    a {
+      color: $colorWhite;
+    }
+  }
+}
+
+.titleWhite {
+  color: $colorWhite;
+}
+.title {
+  color: $colorSlateGray;
+}
 //*done
 
 @media (max-width: 900px) {
@@ -103,3 +130,6 @@ h4 {
     padding: 0 10px;
   }
 }
+
+
+//*font size problemi

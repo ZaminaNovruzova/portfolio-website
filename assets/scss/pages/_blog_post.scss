@@ -1,0 +1,15 @@
+.blogPost {
+    .container {
+        .row {
+            display: flex;
+            flex-direction: column;
+            .blogHeading {
+                display: flex;
+                justify-content: space-between;
+            }
+            .blogDetails {
+                display: flex;
+            }
+        }
+    }
+}

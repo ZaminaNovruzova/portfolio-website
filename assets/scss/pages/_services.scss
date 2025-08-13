@@ -23,12 +23,12 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 20px;
-        .title,
+        .titleWhite,
         .text {
           color: $colorWhite;
           flex: 0 0 37%;
         }
-        .title {
+        .titleWhite {
           font-size: 48px;
         }
       }

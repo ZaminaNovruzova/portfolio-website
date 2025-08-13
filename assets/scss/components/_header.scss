@@ -7,6 +7,12 @@
       .navBar {
         background-color: $colorNav;
         border-radius: 50px;
+        .burger {
+          display: none;
+        }
+        input {
+          display: none;
+        }
         .buttons {
           display: flex;
           justify-content: space-between;
@@ -16,6 +22,9 @@
           .btn {
             font-weight: 400;
             padding: 20px 40px;
+            a {
+              color: $colorWhite;
+            }
             &:hover {
               @include btn($colorBtnHover);
               transform: scale(1.1);
@@ -24,7 +33,7 @@
           .logo {
             padding-left: 5px;
             padding-right: 5px;
-            width: max-content;
+
             height: 86px;
             display: flex;
             justify-content: center;
@@ -45,6 +54,12 @@
               .logoPng {
                 width: 46px;
                 height: 46px;
+                background-color: $colorOrange;
+                border-radius: 50px;
+                padding: 5px;
+                img {
+                  object-fit: contain;
+                }
               }
               .logoAuthor {
                 display: none;
@@ -64,7 +79,7 @@
           .orangeBtn {
             font-weight: 700;
             &:hover {
-              //*bunun rengi deyismemelidir 
+              //*bunun rengi deyismemelidir
               background-color: $colorOrange;
               transform: scale(1);
             }
@@ -74,7 +89,6 @@
     }
   }
 }
-
 @media (max-width: 1230px) {
   .header {
     .container {
@@ -92,22 +106,31 @@
           }
           .burger {
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-            padding: 20px;
-            gap: 8px;
-            span {
-              padding-right: 10px;
-              display: block;
-              width: 30px;
-              height: 2px;
-              border: 2px solid white;
-              border-radius: 10px;
+            cursor: pointer;
+            .menu {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: center;
+              padding: 20px;
+              gap: 8px;
+              span {
+                padding-right: 10px;
+                display: block;
+                width: 30px;
+                height: 2px;
+                border: 2px solid white;
+                border-radius: 10px;
+              }
             }
+          }
+          #checked:checked ~ .buttons {
+            display: flex;
           }
         }
       }
     }
   }
 }
+//*burger duzelmelidir
+//* logo hover edende yazilar surusmemelidir
