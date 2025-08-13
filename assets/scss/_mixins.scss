@@ -12,11 +12,10 @@
   padding: 15px 32px;
   font-family: "Inter", sans-serif;
   text-wrap: nowrap;
+  width: fit-content;
 }
 
-@mixin arrowbtn() {
-  width: 114px;
-  height: 114px;
+@mixin arrowBtn() {
   border-radius: 100%;
   background-color: $colorSlateGray;
   display: flex;
@@ -24,5 +23,16 @@
   align-items: center;
   padding: 21px;
   gap: 10px;
-
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  a {
+    svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+  &:hover {
+    background-color: $colorOrange;
+  }
 }

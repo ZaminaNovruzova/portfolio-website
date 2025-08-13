@@ -61,7 +61,7 @@
                 overflow: hidden;
               }
               .arrowCircle {
-                @include arrowbtn();
+                @include arrowBtn();
                 position: absolute;
                 bottom: 0;
                 right: 0;

@@ -24,7 +24,7 @@
 }
 
 * {
-  outline: 1px solid red;
+  // outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -139,7 +139,7 @@ svg {
       display: block;
     }
   }
- 
+
   a {
     display: flex;
     align-items: center;
@@ -170,9 +170,12 @@ svg {
     }
   }
 }
+.arrowCircle {
+  @include arrowBtn();
+}
 //*done
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .container {
     padding: 0 30px;
   }
@@ -181,6 +184,7 @@ svg {
   .container {
     padding: 0 10px;
   }
+
 }
 
 //*font size problemi

@@ -70,3 +70,8 @@ label elave etmeliyem ve burger menuya klik edende gelen hisseni duzeltmeliyem
  
 
 
+//*renglerin adlarinda problem
+//*font-size problemi 
+
+blog
+//*list style-color nese alinmadi

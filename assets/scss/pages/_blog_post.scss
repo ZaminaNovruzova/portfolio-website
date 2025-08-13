@@ -1,15 +1,123 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
 .blogPost {
-    .container {
-        .row {
+  .container {
+    padding-top: 97px;
+    padding-bottom: 97px;
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      .blogHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        .title {
+          font-size: 48px;
+          font-weight: 700;
+          flex: 0 1 30%;
+        }
+      }
+      .blogDetails {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        .blogCard {
+          display: flex;
+          flex-direction: column;
+          flex: 0 1 32%;
+          gap: 35px;
+          margin-top: 20px;
+          .cardImg {
+            position: relative;
+          }
+          .cardText {
             display: flex;
             flex-direction: column;
-            .blogHeading {
-                display: flex;
-                justify-content: space-between;
+            gap: 35px;
+            .releaseInfo {
+              list-style-type: disc;
+              display: flex;
+              gap: 35px;
+              li {
+                font-size: 20px;
+                color: $colorSlateGray;
+                font-weight: 400;
+                text-wrap: nowrap;
+              }
             }
-            .blogDetails {
-                display: flex;
+
+            .blogText {
+              font-size: 30px;
+              color: $colorSlateGray;
+              font-weight: 400;
             }
+          }
         }
+      }
     }
+  }
 }
+
+@media (max-width: 900px) {
+  .blogPost {
+    .container {
+      .row {
+        .blogHeading {
+          .title {
+            flex: 0 1 50%;
+          }
+        }
+        .blogDetails {
+          .blogCard {
+            flex: 0 1 45%;
+            .cardText {
+              .blogText {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .blogPost {
+    .container {
+      padding-top: 47px;
+      padding-bottom: 47px;
+      .row {
+        gap: 28px;
+        .blogHeading {
+          justify-content: center;
+          text-align: center;
+          .title {
+            font-size: 32px;
+            text-wrap: wrap;
+            flex: 0 0 100%;
+          }
+        }
+        .blogDetails {
+          justify-content: center;
+          .blogCard {
+            .cardText {
+              align-items: center;
+              text-align: center;
+              .blogText {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//*list style-color nese alinmadi

@@ -18,7 +18,6 @@
   font-style: normal;
 }
 * {
-  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -104,6 +103,8 @@ h2 {
   padding: 15px 32px;
   font-family: "Inter", sans-serif;
   text-wrap: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #000000;
 }
 .grayBtn a {
@@ -178,7 +179,27 @@ svg {
   color: #98a2b3;
 }
 
-@media (max-width: 900px) {
+.arrowCircle {
+  border-radius: 100%;
+  background-color: #344054;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 21px;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.arrowCircle a svg {
+  width: 42px;
+  height: 42px;
+}
+.arrowCircle:hover {
+  background-color: #fd853a;
+}
+
+@media (max-width: 920px) {
   .container {
     padding: 0 30px;
   }
@@ -328,7 +349,7 @@ svg {
 .footer .container .row .footerNav .footerText {
   display: flex;
   flex-direction: column;
-  flex: 1 1 40%;
+  flex: 0 1 40%;
 }
 .footer .container .row .footerNav .footerText .logo {
   padding-left: 0;
@@ -348,7 +369,7 @@ svg {
   height: 22px;
 }
 .footer .container .row .footerNav .footerText .socials .socialItem:hover {
-  fill: black;
+  fill: #000000;
 }
 .footer .container .row .footerNav .navList,
 .footer .container .row .footerNav .contact,
@@ -458,6 +479,7 @@ svg {
   }
   .footer .container .row .copyright p {
     font-size: 16px;
+    text-align: center;
   }
 }
 @keyframes heroAnimation {
@@ -742,8 +764,6 @@ svg {
   overflow: hidden;
 }
 .services .container .row .serviceSlide .serviceCards .card .cardImg .arrowCircle {
-  width: 114px;
-  height: 114px;
   border-radius: 100%;
   background-color: #344054;
   display: flex;
@@ -754,6 +774,16 @@ svg {
   position: absolute;
   bottom: 0;
   right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.services .container .row .serviceSlide .serviceCards .card .cardImg .arrowCircle a svg {
+  width: 42px;
+  height: 42px;
+}
+.services .container .row .serviceSlide .serviceCards .card .cardImg .arrowCircle:hover {
+  background-color: #fd853a;
 }
 .services .container .row .serviceSlide .serviceCards .card .cardImg .arrowCircle svg {
   width: 72px;
@@ -1180,14 +1210,101 @@ svg {
     width: 45%;
   }
 }
+.blogPost .container {
+  padding-top: 97px;
+  padding-bottom: 97px;
+}
 .blogPost .container .row {
   display: flex;
   flex-direction: column;
+  gap: 48px;
 }
 .blogPost .container .row .blogHeading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.blogPost .container .row .blogHeading .title {
+  font-size: 48px;
+  font-weight: 700;
+  flex: 0 1 30%;
 }
 .blogPost .container .row .blogDetails {
   display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.blogPost .container .row .blogDetails .blogCard {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 32%;
+  gap: 35px;
+  margin-top: 20px;
+}
+.blogPost .container .row .blogDetails .blogCard .cardImg {
+  position: relative;
+}
+.blogPost .container .row .blogDetails .blogCard .cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.blogPost .container .row .blogDetails .blogCard .cardText .releaseInfo {
+  list-style-type: disc;
+  display: flex;
+  gap: 35px;
+}
+.blogPost .container .row .blogDetails .blogCard .cardText .releaseInfo li {
+  font-size: 20px;
+  color: #344054;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+.blogPost .container .row .blogDetails .blogCard .cardText .blogText {
+  font-size: 30px;
+  color: #344054;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .blogPost .container .row .blogHeading .title {
+    flex: 0 1 50%;
+  }
+  .blogPost .container .row .blogDetails .blogCard {
+    flex: 0 1 45%;
+  }
+  .blogPost .container .row .blogDetails .blogCard .cardText .blogText {
+    font-size: 24px;
+  }
+}
+@media (max-width: 630px) {
+  .blogPost .container {
+    padding-top: 47px;
+    padding-bottom: 47px;
+  }
+  .blogPost .container .row {
+    gap: 28px;
+  }
+  .blogPost .container .row .blogHeading {
+    justify-content: center;
+    text-align: center;
+  }
+  .blogPost .container .row .blogHeading .title {
+    font-size: 32px;
+    text-wrap: wrap;
+    flex: 0 0 100%;
+  }
+  .blogPost .container .row .blogDetails {
+    justify-content: center;
+  }
+  .blogPost .container .row .blogDetails .blogCard .cardText {
+    align-items: center;
+    text-align: center;
+  }
+  .blogPost .container .row .blogDetails .blogCard .cardText .blogText {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=index.css.map */
