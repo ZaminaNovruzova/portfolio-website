@@ -490,6 +490,14 @@ svg {
     transform: translateY(0%);
   }
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .hero {
   margin-top: 40px;
 }
@@ -1208,6 +1216,39 @@ svg {
     color: #344054;
     font-weight: 400;
     width: 45%;
+  }
+}
+.component .componentCard {
+  display: flex;
+  padding: 30px 0;
+  background-color: #fd853a;
+  border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden;
+}
+.component .componentCard .componentText {
+  display: flex;
+  align-items: center;
+  transform: rotate(-3deg);
+  animation: scroll 3s linear infinite;
+  background-color: #ffffff;
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000;
+  text-wrap: nowrap;
+}
+.component .componentCard .componentText svg {
+  width: 34px;
+  height: 34px;
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .component .componentCard {
+    padding: 20px 0;
+  }
+  .component .componentCard .componentText {
+    font-size: 26px;
   }
 }
 .blogPost .container {

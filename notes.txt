@@ -75,3 +75,9 @@ label elave etmeliyem ve burger menuya klik edende gelen hisseni duzeltmeliyem
 
 blog
 //*list style-color nese alinmadi
+
+
+component 
+
+//*rotate ede bilmedim
+//*yazilar infinity deyil

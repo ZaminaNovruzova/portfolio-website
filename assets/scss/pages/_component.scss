@@ -1,0 +1,42 @@
+@use "../variables" as *;
+@use "../animations/animation" as *;
+
+.component {
+  .componentCard {
+    display: flex;
+    padding: 30px 0;
+    background-color: $colorOrange;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    overflow: hidden;
+    .componentText {
+      display: flex;
+      align-items: center;
+      transform: rotate(-3deg);
+      animation: scroll 3s linear infinite;
+      background-color: $colorWhite;
+      font-size: 40px;
+      font-weight: 400;
+      color: $colorBlack;
+      text-wrap: nowrap;
+      svg {
+        width: 34px;
+        height: 34px;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .component {
+    .componentCard {
+      padding: 20px 0;
+
+      .componentText {
+        font-size: 26px;
+
+      }
+    }
+  }
+}
