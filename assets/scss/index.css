@@ -882,7 +882,7 @@ svg {
 @media (max-width: 768px) {
   .experience .container .row .title {
     padding: 45px 0;
-    font-size: 40px;
+    font-size: 38px;
     text-wrap: wrap;
   }
   .experience .container .row .experienceCard {
@@ -898,7 +898,10 @@ svg {
     gap: 35px;
   }
   .experience .container .row .experienceCard .expData .job {
-    font-size: 32px;
+    font-size: 26px;
+  }
+  .experience .container .row .experienceCard .expData .date {
+    font-size: 20px;
   }
 }
 .whyHire {
@@ -1004,7 +1007,7 @@ svg {
 }
 @media (max-width: 768px) {
   .whyHire {
-    padding: 50px 0;
+    padding: 30px 0;
   }
   .whyHire .container .row {
     flex-wrap: wrap;
@@ -1026,9 +1029,6 @@ svg {
   }
 }
 @media (max-width: 375px) {
-  .whyHire {
-    padding: 30px 0;
-  }
   .whyHire .container .row .hireTextCard .title {
     font-size: 32px;
   }
@@ -1330,8 +1330,8 @@ svg {
 }
 @media (max-width: 768px) {
   .projectIdea .container {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 10px;
+    padding-bottom: 30px;
   }
   .projectIdea .container .row .title {
     font-size: 32px;

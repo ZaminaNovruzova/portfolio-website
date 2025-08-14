@@ -87,7 +87,7 @@
       .row {
         .title {
           padding: 45px 0;
-          font-size: 40px;
+          font-size: 38px;
           text-wrap: wrap;
         }
         .experienceCard {
@@ -103,7 +103,10 @@
           }
           .expData {
             .job {
-              font-size: 32px;
+              font-size: 26px;
+            }
+            .date {
+              font-size: 20px;
             }
           }
         }
@@ -111,3 +114,5 @@
     }
   }
 }
+
+//*done
