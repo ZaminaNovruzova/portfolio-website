@@ -18,7 +18,6 @@
   font-style: normal;
 }
 * {
-  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -208,6 +207,9 @@ svg {
 @media (max-width: 425px) {
   .container {
     padding: 0 15px;
+  }
+  a {
+    font-size: 16px;
   }
 }
 .header .container .row .navBar {
@@ -904,20 +906,38 @@ svg {
   background-color: #f2f4f7;
   border-radius: 50px;
   padding: 122px 0;
+  height: 100%;
 }
 .whyHire .container .row {
   display: flex;
   justify-content: space-between;
   gap: 96px;
 }
-.whyHire .container .row .womanImg {
-  flex: 0 0 48%;
-  width: -moz-max-content;
-  width: max-content;
+.whyHire .container .row .photoMask {
+  position: relative;
+  flex: 1 0 48%;
+  cursor: pointer;
 }
-.whyHire .container .row .womanImg img {
-  -o-object-fit: contain;
-     object-fit: contain;
+.whyHire .container .row .photoMask .womanImg,
+.whyHire .container .row .photoMask .womanImgHover {
+  width: 100%;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.whyHire .container .row .photoMask .womanImgHover {
+  position: absolute;
+  bottom: 0;
+  clip-path: inset(100% 0 0 0);
+  opacity: 1;
+  transform: scale(1);
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.whyHire .container .row .photoMask:hover .womanImgHover {
+  clip-path: inset(0 0 0 0);
+  transform: scale(1.04);
+}
+.whyHire .container .row .photoMask:hover .womanImg {
+  opacity: 0;
 }
 .whyHire .container .row .hireTextCard {
   display: flex;
@@ -1248,7 +1268,6 @@ svg {
   padding: 14px;
   border: 1px solid #e4e7ec;
   justify-content: space-between;
-  gap: 10px;
   align-items: center;
 }
 .projectIdea .container .row .projectCard .emailForm .enterInput {

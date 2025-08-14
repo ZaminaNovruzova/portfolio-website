@@ -41,8 +41,8 @@
             </div>
         </div>
     </header>
-    <!-- <main>
-        <section class="hero" id="about">
+    <main>
+        <!-- <section class="hero" id="about">
             <div class="container">
                 <div class="row">
                     <div class="aboutMe">
@@ -102,8 +102,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="services" id="service">
+        </section> -->
+        <!-- <section class="services" id="service">
             <div class="container">
                 <div class="row">
                     <div class="serviceHeading">
@@ -169,7 +169,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="experience" id="resume">
             <div class="container">
                 <div class="row">
@@ -218,7 +218,12 @@
         <section class="whyHire">
             <div class="container">
                 <div class="row">
-                    <div class="womanImg"><img src="assets/images/hire-img.png" alt="woman"></div>
+                    <div class="photoMask">
+                        <div class="womanImg">
+                            <img src="assets/images/hire-img.png" alt="woman">
+                        </div>
+                        <div class="womanImgHover"><img src="assets/images/hire-img-hover.png" alt="woman"></div>
+                    </div>
                     <div class="hireTextCard">
                         <h2 class="title">Why <span class="orange">Hire me</span>?</h2>
                         <p class="hireText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
@@ -241,7 +246,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <!-- <section class="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="portfolioHeading">
@@ -299,202 +304,212 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+        <!-- <section class="testimonials">
+
+        <div class="testimonialHeading">
+            <h2 class="titleWhite">Testimonials That Speak to <span class="orange">My Results</span></h2>
+            <p class="testimonialText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum
+                ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum
+                egestas lobortis.</p>
+        </div>
+
+
+    </section> -->
+        <section class="projectIdea" id="project">
+            <div class="container">
+                <div class="row">
+                    <h2 class="title">Have an Awesome Project Idea? <span class="orange">Let’s Discuss</span></h2>
+                    <div class="projectCard">
+                        <form class="emailForm">
+                            <div class="enterInput">
+                                <label class="emailIcon" for="emailInput"> <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="32" height="32" viewBox="0 0 32 33" fill="none">
+                                        <path
+                                            d="M22.6666 4.74756H9.33329C5.33329 4.74756 2.66663 6.74756 2.66663 11.4142V20.7476C2.66663 25.4142 5.33329 27.4142 9.33329 27.4142H22.6666C26.6666 27.4142 29.3333 25.4142 29.3333 20.7476V11.4142C29.3333 6.74756 26.6666 4.74756 22.6666 4.74756ZM23.2933 12.8676L19.12 16.2009C18.24 16.9076 17.12 17.2542 16 17.2542C14.88 17.2542 13.7466 16.9076 12.88 16.2009L8.70663 12.8676C8.27996 12.5209 8.21329 11.8809 8.54663 11.4542C8.89329 11.0276 9.51996 10.9476 9.94663 11.2942L14.12 14.6276C15.1333 15.4409 16.8533 15.4409 17.8666 14.6276L22.04 11.2942C22.4666 10.9476 23.1066 11.0142 23.44 11.4542C23.7866 11.8809 23.72 12.5209 23.2933 12.8676Z"
+                                            fill="#FD853A" />
+                                    </svg>
+                                </label>
+                                <input id="emailInput" type="email" placeholder="Enter Email Address" required>
+                            </div>
+                            <button class="orangeBtn" type="submit">Send</button>
+                        </form>
+                        <div class="projectIdeaInfos">
+                            <div class="ideaInfo">
+                                <div class="infoImg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+                                        viewBox="0 0 24 25" fill="none">
+                                        <path
+                                            d="M15.3899 5.29084L16.7999 8.11084C16.9899 8.50084 17.4999 8.87084 17.9299 8.95084L20.4799 9.37084C22.1099 9.64084 22.4899 10.8208 21.3199 12.0008L19.3299 13.9908C18.9999 14.3208 18.8099 14.9708 18.9199 15.4408L19.4899 17.9008C19.9399 19.8408 18.8999 20.6008 17.1899 19.5808L14.7999 18.1608C14.3699 17.9008 13.6499 17.9008 13.2199 18.1608L10.8299 19.5808C9.11994 20.5908 8.07994 19.8408 8.52994 17.9008L9.09994 15.4408C9.18994 14.9608 8.99994 14.3108 8.66994 13.9808L6.67994 11.9908C5.50994 10.8208 5.88994 9.64084 7.51994 9.36084L10.0699 8.94084C10.4999 8.87084 11.0099 8.49084 11.1999 8.10084L12.6099 5.28084C13.3799 3.76084 14.6199 3.76084 15.3899 5.29084Z"
+                                            fill="#292D32" />
+                                        <path
+                                            d="M8 5.83105H2C1.59 5.83105 1.25 5.49105 1.25 5.08105C1.25 4.67105 1.59 4.33105 2 4.33105H8C8.41 4.33105 8.75 4.67105 8.75 5.08105C8.75 5.49105 8.41 5.83105 8 5.83105Z"
+                                            fill="#292D32" />
+                                        <path
+                                            d="M5 19.8311H2C1.59 19.8311 1.25 19.4911 1.25 19.0811C1.25 18.6711 1.59 18.3311 2 18.3311H5C5.41 18.3311 5.75 18.6711 5.75 19.0811C5.75 19.4911 5.41 19.8311 5 19.8311Z"
+                                            fill="#292D32" />
+                                        <path
+                                            d="M3 12.8311H2C1.59 12.8311 1.25 12.4911 1.25 12.0811C1.25 11.6711 1.59 11.3311 2 11.3311H3C3.41 11.3311 3.75 11.6711 3.75 12.0811C3.75 12.4911 3.41 12.8311 3 12.8311Z"
+                                            fill="#292D32" />
+                                    </svg></div>
+                                <span>4.9/5 Average Ratings</span>
+                            </div>
+                            <div class="ideaInfo">
+                                <div class="infoImg"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+                                        viewBox="0 0 24 25" fill="none">
+                                        <path
+                                            d="M17.8099 5.57105V6.31105L14.2699 4.26105C12.9299 3.49105 11.0599 3.49105 9.72994 4.26105L6.18994 6.32105V5.57105C6.18994 3.32105 7.41994 2.08105 9.66994 2.08105H14.3299C16.5799 2.08105 17.8099 3.32105 17.8099 5.57105Z"
+                                            fill="#292D32" />
+                                        <path
+                                            d="M17.84 8.05129L17.7 7.98129L16.34 7.20129L13.52 5.57129C12.66 5.07129 11.34 5.07129 10.48 5.57129L7.66 7.19129L6.3 7.99129L6.12 8.08129C4.37 9.26129 4.25 9.48129 4.25 11.3713V15.8913C4.25 17.7813 4.37 18.0013 6.16 19.2113L10.48 21.7013C10.91 21.9613 11.45 22.0713 12 22.0713C12.54 22.0713 13.09 21.9513 13.52 21.7013L17.88 19.1813C19.64 18.0013 19.75 17.7913 19.75 15.8913V11.3713C19.75 9.48129 19.63 9.26129 17.84 8.05129ZM14.79 13.5813L14.18 14.3313C14.08 14.4413 14.01 14.6513 14.02 14.8013L14.08 15.7613C14.12 16.3513 13.7 16.6513 13.15 16.4413L12.26 16.0813C12.12 16.0313 11.89 16.0313 11.75 16.0813L10.86 16.4313C10.31 16.6513 9.89 16.3413 9.93 15.7513L9.99 14.7913C10 14.6413 9.93 14.4313 9.83 14.3213L9.21 13.5813C8.83 13.1313 9 12.6313 9.57 12.4813L10.5 12.2413C10.65 12.2013 10.82 12.0613 10.9 11.9413L11.42 11.1413C11.74 10.6413 12.25 10.6413 12.58 11.1413L13.1 11.9413C13.18 12.0713 13.36 12.2013 13.5 12.2413L14.43 12.4813C15 12.6313 15.17 13.1313 14.79 13.5813Z"
+                                            fill="#292D32" />
+                                    </svg></div>
+                                <span>25+ Winning Awards</span>
+                            </div>
+                            <div class="ideaInfo">
+                                <div class="infoImg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+                                        viewBox="0 0 24 25" fill="none">
+                                        <path
+                                            d="M18.54 4.2009L13.04 2.1409C12.47 1.9309 11.54 1.9309 10.97 2.1409L5.47005 4.2009C4.41005 4.6009 3.55005 5.8409 3.55005 6.9709V15.0709C3.55005 15.8809 4.08005 16.9509 4.73005 17.4309L10.23 21.5409C11.2 22.2709 12.79 22.2709 13.76 21.5409L19.26 17.4309C19.91 16.9409 20.4401 15.8809 20.4401 15.0709V6.9709C20.4501 5.8409 19.59 4.6009 18.54 4.2009ZM15.48 9.8009L11.18 14.1009C11.03 14.2509 10.84 14.3209 10.65 14.3209C10.46 14.3209 10.27 14.2509 10.12 14.1009L8.52005 12.4809C8.23005 12.1909 8.23005 11.7109 8.52005 11.4209C8.81005 11.1309 9.29005 11.1309 9.58005 11.4209L10.66 12.5009L14.43 8.7309C14.72 8.4409 15.2 8.4409 15.49 8.7309C15.78 9.0209 15.78 9.5109 15.48 9.8009Z"
+                                            fill="#292D32" />
+                                    </svg>
+                                </div>
+                                <span>Certified Product Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="testimonials"></section> -->
-    <section class="projectIdea" id="project">
-        <div class="container">
-            <div class="row">
-                <h2 class="title">Have an Awesome Project Idea? <span class="orange">Let’s Discuss</span></h2>
-                <div class="projectCard">
-                    <form class="emailForm">
-                        <div class="enterInput">
-                            <label class="emailIcon" for="emailInput"> <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="32" height="32" viewBox="0 0 32 33" fill="none">
-                                    <path
-                                        d="M22.6666 4.74756H9.33329C5.33329 4.74756 2.66663 6.74756 2.66663 11.4142V20.7476C2.66663 25.4142 5.33329 27.4142 9.33329 27.4142H22.6666C26.6666 27.4142 29.3333 25.4142 29.3333 20.7476V11.4142C29.3333 6.74756 26.6666 4.74756 22.6666 4.74756ZM23.2933 12.8676L19.12 16.2009C18.24 16.9076 17.12 17.2542 16 17.2542C14.88 17.2542 13.7466 16.9076 12.88 16.2009L8.70663 12.8676C8.27996 12.5209 8.21329 11.8809 8.54663 11.4542C8.89329 11.0276 9.51996 10.9476 9.94663 11.2942L14.12 14.6276C15.1333 15.4409 16.8533 15.4409 17.8666 14.6276L22.04 11.2942C22.4666 10.9476 23.1066 11.0142 23.44 11.4542C23.7866 11.8809 23.72 12.5209 23.2933 12.8676Z"
-                                        fill="#FD853A" />
-                                </svg>
-                            </label>
-                            <input id="emailInput" type="email" placeholder="Enter Email Address" required>
-                        </div>
-                        <button class="orangeBtn" type="submit">Send</button>
-                    </form>
-                    <div class="projectIdeaInfos">
-                        <div class="ideaInfo">
-                            <div class="infoImg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
-                                    viewBox="0 0 24 25" fill="none">
-                                    <path
-                                        d="M15.3899 5.29084L16.7999 8.11084C16.9899 8.50084 17.4999 8.87084 17.9299 8.95084L20.4799 9.37084C22.1099 9.64084 22.4899 10.8208 21.3199 12.0008L19.3299 13.9908C18.9999 14.3208 18.8099 14.9708 18.9199 15.4408L19.4899 17.9008C19.9399 19.8408 18.8999 20.6008 17.1899 19.5808L14.7999 18.1608C14.3699 17.9008 13.6499 17.9008 13.2199 18.1608L10.8299 19.5808C9.11994 20.5908 8.07994 19.8408 8.52994 17.9008L9.09994 15.4408C9.18994 14.9608 8.99994 14.3108 8.66994 13.9808L6.67994 11.9908C5.50994 10.8208 5.88994 9.64084 7.51994 9.36084L10.0699 8.94084C10.4999 8.87084 11.0099 8.49084 11.1999 8.10084L12.6099 5.28084C13.3799 3.76084 14.6199 3.76084 15.3899 5.29084Z"
-                                        fill="#292D32" />
-                                    <path
-                                        d="M8 5.83105H2C1.59 5.83105 1.25 5.49105 1.25 5.08105C1.25 4.67105 1.59 4.33105 2 4.33105H8C8.41 4.33105 8.75 4.67105 8.75 5.08105C8.75 5.49105 8.41 5.83105 8 5.83105Z"
-                                        fill="#292D32" />
-                                    <path
-                                        d="M5 19.8311H2C1.59 19.8311 1.25 19.4911 1.25 19.0811C1.25 18.6711 1.59 18.3311 2 18.3311H5C5.41 18.3311 5.75 18.6711 5.75 19.0811C5.75 19.4911 5.41 19.8311 5 19.8311Z"
-                                        fill="#292D32" />
-                                    <path
-                                        d="M3 12.8311H2C1.59 12.8311 1.25 12.4911 1.25 12.0811C1.25 11.6711 1.59 11.3311 2 11.3311H3C3.41 11.3311 3.75 11.6711 3.75 12.0811C3.75 12.4911 3.41 12.8311 3 12.8311Z"
-                                        fill="#292D32" />
-                                </svg></div>
-                            <span>4.9/5 Average Ratings</span>
-                        </div>
-                        <div class="ideaInfo">
-                            <div class="infoImg"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
-                                    viewBox="0 0 24 25" fill="none">
-                                    <path
-                                        d="M17.8099 5.57105V6.31105L14.2699 4.26105C12.9299 3.49105 11.0599 3.49105 9.72994 4.26105L6.18994 6.32105V5.57105C6.18994 3.32105 7.41994 2.08105 9.66994 2.08105H14.3299C16.5799 2.08105 17.8099 3.32105 17.8099 5.57105Z"
-                                        fill="#292D32" />
-                                    <path
-                                        d="M17.84 8.05129L17.7 7.98129L16.34 7.20129L13.52 5.57129C12.66 5.07129 11.34 5.07129 10.48 5.57129L7.66 7.19129L6.3 7.99129L6.12 8.08129C4.37 9.26129 4.25 9.48129 4.25 11.3713V15.8913C4.25 17.7813 4.37 18.0013 6.16 19.2113L10.48 21.7013C10.91 21.9613 11.45 22.0713 12 22.0713C12.54 22.0713 13.09 21.9513 13.52 21.7013L17.88 19.1813C19.64 18.0013 19.75 17.7913 19.75 15.8913V11.3713C19.75 9.48129 19.63 9.26129 17.84 8.05129ZM14.79 13.5813L14.18 14.3313C14.08 14.4413 14.01 14.6513 14.02 14.8013L14.08 15.7613C14.12 16.3513 13.7 16.6513 13.15 16.4413L12.26 16.0813C12.12 16.0313 11.89 16.0313 11.75 16.0813L10.86 16.4313C10.31 16.6513 9.89 16.3413 9.93 15.7513L9.99 14.7913C10 14.6413 9.93 14.4313 9.83 14.3213L9.21 13.5813C8.83 13.1313 9 12.6313 9.57 12.4813L10.5 12.2413C10.65 12.2013 10.82 12.0613 10.9 11.9413L11.42 11.1413C11.74 10.6413 12.25 10.6413 12.58 11.1413L13.1 11.9413C13.18 12.0713 13.36 12.2013 13.5 12.2413L14.43 12.4813C15 12.6313 15.17 13.1313 14.79 13.5813Z"
-                                        fill="#292D32" />
-                                </svg></div>
-                            <span>25+ Winning Awards</span>
-                        </div>
-                        <div class="ideaInfo">
-                            <div class="infoImg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
-                                    viewBox="0 0 24 25" fill="none">
-                                    <path
-                                        d="M18.54 4.2009L13.04 2.1409C12.47 1.9309 11.54 1.9309 10.97 2.1409L5.47005 4.2009C4.41005 4.6009 3.55005 5.8409 3.55005 6.9709V15.0709C3.55005 15.8809 4.08005 16.9509 4.73005 17.4309L10.23 21.5409C11.2 22.2709 12.79 22.2709 13.76 21.5409L19.26 17.4309C19.91 16.9409 20.4401 15.8809 20.4401 15.0709V6.9709C20.4501 5.8409 19.59 4.6009 18.54 4.2009ZM15.48 9.8009L11.18 14.1009C11.03 14.2509 10.84 14.3209 10.65 14.3209C10.46 14.3209 10.27 14.2509 10.12 14.1009L8.52005 12.4809C8.23005 12.1909 8.23005 11.7109 8.52005 11.4209C8.81005 11.1309 9.29005 11.1309 9.58005 11.4209L10.66 12.5009L14.43 8.7309C14.72 8.4409 15.2 8.4409 15.49 8.7309C15.78 9.0209 15.78 9.5109 15.48 9.8009Z"
-                                        fill="#292D32" />
-                                </svg>
-                            </div>
-                            <span>Certified Product Designer</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="component">
-        <div class="componentCard">
-            <span class="componentText">Design
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg> App Design <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                    fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg> Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                    fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg> Wireframe <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                    fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg>UI/UX</span>
-            <span class="componentText" aria-hidden="true">Design
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg> App Design <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                    fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg> Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                    fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg> Wireframe <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                    fill="none">
-                    <path
-                        d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
-                        fill="#FD853A" />
-                </svg>UI/UX</span>
-
-        </div>
-    </section>
-    <section class="blogPost">
-        <div class="container">
-            <div class="row">
-                <div class="blogHeading">
-                    <h2 class="title">From my blog post</h2>
-                    <a href="#" target="_blank" class="orangeBtn">See All</a>
-                </div>
-                <div class="blogDetails">
-                    <div class="blogCard">
-                        <div class="cardImg">
-                            <img src="assets/images/blog-img-1.png" alt="image">
-                            <div class="arrowCircle">
-                                <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <a href="#" target="_blank" class="grayBtn">UI/ UX Design</a>
-                            <ul class="releaseInfo">
-                                <li>Jayesh Patil</li>
-                                <li>10 Nov, 2023</li>
-                            </ul>
-                            <p class="blogText">Design Unraveled: Behind the Scenes of UI/UX Magic</p>
-                        </div>
-                    </div>
-                    <div class="blogCard">
-                        <div class="cardImg">
-                            <img src="assets/images/blog-img-2.png" alt="image">
-                            <div class="arrowCircle">
-                                <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <a href="#" target="_blank" class="grayBtn">App Design</a>
-                            <ul class="releaseInfo">
-                                <li>Jayesh Patil</li>
-                                <li>09 Oct, 2023</li>
-                            </ul>
-                            <p class="blogText">Sugee: Loan Management System for Rural Sector.</p>
-                        </div>
-                    </div>
-                    <div class="blogCard">
-                        <div class="cardImg">
-                            <img src="assets/images/blog-img-3.png" alt="image">
-                            <div class="arrowCircle">
-                                <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <a href="#" target="_blank" class="grayBtn">App Design</a>
-                            <ul class="releaseInfo">
-                                <li>Jayesh Patil</li>
-                                <li>13 Aug, 2023</li>
-                            </ul>
-                            <p class="blogText">Cinetrade: Innovative way to invest in Digital Media</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="component">
+            <div class="componentCard">
+                <span class="componentText">Design
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg> App Design <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                        fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg> Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                        fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg> Wireframe <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                        fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg>UI/UX</span>
+                <span class="componentText" aria-hidden="true">Design
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg> App Design <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                        fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg> Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                        fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg> Wireframe <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                        fill="none">
+                        <path
+                            d="M17.0757 0.301927L22.3079 12.3851L34.8011 16.5442L22.718 21.7764L18.5588 34.2696L13.3266 22.1864L0.833449 18.0273L12.9166 12.7951L17.0757 0.301927Z"
+                            fill="#FD853A" />
+                    </svg>UI/UX</span>
 
             </div>
-        </div>
-        </div>
-    </section>
+        </section>
+        <section class="blogPost">
+            <div class="container">
+                <div class="row">
+                    <div class="blogHeading">
+                        <h2 class="title">From my blog post</h2>
+                        <a href="#" target="_blank" class="orangeBtn">See All</a>
+                    </div>
+                    <div class="blogDetails">
+                        <div class="blogCard">
+                            <div class="cardImg">
+                                <img src="assets/images/blog-img-1.png" alt="image">
+                                <div class="arrowCircle">
+                                    <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <a href="#" target="_blank" class="grayBtn">UI/ UX Design</a>
+                                <ul class="releaseInfo">
+                                    <li>Jayesh Patil</li>
+                                    <li>10 Nov, 2023</li>
+                                </ul>
+                                <p class="blogText">Design Unraveled: Behind the Scenes of UI/UX Magic</p>
+                            </div>
+                        </div>
+                        <div class="blogCard">
+                            <div class="cardImg">
+                                <img src="assets/images/blog-img-2.png" alt="image">
+                                <div class="arrowCircle">
+                                    <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <a href="#" target="_blank" class="grayBtn">App Design</a>
+                                <ul class="releaseInfo">
+                                    <li>Jayesh Patil</li>
+                                    <li>09 Oct, 2023</li>
+                                </ul>
+                                <p class="blogText">Sugee: Loan Management System for Rural Sector.</p>
+                            </div>
+                        </div>
+                        <div class="blogCard">
+                            <div class="cardImg">
+                                <img src="assets/images/blog-img-3.png" alt="image">
+                                <div class="arrowCircle">
+                                    <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <a href="#" target="_blank" class="grayBtn">App Design</a>
+                                <ul class="releaseInfo">
+                                    <li>Jayesh Patil</li>
+                                    <li>13 Aug, 2023</li>
+                                </ul>
+                                <p class="blogText">Cinetrade: Innovative way to invest in Digital Media</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
     </main>
     <footer class="footer" id="contact">
         <div class="container">

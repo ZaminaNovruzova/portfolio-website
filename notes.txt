@@ -55,7 +55,7 @@ sekiller niye ortada qalib
 figmada verilen bu statik olculer ne qeder dogrudur 
 hover edende yazi gelsin
 responsivlik
-arrow buttonlar component olacaq sonda qayit onu bir de duzelt sabahin taski 
+
 
 testimonials
 
