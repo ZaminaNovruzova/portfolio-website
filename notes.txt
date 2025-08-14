@@ -42,12 +42,6 @@ responsiv 1024 olanda 3cu card yoxa cixsin ve slide da gorunsun
 umumiyyetle slide verek olcu kicildikce surusme olsun 
 ortadki card niye asagi dusur olcu kicilende-max content verende tekce yoxa cixir onda da responsivlik gedir? slide hell ede biler?
 
-experience 
-job basliq kicilende title sanki cox boyuk qalir 
-birde 375 den asagi olcude yazilarin olcusu cox boyukdur 
-
-why-hire
-sekli hover edende arxada halqa gelsin
 
 
 portfolio 
@@ -56,12 +50,6 @@ figmada verilen bu statik olculer ne qeder dogrudur
 hover edende yazi gelsin
 responsivlik
 
-
-testimonials
-
-
-portfoliodan asagi hisselere qalib 
-responsive olmasi ucun boyuk olculere width faizle ver ve container i faizle deyis 
 
 
 header
@@ -81,3 +69,9 @@ component
 
 //*rotate ede bilmedim
 //*yazilar infinity deyil
+
+
+testimonials
+//*iconlar
+swiper islemir
+

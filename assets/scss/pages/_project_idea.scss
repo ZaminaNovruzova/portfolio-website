@@ -98,17 +98,18 @@
 @media (max-width: 768px) {
   .projectIdea {
     .container {
-      padding-top: 10px;
-      padding-bottom: 30px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       .row {
         .title {
-          font-size: 32px;
+          font-size: 26px;
           width: 95%;
         }
         .projectCard {
           width: 98%;
           .emailForm {
             padding: 5px;
+            margin: 0 15px;
             .enterInput {
               .emailIcon {
                 padding: 5px;
@@ -117,12 +118,16 @@
                   height: 24px;
                 }
               }
+              #emailInput {
+                padding-left: 5px;
+              }
               #emailInput::placeholder {
                 font-size: 14px;
               }
             }
             .orangeBtn {
-              padding: 10px 20px;
+              padding: 5px 10px;
+              margin-right: 5px;
             }
           }
         }

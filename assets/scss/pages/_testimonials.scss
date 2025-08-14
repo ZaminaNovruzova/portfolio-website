@@ -1,37 +1,202 @@
-// @use "../variables" as *;
-// .testimonials {
-//   background-image: url("/assets/images/bg-img.jpg");
-//   border-radius: 50px;
-//   background-repeat: no-repeat;
-//   background-position: top center;
-//   background-size: cover;
-//   position: relative;
-//   &::after {
-//     content: "";
-//     color: red;
-//     // opacity: 20%;
-//     background-color: $colorNav;
-//     width: 100%;
-//     display: block;
-//     height: 100%;
-//     border-radius: 50px;
-//     padding-top: 116px;
-//     padding-bottom: 116px;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     z-index: -5;
-//   }
-//   //   display: flex;
-//   //   flex-direction: column;
-//   //   gap: 96px;
-//   .testimonialHeading {
-//     .titleWhite {
-//       font-size: 48px;
-   
-//     }
-//     .testimonialText {
-//         color: $colorTestimonialsText;
-//     }
-//   }
-// }
+@use "../variables" as *;
+.testimonials {
+  background-image: url("/assets/images/bg-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  padding-top: 116px;
+  padding-bottom: 116px;
+  position: relative;
+  z-index: -5;
+  border-radius: 50px;
+  &::after {
+    content: "";
+    opacity: 80%;
+    background-color: $colorNav;
+    width: 100%;
+    display: block;
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -4;
+  }
+  .textWhite {
+    color: $colorTestimonialsText;
+  }
+  .testimonialHeading {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    text-align: center;
+    .title {
+      display: flex;
+      width: 35%;
+      position: relative;
+      justify-content: center;
+      .titleWhite {
+        font-size: 48px;
+        font-weight: 500;
+      }
+    }
+    .textWhite {
+      width: 48%;
+    }
+  }
+  .slider {
+    .swiper-wrapper {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      overflow: hidden;
+      flex-wrap: nowrap;
+      .swiper-slide {
+        background-color: rgba(255, 255, 255, 0.14);
+        border-radius: 24px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 21px;
+        flex: 1 0 40%;
+        flex-wrap: nowrap;
+        min-width: 350px;
+        .commentAuthor {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+          .authorInfo {
+            display: flex;
+            flex-direction: column;
+            .author {
+              display: flex;
+              gap: 12px;
+              .authorImg {
+                width: 55px;
+                height: 55px;
+                border-radius: 100%;
+                overflow: hidden;
+              }
+              .aboutAuthor {
+                display: flex;
+                flex-direction: column;
+                font-family: "Urbanist";
+                gap: 5px;
+                .authorName {
+                  font-size: 23.5px;
+                  text-wrap: nowrap;
+                }
+                .profession {
+                  font-size: 18.28px;
+                  text-wrap: nowrap;
+                }
+              }
+            }
+            .stars {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              flex-wrap: nowrap;
+              .value {
+                font-size: 25.69px;
+                font-weight: 500;
+              }
+            }
+          }
+          .quoteImg {
+            svg {
+              width: 100px;
+              height: 100px;
+              stroke: none;
+            }
+          }
+        }
+      }
+      .red {
+        background-color: red;
+      }
+      .swiper-slide:hover {
+        border: 2px solid $colorWhite;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .testimonials {
+    padding-top: 66px;
+    padding-bottom: 66px;
+    .testimonialHeading {
+      .title {
+        width: 90%;
+        .titleWhite {
+          font-size: 36px;
+        }
+      }
+      .textWhite {
+        width: 90%;
+      }
+    }
+    .slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          flex: 0 0 70%;
+          .commentAuthor {
+            .quoteImg {
+              svg {
+                width: 48px;
+                height: 48px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .testimonials {
+    gap: 46px;
+    .textWhite {
+      font-size: 16px;
+    }
+    .slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          min-width: 240px;
+          .commentAuthor {
+            .authorInfo {
+              .author {
+                .aboutAuthor {
+                  .authorName,
+                  .profession {
+                    font-size: 18px;
+                  }
+                }
+              }
+              .stars {
+                .value {
+                  font-size: 18px;
+                }
+              }
+            }
+            .quoteImg {
+              svg {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//*done

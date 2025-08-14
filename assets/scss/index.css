@@ -18,6 +18,7 @@
   font-style: normal;
 }
 * {
+  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -413,6 +414,8 @@ svg {
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
   height: 51px;
+  border: none;
+  outline: none;
 }
 .footer .container .row .footerNav .latestInfo form .infoBtn:hover {
   opacity: 0.7;
@@ -476,6 +479,12 @@ svg {
   .footer .container .row .footerNav .footerText .socials .socialItem svg {
     width: 22px;
     height: 22px;
+  }
+  .footer .container .row .footerNav .latestInfo form input {
+    padding: 5px;
+  }
+  .footer .container .row .footerNav .latestInfo form .infoBtn {
+    padding: 3px;
   }
   .footer .container .row .copyright {
     justify-content: center;
@@ -976,6 +985,7 @@ svg {
   text-wrap: wrap;
 }
 .whyHire .container .row .hireTextCard .btn {
+  cursor: pointer;
   width: -moz-fit-content;
   width: fit-content;
   border: 1px solid #151515;
@@ -1239,6 +1249,174 @@ svg {
     width: 45%;
   }
 }
+.testimonials {
+  background-image: url("/assets/images/bg-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  padding-top: 116px;
+  padding-bottom: 116px;
+  position: relative;
+  z-index: -5;
+  border-radius: 50px;
+}
+.testimonials::after {
+  content: "";
+  opacity: 80%;
+  background-color: #171717;
+  width: 100%;
+  display: block;
+  height: 100%;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -4;
+}
+.testimonials .textWhite {
+  color: #f9fafb;
+}
+.testimonials .testimonialHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+}
+.testimonials .testimonialHeading .title {
+  display: flex;
+  width: 35%;
+  position: relative;
+  justify-content: center;
+}
+.testimonials .testimonialHeading .title .titleWhite {
+  font-size: 48px;
+  font-weight: 500;
+}
+.testimonials .testimonialHeading .textWhite {
+  width: 48%;
+}
+.testimonials .slider .swiper-wrapper {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 21px;
+  flex: 1 0 40%;
+  flex-wrap: nowrap;
+  min-width: 350px;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .author {
+  display: flex;
+  gap: 12px;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .author .authorImg {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .author .aboutAuthor {
+  display: flex;
+  flex-direction: column;
+  font-family: "Urbanist";
+  gap: 5px;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .author .aboutAuthor .authorName {
+  font-size: 23.5px;
+  text-wrap: nowrap;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .author .aboutAuthor .profession {
+  font-size: 18.28px;
+  text-wrap: nowrap;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .stars .value {
+  font-size: 25.69px;
+  font-weight: 500;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .quoteImg svg {
+  width: 100px;
+  height: 100px;
+  stroke: none;
+}
+.testimonials .slider .swiper-wrapper .red {
+  background-color: red;
+}
+.testimonials .slider .swiper-wrapper .swiper-slide:hover {
+  border: 2px solid #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .testimonials {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+  .testimonials .testimonialHeading .title {
+    width: 90%;
+  }
+  .testimonials .testimonialHeading .title .titleWhite {
+    font-size: 36px;
+  }
+  .testimonials .testimonialHeading .textWhite {
+    width: 90%;
+  }
+  .testimonials .slider .swiper-wrapper .swiper-slide {
+    flex: 0 0 70%;
+  }
+  .testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .quoteImg svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 500px) {
+  .testimonials {
+    gap: 46px;
+  }
+  .testimonials .textWhite {
+    font-size: 16px;
+  }
+  .testimonials .slider .swiper-wrapper .swiper-slide {
+    min-width: 240px;
+  }
+  .testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .author .aboutAuthor .authorName,
+  .testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .author .aboutAuthor .profession {
+    font-size: 18px;
+  }
+  .testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .authorInfo .stars .value {
+    font-size: 18px;
+  }
+  .testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor .quoteImg svg {
+    width: 30px;
+    height: 30px;
+  }
+}
 .projectIdea .container {
   padding-top: 98px;
   padding-bottom: 98px;
@@ -1330,11 +1508,11 @@ svg {
 }
 @media (max-width: 768px) {
   .projectIdea .container {
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .projectIdea .container .row .title {
-    font-size: 32px;
+    font-size: 26px;
     width: 95%;
   }
   .projectIdea .container .row .projectCard {
@@ -1342,6 +1520,7 @@ svg {
   }
   .projectIdea .container .row .projectCard .emailForm {
     padding: 5px;
+    margin: 0 15px;
   }
   .projectIdea .container .row .projectCard .emailForm .enterInput .emailIcon {
     padding: 5px;
@@ -1350,6 +1529,9 @@ svg {
     width: 24px;
     height: 24px;
   }
+  .projectIdea .container .row .projectCard .emailForm .enterInput #emailInput {
+    padding-left: 5px;
+  }
   .projectIdea .container .row .projectCard .emailForm .enterInput #emailInput::-moz-placeholder {
     font-size: 14px;
   }
@@ -1357,7 +1539,8 @@ svg {
     font-size: 14px;
   }
   .projectIdea .container .row .projectCard .emailForm .orangeBtn {
-    padding: 10px 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
   }
 }
 .component .componentCard {
@@ -1423,12 +1606,13 @@ svg {
 .blogPost .container .row .blogDetails .blogCard {
   display: flex;
   flex-direction: column;
-  flex: 0 1 32%;
+  flex: 1 1 32%;
   gap: 35px;
   margin-top: 20px;
 }
 .blogPost .container .row .blogDetails .blogCard .cardImg {
   position: relative;
+  max-width: 350px;
 }
 .blogPost .container .row .blogDetails .blogCard .cardText {
   display: flex;
@@ -1483,11 +1667,20 @@ svg {
   .blogPost .container .row .blogDetails {
     justify-content: center;
   }
+  .blogPost .container .row .blogDetails .blogCard {
+    align-items: center;
+  }
+  .blogPost .container .row .blogDetails .blogCard .cardImg {
+    max-width: 240px;
+  }
   .blogPost .container .row .blogDetails .blogCard .cardText {
     align-items: center;
     text-align: center;
   }
+  .blogPost .container .row .blogDetails .blogCard .cardText .releaseInfo li {
+    font-size: 16px;
+  }
   .blogPost .container .row .blogDetails .blogCard .cardText .blogText {
-    font-size: 20px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=index.css.map */

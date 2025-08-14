@@ -29,11 +29,12 @@
         .blogCard {
           display: flex;
           flex-direction: column;
-          flex: 0 1 32%;
+          flex: 1 1 32%;
           gap: 35px;
           margin-top: 20px;
           .cardImg {
             position: relative;
+            max-width: 350px;
           }
           .cardText {
             display: flex;
@@ -102,16 +103,22 @@
             text-wrap: wrap;
             flex: 0 0 100%;
           }
-      
         }
         .blogDetails {
           justify-content: center;
           .blogCard {
+            align-items: center;
+            .cardImg {
+              max-width: 240px;
+            }
             .cardText {
               align-items: center;
               text-align: center;
+              .releaseInfo li {
+                font-size: 16px;
+              }
               .blogText {
-                font-size: 20px;
+                font-size: 18px;
               }
             }
           }
