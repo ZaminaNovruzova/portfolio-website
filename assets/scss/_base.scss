@@ -24,7 +24,7 @@
 }
 
 * {
-  outline: 1px solid red;
+  // outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -47,7 +47,6 @@ img {
   height: 100%;
   object-fit: cover;
 }
-
 
 .container {
   width: 100%;
@@ -88,6 +87,7 @@ h2 {
   @include btn($colorOrange);
   border: none;
   color: $colorWhite;
+  text-wrap: nowrap;
   a {
     color: $colorWhite;
   }

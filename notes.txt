@@ -1,68 +1,28 @@
-figmada my services de ilisdim 
-? dinamikliyi gormeliyem nece olacaq
-? kartlarin dizayninda her bir kart nece qurulacaq 
-
-testimonials ve heroda urbanist var project idea buttonlarda var
-blogpost seklin altindaki xirda yazilarda inter var 
-
-header
-eslinde header position fixed ya dasticky olmalidir ve z index olmalidir  amma burda bele deyil 
-muellimden sorus
-diger navlari hover edende ele bil sozlerin yeri deyisir bir az sol yuxari qalxir
-ve aktive eedende avtomatik hemin sectiona surussun active edende narinci ve activ edende font weight bold olsun 
-hover edende logo adi deyissin author olsun bunun kecidi yumsaq olsun
-logo hover edende diger navlar da 
-header dasmaya sebeb olur
-header burger click edende menu gelecek js de yaz onclick ile add-active ile amma acilandan sonra da iceride dizayn deyisecek
-ekran olcusu kicilende div altdan reski boyuyubb sonra balacalasir bu kecidi yox et
-1215 ele bil ki tezdir e eburger kecmek ucun cox bosluq qalir
-
-
-hero
-
-//* icon qaldi
-//* icon hover edende h1 yoxa cixsin ve quote card flex start olsun
-//* seklin olcusu teyin olunmalidir
-//*buttonlar ucun js tetbiq edeceyik birine hover edende digerinden active classsi remove olsun hover edilene elave olunsun
-//*responsivlik qaldi
-
-
-
- my-services
- arxa fon background img necese opacity vermek lazimdir ki ancaq sekle tesir etsin diger elemetlere yox
-ondan sonra ox olan hissede seklin gorunusu itmelidir 
-arxa fon seklinde hover transform x ile rotate olsun 45 derece
-cardlara hover edende gradient reng narinci olmalidir ve scale boyumelidr arrow lar rengi hoverde narinci olmaliidri
-slide goruntusu var amma funksional deyil 
-asagidan padding cox verilib amma figmada azdir baxmayaraq ki bottom 116px teyin olunub
-bu sekil niyese gore servic3 cardin icinden dasir 
-responsivlik slide movzusune yeni js e gedib cixsdgi ucun bunu saxlayiram
-hele bu section un responsivliyi qalib
-responsiv 1024 olanda 3cu card yoxa cixsin ve slide da gorunsun 
-umumiyyetle slide verek olcu kicildikce surusme olsun 
-ortadki card niye asagi dusur olcu kicilende-max content verende tekce yoxa cixir onda da responsivlik gedir? slide hell ede biler?
-
-
-
-portfolio 
-sekiller niye ortada qalib 
-figmada verilen bu statik olculer ne qeder dogrudur 
-hover edende yazi gelsin
-responsivlik
-
-
-
-header
-
-label elave etmeliyem ve burger menuya klik edende gelen hisseni duzeltmeliyem
- 
-
-
 //*renglerin adlarinda problem
 //*font-size problemi 
 
-blog
-//*list style-color nese alinmadi
+
+heeader-
+responsivliye mane olur
+burger menu islemir
+
+hero
+
+services
+seklin arxasinda 3 dene shadow var 3 dene elave kart yaradib position absolute ile z-index vermek olar
+portfolio
+responsivlik
+slide
+
+portfolio
+bcg img bir der adi img kimi yoxladim eyni problem belli meseledir ki seklin ozunu kesmekv lazimdir 
+responsivlik hazir amma cardlar xaric
+seklin ozunu kesmek 
+
+testimonials
+//*iconlar
+swiper islemir
+responsiv deyil
 
 
 component 
@@ -71,7 +31,7 @@ component
 //*yazilar infinity deyil
 
 
-testimonials
-//*iconlar
-swiper islemir
+blog
+//*list style-color nese alinmadi
 
+is bitenden sonra butun ahrefleri yoxla

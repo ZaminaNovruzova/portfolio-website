@@ -18,7 +18,6 @@
   font-style: normal;
 }
 * {
-  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -90,6 +89,7 @@ h2 {
   width: fit-content;
   border: none;
   color: #ffffff;
+  text-wrap: nowrap;
 }
 .orangeBtn a {
   color: #ffffff;
@@ -479,6 +479,9 @@ svg {
   .footer .container .row .footerNav .footerText .socials .socialItem svg {
     width: 22px;
     height: 22px;
+  }
+  .footer .container .row .footerNav .latestInfo form {
+    justify-content: center;
   }
   .footer .container .row .footerNav .latestInfo form input {
     padding: 5px;
@@ -1056,8 +1059,9 @@ svg {
     padding: 16px 30px;
   }
 }
-.portfolio {
-  padding: 97px 0;
+.portfolio .container {
+  padding-top: 97px;
+  padding-bottom: 97px;
 }
 .portfolio .container .row {
   display: flex;
@@ -1068,10 +1072,12 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 .portfolio .container .row .portfolioHeading h2 {
   font-weight: 600;
-  flex: 0 0 50%;
+  flex: 0 0 44%;
 }
 .portfolio .container .row .portfolioDetails {
   display: flex;
@@ -1089,22 +1095,25 @@ svg {
   justify-content: space-between;
   gap: 24px;
   width: 100%;
+  flex-wrap: wrap;
 }
 .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card {
-  width: 50%;
-  height: 371px;
-  max-height: 371px;
-  border-radius: 20px;
   background-image: url("/assets/images/portfolio.png");
   background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 20px;
   position: relative;
   background-size: cover;
-  padding: 10px;
+  background-position: center;
+  cursor: pointer;
+  flex: 1 1 40%;
+  min-width: 200px;
+  overflow: hidden;
+  max-height: 371px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
+  padding: 10px;
+  height: 371px;
 }
 .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card::after {
   content: "";
@@ -1117,9 +1126,30 @@ svg {
   z-index: 2;
 }
 .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .arrowRight {
+  border: 1px solid #fd853a;
   width: 64px;
   height: 64px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: flex-end;
+  gap: 10px;
+  padding: 10px;
+}
+.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .arrowRight a svg {
+  stroke: none;
+  fill: #fd853a;
+}
+.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 0 10px;
+  position: relative;
+  z-index: 5;
 }
 .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
   font-size: 70px;
@@ -1130,13 +1160,22 @@ svg {
 }
 .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteText {
   display: none;
-}
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .liranteText {
-  display: block;
-  background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72));
+  width: 90%;
   color: #ffffff;
-  transform: scaleY(1.1);
-  border-radius: 25px;
+}
+.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .arrowRight {
+  background-color: #fd853a;
+}
+.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .arrowRight a svg {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .lirante {
+  background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72));
+  transform: scale(1.02);
+}
+.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .lirante .liranteText {
+  display: block;
 }
 .portfolio .container .row .portfolioDetails .portfolioSlide .dots {
   width: -moz-fit-content;
@@ -1158,15 +1197,28 @@ svg {
 .portfolio .container .row .portfolioDetails .aboutLirante .subtitle {
   display: flex;
   gap: 18px;
+  align-items: center;
 }
 .portfolio .container .row .portfolioDetails .aboutLirante .subtitle h4 {
   color: #344054;
   font-weight: 700;
   font-size: 48px;
 }
-.portfolio .container .row .portfolioDetails .aboutLirante .subtitle .arrowUpRight {
+.portfolio .container .row .portfolioDetails .aboutLirante .subtitle .arrowOrange {
   width: 58px;
   height: 58px;
+  background-color: #fd853a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 2px solid #fd853a;
+  gap: 10px;
+  padding: 10px;
+}
+.portfolio .container .row .portfolioDetails .aboutLirante .subtitle .arrowOrange:hover {
+  background-color: #000000;
+  border: none;
 }
 .portfolio .container .row .portfolioDetails .aboutLirante p {
   color: #344054;
@@ -1174,79 +1226,64 @@ svg {
   width: 45%;
 }
 
-@media (max-width: 1200px) {
-  .portfolio {
-    padding: 97px 0;
-  }
-  .portfolio .container .row {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-  }
-  .portfolio .container .row .portfolioHeading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media (max-width: 950px) {
+  .portfolio .container {
+    padding-top: 57px;
+    padding-bottom: 57px;
   }
   .portfolio .container .row .portfolioHeading h2 {
-    font-size: 40px;
-  }
-  .portfolio .container .row .portfolioDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-  }
-  .portfolio .container .row .portfolioDetails .portfolioSlide {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    align-items: center;
+    font-size: 48px;
+    flex: 1 1 60%;
   }
   .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    width: 100%;
+    justify-content: center;
+  }
+  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card {
+    flex: 0 1 60%;
+  }
+  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante {
+    padding: 5px;
+    margin: 0px;
   }
   .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
     font-size: 50px;
   }
-  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteText {
-    display: none;
-  }
-  .portfolio .container .row .portfolioDetails .portfolioSlide .dots {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .portfolio .container .row .portfolioDetails .portfolioLinks {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-  }
-  .portfolio .container .row .portfolioDetails .aboutLirante {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 24px;
-  }
   .portfolio .container .row .portfolioDetails .aboutLirante .subtitle {
     display: flex;
     gap: 18px;
+    align-items: center;
   }
   .portfolio .container .row .portfolioDetails .aboutLirante .subtitle h4 {
-    color: #344054;
-    font-weight: 700;
-    font-size: 48px;
-  }
-  .portfolio .container .row .portfolioDetails .aboutLirante .subtitle .arrowUpRight {
-    width: 58px;
-    height: 58px;
+    font-size: 40px;
   }
   .portfolio .container .row .portfolioDetails .aboutLirante p {
-    color: #344054;
-    font-weight: 400;
-    width: 45%;
+    width: 95%;
+  }
+}
+@media (max-width: 500px) {
+  .portfolio .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .portfolio .container .row .portfolioHeading {
+    justify-content: center;
+  }
+  .portfolio .container .row .portfolioHeading h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
+    font-size: 35px;
+  }
+  .portfolio .container .row .portfolioDetails .aboutLirante .subtitle {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .portfolio .container .row .portfolioDetails .aboutLirante .subtitle h4 {
+    font-size: 30px;
+  }
+  .portfolio .container .row .portfolioDetails .aboutLirante p {
+    font-size: 16px;
   }
 }
 .testimonials {
@@ -1299,11 +1336,13 @@ svg {
 .testimonials .testimonialHeading .textWhite {
   width: 48%;
 }
+.testimonials .slider {
+  overflow: hidden;
+}
 .testimonials .slider .swiper-wrapper {
   display: flex;
   gap: 14px;
   justify-content: center;
-  overflow: hidden;
   flex-wrap: nowrap;
 }
 .testimonials .slider .swiper-wrapper .swiper-slide {
@@ -1365,9 +1404,6 @@ svg {
   width: 100px;
   height: 100px;
   stroke: none;
-}
-.testimonials .slider .swiper-wrapper .red {
-  background-color: red;
 }
 .testimonials .slider .swiper-wrapper .swiper-slide:hover {
   border: 2px solid #ffffff;
@@ -1438,7 +1474,6 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 68%;
 }
 .projectIdea .container .row .projectCard .emailForm {
   display: flex;
@@ -1512,15 +1547,10 @@ svg {
     padding-bottom: 40px;
   }
   .projectIdea .container .row .title {
-    font-size: 26px;
-    width: 95%;
-  }
-  .projectIdea .container .row .projectCard {
-    width: 98%;
+    font-size: 36px;
   }
   .projectIdea .container .row .projectCard .emailForm {
     padding: 5px;
-    margin: 0 15px;
   }
   .projectIdea .container .row .projectCard .emailForm .enterInput .emailIcon {
     padding: 5px;
@@ -1540,7 +1570,11 @@ svg {
   }
   .projectIdea .container .row .projectCard .emailForm .orangeBtn {
     padding: 5px 10px;
-    margin-right: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .projectIdea .container .row .title {
+    font-size: 26px;
   }
 }
 .component .componentCard {
@@ -1671,7 +1705,7 @@ svg {
     align-items: center;
   }
   .blogPost .container .row .blogDetails .blogCard .cardImg {
-    max-width: 240px;
+    min-width: 240px;
   }
   .blogPost .container .row .blogDetails .blogCard .cardText {
     align-items: center;

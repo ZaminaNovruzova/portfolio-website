@@ -21,7 +21,6 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        width: 68%;
         .emailForm {
           display: flex;
           border-radius: 50px;
@@ -102,14 +101,12 @@
       padding-bottom: 40px;
       .row {
         .title {
-          font-size: 26px;
-          width: 95%;
+          font-size: 36px;
         }
         .projectCard {
-          width: 98%;
           .emailForm {
             padding: 5px;
-            margin: 0 15px;
+
             .enterInput {
               .emailIcon {
                 padding: 5px;
@@ -127,9 +124,20 @@
             }
             .orangeBtn {
               padding: 5px 10px;
-              margin-right: 5px;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .projectIdea {
+    .container {
+      .row {
+        .title {
+          font-size: 26px;
         }
       }
     }
