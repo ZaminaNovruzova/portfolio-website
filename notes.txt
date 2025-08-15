@@ -7,11 +7,12 @@ responsivliye mane olur
 burger menu islemir
 
 hero
+responsivlik
 
 services
-seklin arxasinda 3 dene shadow var 3 dene elave kart yaradib position absolute ile z-index vermek olar
-portfolio
-responsivlik
+seklin arxasindaki kolgelere transform translateZ istifade etmek ve mesafeni duzeltmek
+oxlar olan hissede kesilme var 
+bcg img rotate arxa fon seklin detallari transform rotate olmalidr
 slide
 
 portfolio

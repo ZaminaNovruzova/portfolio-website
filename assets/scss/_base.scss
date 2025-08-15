@@ -173,6 +173,9 @@ svg {
 }
 .arrowCircle {
   @include arrowBtn();
+  &:hover {
+    background-color: $colorOrange;
+  }
 }
 //*done
 

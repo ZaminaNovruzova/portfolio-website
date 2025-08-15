@@ -2,16 +2,33 @@
 @use "../mixins" as *;
 
 .services {
-  background-image: url("/assets/images/service-bg.jpg");
+  background-image: url("/assets/images/bg-img.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -20;
   border-radius: 50px;
-
+  &::after {
+    content: "";
+    opacity: 80%;
+    background-color: $colorNav;
+    background-image: url("/assets/images/services-bg-details.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 100%;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    z-index: -15;
+  }
   .container {
     padding-top: 116px;
     padding-bottom: 116px;
-
     .row {
       display: flex;
       flex-direction: column;
@@ -25,7 +42,9 @@
         .titleWhite,
         .text {
           color: $colorWhite;
-          flex: 0 0 37%;
+        }
+        .text {
+          width: 37%;
         }
         .titleWhite {
           font-size: 48px;
@@ -39,7 +58,9 @@
           display: flex;
           justify-content: space-between;
           gap: 39px;
+          flex-wrap: wrap;
           .card {
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -47,7 +68,8 @@
             background-color: rgba(255, 255, 255, 0.3);
             border-radius: 35px;
             border: 2px solid $colorWhite;
-            overflow: hidden;
+            max-width: 50%;
+            flex: 1 1 30%;
             .cardTitle {
               font-size: 32px;
               font-weight: 500;
@@ -56,19 +78,12 @@
               text-wrap: nowrap;
             }
             .cardImg {
-              .img {
+              border-radius: 35px;
+              overflow: hidden;
+              position: relative;
+
+              img {
                 border-radius: 35px;
-                overflow: hidden;
-              }
-              .arrowCircle {
-                @include arrowBtn();
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                svg {
-                  width: 72px;
-                  height: 72px;
-                }
               }
             }
             .cardImg::before {
@@ -76,6 +91,25 @@
               border: 2px solid rgba(249, 250, 251, 0.3);
               display: block;
               margin: 23px 0;
+              position: relative;
+              z-index: -10;
+            }
+            .cardImgShadow {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              border-radius: 35px;
+            }
+            .dark {
+              background-color: #757575;
+              opacity: 50%;
+              top: 0;
+              z-index: -5;
+            }
+            .light {
+              background-color: #9e9d9d;
+              top: 20px;
+              z-index: -3;
             }
           }
         }
@@ -88,78 +122,49 @@
   }
 }
 
-// @media (max-width: 1024px) {
-//   .services {
-//     .container {
-//       padding-top: 70px;
-//       padding-bottom: 70px;
-//       .row {
-//         gap: 70px;
-//         .serviceHeading {
-//           .title,
-//           .text {
-//             flex: 0 0 100%;
-//           }
-//         }
-//         .serviceSlide {
-//           .serviceCards {
-//             .card {
-//               .serviceDetails {
-//                 .cardTitle {
-//                   font-size: 24px;
-//                   padding: 37px;
-//                   text-wrap: nowrap;
-//                 }
-//               }
-//               .arrowCircle {
-//                 width: 74px;
-//                 height: 74px;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@media (max-width: 768px) {
+  .services {
+    .container {
+      padding-top: 66px;
+      padding-bottom: 66px;
+      .row {
+        gap: 48px;
+        .serviceHeading {
+          text-align: center;
+          justify-content: center;
+          .titleWhite,
+          .text {
+            flex: 0 0 90%;
+          }
+          .text {
+            font-size: 18px;
+          }
+          .titleWhite {
+            font-size: 36px;
+          }
+        }
+        .serviceSlide {
+          .serviceCards {
+            justify-content: center;
+            .card {
+              flex: 1 1 70%;
+              max-width: 70%;
+              .cardTitle {
+                text-align: center;
+                font-size: 24px;
 
-// //*768den-320 e qeder normal deyil  sonra kartlar slide olmaga baslasin ve 768 de aralrindaki gap azalsin
-// //* done
-
-// @media (max-width: 425px) {
-//   .services {
-//     .container {
-//       padding-top: 50px;
-//       padding-bottom: 50px;
-//       .row {
-//         gap: 50px;
-//         .serviceHeading {
-//           text-align: center;
-//           .title {
-//             font-size: 40px;
-//           }
-//         }
-//         .serviceSlide {
-//           .serviceCards {
-//             .deactive {
-//               display: none;
-//             }
-//             .card {
-//               .cardTitle {
-//                 text-align: center;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-//*seklin arxasinda shadow var 3qatli 3 div ust uste ve herbirine z index background color ve olcu de inherit veri duzelde bilerem
-
-//*responsivlikde slide lazim 
-//*buttonlar olan yerde kesilme olmalidir
-//*background img rotate 
-//*opacity var bacground img in ustunde 
+                padding: 20px;
+                text-wrap: wrap;
+              }
+              .cardImg {
+                .arrowCircle {
+                  padding: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
