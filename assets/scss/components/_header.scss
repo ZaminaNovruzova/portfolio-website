@@ -2,11 +2,17 @@
 @use "../mixins" as *;
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
   .container {
     .row {
       .navBar {
         background-color: $colorNav;
         border-radius: 50px;
+
         .burger {
           display: none;
         }
@@ -30,15 +36,8 @@
               transform: scale(1.1);
             }
           }
-        
-          .orangeBtn {
-            font-weight: 700;
-            &:hover {
-              //*bunun rengi deyismemelidir
-              background-color: $colorOrange;
-              transform: scale(1);
-            }
-          }
+
+       
         }
       }
     }
@@ -89,3 +88,7 @@
 }
 //*burger duzelmelidir
 //* logo hover edende yazilar surusmemelidir
+// .buttons btn:active {
+//   background-color: $colorOrange;
+// }
+

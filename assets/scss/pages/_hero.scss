@@ -3,12 +3,14 @@
 @use "../animations/animation" as *;
 
 .hero {
-  margin-top: 40px;
+  margin-top: 100px;
+  height: 90vh;
   .container {
     .row {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      justify-content: space-between;
       .aboutMe {
         display: flex;
         flex-direction: column;
@@ -42,7 +44,7 @@
             font-weight: 600;
             font-size: 95.57px;
           }
-          //*vector 2 de problem var responsiv deyil
+          //           //*vector 2 de problem var responsiv deyil
           .vectorTwo {
             width: fit-content;
             position: absolute;
@@ -68,9 +70,6 @@
           .quoteUp {
             width: 36px;
             height: 36px;
-            img {
-              color: $colorSlateGray;
-            }
           }
           p {
             color: $colorSlateGray;
@@ -83,7 +82,7 @@
           gap: 21px;
           text-align: end;
           .stars {
-            width: fit-content;
+            width: max-content;
           }
           .experienceText {
             display: flex;
@@ -117,8 +116,13 @@
           position: absolute;
           bottom: 0;
         }
+        // .personImg {
+        //   // width: 600px;
+        //   // height: 500px;
+        // }
         .ellipse {
           z-index: -2;
+          // width: 60%;
         }
         .personImgIcons {
           z-index: -1;
@@ -146,7 +150,6 @@
             a {
               color: $colorWhite;
             }
-           
           }
           .hire {
             svg {
@@ -252,9 +255,9 @@
           .buttons {
             bottom: 20px;
           }
-          .personImg {
-            width: 100%;
-          }
+          // .personImg {
+          //   width: 100%;
+          // }
         }
       }
     }

@@ -5,15 +5,23 @@
 heeader-
 responsivliye mane olur
 burger menu islemir
+logo hover olanda digerleri kenara surusur 
 
 hero
 responsivlik
+qadin seklinin olcusu
+iconlar serviceden niye gelir
+//*vector 2 de problem var responsiv deyil
+//*burda nese font weigth uygun gelmir
+//* base de ki font face de de duzelis edende hamsinin weigthine tesir edir .arasdir
 
 services
 seklin arxasindaki kolgelere transform translateZ istifade etmek ve mesafeni duzeltmek
 oxlar olan hissede kesilme var 
 bcg img rotate arxa fon seklin detallari transform rotate olmalidr
 slide
+z-index e gore hover islemir niye?
+
 
 portfolio
 bcg img bir der adi img kimi yoxladim eyni problem belli meseledir ki seklin ozunu kesmekv lazimdir 

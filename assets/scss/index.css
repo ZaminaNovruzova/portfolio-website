@@ -30,10 +30,15 @@
 body {
   background-color: #ffffff;
   padding-top: 40px;
+  height: 100vh;
 }
 
 main {
   position: relative;
+}
+
+section {
+  width: 100%;
 }
 
 img {
@@ -216,6 +221,12 @@ svg {
     font-size: 16px;
   }
 }
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
 .header .container .row .navBar {
   background-color: #171717;
   border-radius: 50px;
@@ -247,13 +258,6 @@ svg {
   width: -moz-fit-content;
   width: fit-content;
   transform: scale(1.1);
-}
-.header .container .row .navBar .buttons .orangeBtn {
-  font-weight: 700;
-}
-.header .container .row .navBar .buttons .orangeBtn:hover {
-  background-color: #fd853a;
-  transform: scale(1);
 }
 
 @media (max-width: 1230px) {
@@ -517,12 +521,14 @@ svg {
   }
 }
 .hero {
-  margin-top: 40px;
+  margin-top: 100px;
+  height: 90vh;
 }
 .hero .container .row {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  justify-content: space-between;
 }
 .hero .container .row .aboutMe {
   display: flex;
@@ -586,9 +592,6 @@ svg {
   width: 36px;
   height: 36px;
 }
-.hero .container .row .aboutText .quoteCard .quoteUp img {
-  color: #344054;
-}
 .hero .container .row .aboutText .quoteCard p {
   color: #344054;
 }
@@ -600,8 +603,8 @@ svg {
   text-align: end;
 }
 .hero .container .row .aboutText .experienceCard .stars {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .hero .container .row .aboutText .experienceCard .experienceText {
   display: flex;
@@ -718,9 +721,6 @@ svg {
   .hero .container .row .personDetails .buttons {
     bottom: 20px;
   }
-  .hero .container .row .personDetails .personImg {
-    width: 100%;
-  }
 }
 @media (max-width: 375px) {
   .vectorTwo {
@@ -733,7 +733,6 @@ svg {
   background-size: cover;
   background-position: center;
   position: relative;
-  z-index: -20;
   border-radius: 50px;
 }
 .services::after {
@@ -751,11 +750,12 @@ svg {
   border-radius: 50px;
   top: 0;
   left: 0;
-  z-index: -15;
+  z-index: 1;
 }
 .services .container {
-  padding-top: 116px;
-  padding-bottom: 116px;
+  padding: 116px 71px;
+  position: relative;
+  z-index: 2;
 }
 .services .container .row {
   display: flex;
@@ -780,27 +780,20 @@ svg {
   font-size: 48px;
 }
 .services .container .row .serviceSlide {
-  display: flex;
-  flex-direction: column;
-  gap: 39px;
-}
-.services .container .row .serviceSlide .serviceCards {
-  display: flex;
-  justify-content: space-between;
-  gap: 39px;
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
 }
 .services .container .row .serviceSlide .serviceCards .card {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 35px;
   border: 2px solid #ffffff;
-  max-width: 50%;
-  flex: 1 1 30%;
+  width: 33%;
 }
 .services .container .row .serviceSlide .serviceCards .card .cardTitle {
   font-size: 32px;
@@ -814,8 +807,15 @@ svg {
   overflow: hidden;
   position: relative;
 }
+.services .container .row .serviceSlide .serviceCards .card .cardImg .img {
+  position: relative;
+  z-index: 10;
+}
 .services .container .row .serviceSlide .serviceCards .card .cardImg img {
   border-radius: 35px;
+}
+.services .container .row .serviceSlide .serviceCards .card .cardImg .arrowCircle {
+  z-index: 12;
 }
 .services .container .row .serviceSlide .serviceCards .card .cardImg::before {
   content: "";
@@ -823,7 +823,6 @@ svg {
   display: block;
   margin: 23px 0;
   position: relative;
-  z-index: -10;
 }
 .services .container .row .serviceSlide .serviceCards .card .cardImgShadow {
   width: 100%;
@@ -835,58 +834,21 @@ svg {
   background-color: #757575;
   opacity: 50%;
   top: 0;
-  z-index: -5;
 }
 .services .container .row .serviceSlide .serviceCards .card .light {
   background-color: #9e9d9d;
   top: 20px;
-  z-index: -3;
 }
-.services .container .row .serviceSlide .dots {
-  width: -moz-fit-content;
-  width: fit-content;
-  align-self: center;
+.services .container .row .serviceSlide .serviceCards .card:hover {
+  background-color: #fd853a;
+}
+.services .container .row .serviceSlide .serviceCards .card:hover .cardImg .img {
+  transform: scaleY(1.04);
+}
+.services .container .row .serviceSlide .serviceCards .card:hover .cardImg .arrowCircle {
+  background-color: #fd853a;
 }
 
-@media (max-width: 768px) {
-  .services .container {
-    padding-top: 66px;
-    padding-bottom: 66px;
-  }
-  .services .container .row {
-    gap: 48px;
-  }
-  .services .container .row .serviceHeading {
-    text-align: center;
-    justify-content: center;
-  }
-  .services .container .row .serviceHeading .titleWhite,
-  .services .container .row .serviceHeading .text {
-    flex: 0 0 90%;
-  }
-  .services .container .row .serviceHeading .text {
-    font-size: 18px;
-  }
-  .services .container .row .serviceHeading .titleWhite {
-    font-size: 36px;
-  }
-  .services .container .row .serviceSlide .serviceCards {
-    justify-content: center;
-  }
-  .services .container .row .serviceSlide .serviceCards .card {
-    flex: 1 1 70%;
-    max-width: 70%;
-  }
-  .services .container .row .serviceSlide .serviceCards .card .cardTitle {
-    text-align: center;
-    font-size: 24px;
-    padding: 20px;
-    text-wrap: wrap;
-  }
-  .services .container .row .serviceSlide .serviceCards .card .cardImg .arrowCircle {
-    padding: 10px;
-  }
-}
 .experience .container .row {
   flex-direction: column;
   gap: 10px;
@@ -1147,20 +1109,13 @@ svg {
   flex-direction: column;
   gap: 48px;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  align-items: center;
-}
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards {
+.portfolio .container .row .portfolioDetails .portfolioCards {
   display: flex;
   justify-content: space-between;
   gap: 24px;
   width: 100%;
-  flex-wrap: wrap;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card {
+.portfolio .container .row .portfolioDetails .portfolioCards .card {
   background-image: url("/assets/images/portfolio.png");
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -1178,7 +1133,7 @@ svg {
   padding: 10px;
   height: 371px;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card::after {
+.portfolio .container .row .portfolioDetails .portfolioCards .card::after {
   content: "";
   background: linear-gradient(to top right, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%);
   width: 100%;
@@ -1188,7 +1143,7 @@ svg {
   left: 0;
   z-index: 2;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .arrowRight {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .arrowRight {
   border: 1px solid #fd853a;
   width: 64px;
   height: 64px;
@@ -1200,11 +1155,11 @@ svg {
   gap: 10px;
   padding: 10px;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .arrowRight a svg {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .arrowRight a svg {
   stroke: none;
   fill: #fd853a;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .lirante {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1214,33 +1169,33 @@ svg {
   position: relative;
   z-index: 5;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .lirante .liranteTitle {
   font-size: 70px;
   font-weight: 700;
   position: relative;
   z-index: 4;
   color: #ffffff;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteText {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .lirante .liranteText {
   display: none;
   width: 90%;
   color: #ffffff;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .arrowRight {
+.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .arrowRight {
   background-color: #fd853a;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .arrowRight a svg {
+.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .arrowRight a svg {
   fill: #ffffff;
   stroke: #ffffff;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .lirante {
+.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .lirante {
   background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72));
   transform: scale(1.02);
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card:hover .lirante .liranteText {
+.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .lirante .liranteText {
   display: block;
 }
-.portfolio .container .row .portfolioDetails .portfolioSlide .dots {
+.portfolio .container .row .portfolioDetails .dots {
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1250,24 +1205,24 @@ svg {
   justify-content: center;
   flex-wrap: wrap;
 }
-.portfolio .container .row .portfolioDetails .aboutLirante {
+.portfolio .container .row .portfolioDetails .aboutBrand {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   gap: 24px;
 }
-.portfolio .container .row .portfolioDetails .aboutLirante .subtitle {
+.portfolio .container .row .portfolioDetails .aboutBrand .subtitle {
   display: flex;
   gap: 18px;
   align-items: center;
 }
-.portfolio .container .row .portfolioDetails .aboutLirante .subtitle h4 {
+.portfolio .container .row .portfolioDetails .aboutBrand .subtitle h4 {
   color: #344054;
   font-weight: 700;
   font-size: 48px;
 }
-.portfolio .container .row .portfolioDetails .aboutLirante .subtitle .arrowOrange {
+.portfolio .container .row .portfolioDetails .aboutBrand .subtitle .arrowOrange {
   width: 58px;
   height: 58px;
   background-color: #fd853a;
@@ -1279,11 +1234,11 @@ svg {
   gap: 10px;
   padding: 10px;
 }
-.portfolio .container .row .portfolioDetails .aboutLirante .subtitle .arrowOrange:hover {
+.portfolio .container .row .portfolioDetails .aboutBrand .subtitle .arrowOrange:hover {
   background-color: #000000;
   border: none;
 }
-.portfolio .container .row .portfolioDetails .aboutLirante p {
+.portfolio .container .row .portfolioDetails .aboutBrand p {
   color: #344054;
   font-weight: 400;
   width: 45%;
@@ -1311,15 +1266,15 @@ svg {
   .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
     font-size: 50px;
   }
-  .portfolio .container .row .portfolioDetails .aboutLirante .subtitle {
+  .portfolio .container .row .portfolioDetails .aboutBrand .subtitle {
     display: flex;
     gap: 18px;
     align-items: center;
   }
-  .portfolio .container .row .portfolioDetails .aboutLirante .subtitle h4 {
+  .portfolio .container .row .portfolioDetails .aboutBrand .subtitle h4 {
     font-size: 40px;
   }
-  .portfolio .container .row .portfolioDetails .aboutLirante p {
+  .portfolio .container .row .portfolioDetails .aboutBrand p {
     width: 95%;
   }
 }
@@ -1338,14 +1293,14 @@ svg {
   .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
     font-size: 35px;
   }
-  .portfolio .container .row .portfolioDetails .aboutLirante .subtitle {
+  .portfolio .container .row .portfolioDetails .aboutBrand .subtitle {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .portfolio .container .row .portfolioDetails .aboutLirante .subtitle h4 {
+  .portfolio .container .row .portfolioDetails .aboutBrand .subtitle h4 {
     font-size: 30px;
   }
-  .portfolio .container .row .portfolioDetails .aboutLirante p {
+  .portfolio .container .row .portfolioDetails .aboutBrand p {
     font-size: 16px;
   }
 }
@@ -1360,7 +1315,7 @@ svg {
   padding-top: 116px;
   padding-bottom: 116px;
   position: relative;
-  z-index: -5;
+  z-index: 0;
   border-radius: 50px;
 }
 .testimonials::after {
@@ -1374,7 +1329,7 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -4;
+  z-index: 1;
 }
 .testimonials .textWhite {
   color: #f9fafb;
@@ -1385,6 +1340,8 @@ svg {
   gap: 14px;
   align-items: center;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 .testimonials .testimonialHeading .title {
   display: flex;
@@ -1400,13 +1357,10 @@ svg {
   width: 48%;
 }
 .testimonials .slider {
-  overflow: hidden;
-}
-.testimonials .slider .swiper-wrapper {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: nowrap;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 .testimonials .slider .swiper-wrapper .swiper-slide {
   background-color: rgba(255, 255, 255, 0.14);
@@ -1416,9 +1370,6 @@ svg {
   flex-direction: column;
   gap: 14px;
   padding: 21px;
-  flex: 1 0 40%;
-  flex-wrap: nowrap;
-  min-width: 350px;
 }
 .testimonials .slider .swiper-wrapper .swiper-slide .commentAuthor {
   display: flex;
@@ -1706,6 +1657,10 @@ svg {
   flex: 1 1 32%;
   gap: 35px;
   margin-top: 20px;
+  cursor: pointer;
+}
+.blogPost .container .row .blogDetails .blogCard:hover .arrowCircle {
+  background-color: #fd853a;
 }
 .blogPost .container .row .blogDetails .blogCard .cardImg {
   position: relative;
@@ -1780,4 +1735,218 @@ svg {
   .blogPost .container .row .blogDetails .blogCard .cardText .blogText {
     font-size: 18px;
   }
+}
+.adminBody {
+  background-color: #000000;
+}
+
+.serviceAdmin {
+  height: 100%;
+  position: relative;
+}
+.serviceAdmin .overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6431372549), rgba(0, 0, 0, 0.5764705882));
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+}
+.serviceAdmin .active {
+  display: block;
+}
+.serviceAdmin .container {
+  padding: 71px;
+}
+.serviceAdmin .container .row {
+  position: relative;
+}
+.serviceAdmin .container .row .serviceBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 39px;
+  position: relative;
+}
+.serviceAdmin .container .row .serviceBox .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 35px;
+  border: 2px solid #ffffff;
+  flex: 0 0 25%;
+  height: 400px;
+  width: 300px;
+  position: relative;
+}
+.serviceAdmin .container .row .serviceBox .card .cardTitle {
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 37px;
+  text-wrap: nowrap;
+}
+.serviceAdmin .container .row .serviceBox .card .cardImg {
+  border-radius: 35px;
+  overflow: hidden;
+  position: relative;
+}
+.serviceAdmin .container .row .serviceBox .card .cardImg .img {
+  position: relative;
+  z-index: 10;
+  height: 300px;
+  width: 100%;
+  bottom: 0;
+}
+.serviceAdmin .container .row .serviceBox .card .cardImg img {
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+}
+.serviceAdmin .container .row .serviceBox .card .cardImg .arrowCircle {
+  z-index: 12;
+}
+.serviceAdmin .container .row .serviceBox .card .cardImg::before {
+  content: "";
+  border: 2px solid rgba(249, 250, 251, 0.3);
+  display: block;
+  margin: 23px 0;
+  position: relative;
+}
+.serviceAdmin .container .row .serviceBox .card .cardImgShadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 35px;
+}
+.serviceAdmin .container .row .serviceBox .card .dark {
+  background-color: #757575;
+  opacity: 50%;
+  top: 0;
+}
+.serviceAdmin .container .row .serviceBox .card .light {
+  background-color: #9e9d9d;
+  top: 20px;
+}
+.serviceAdmin .container .row .serviceBox .card .changeCard {
+  position: absolute;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  display: none;
+}
+.serviceAdmin .container .row .serviceBox .card .changeCard .setItem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.serviceAdmin .container .row .serviceBox .card .changeCard .setItem button {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.serviceAdmin .container .row .serviceBox .card:hover .changeCard {
+  display: block;
+}
+.serviceAdmin .container .row .addBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 30;
+}
+.serviceAdmin .container .row .addBtn .add {
+  cursor: pointer;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+}
+.serviceAdmin .container .row .modalWindow {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 40;
+  width: 100%;
+  height: 100%;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.serviceAdmin .container .row .modalWindow .modalContent {
+  background-color: rgb(245, 229, 229);
+  position: absolute;
+  z-index: 45;
+  width: 40%;
+  top: 0;
+  border-radius: 20px;
+  padding: 20px;
+}
+.serviceAdmin .container .row .modalWindow .modalContent h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 6px 0 16px;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow .error {
+  color: red;
+  background-color: white;
+  margin: 5px;
+  font-size: 16px;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow label {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow input {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  height: 35px;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow input::-moz-placeholder {
+  font-size: 16px;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow input::placeholder {
+  font-size: 16px;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow .buttons button {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.serviceAdmin .container .row .active {
+  display: flex;
 }/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/scss/index.css">
+    <title>Portfolio | Admin</title>
+</head>
+
+<body class="adminBody">
+    <main>
+        <section class="serviceAdmin">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="serviceBox">
+                    </div>
+                    <form class="addBtn">
+                        <button class="add" type="submit">+</button>
+                    </form>
+                    <div class="modalWindow">
+                        <div class="modalContent">
+                            <h3>Add new service</h3>
+                            <form class="addServiceWindow" novalidate>
+                                <input type="text" id="serviceTitle" placeholder="Enter service title">
+                                <label for="image">Enter the image:</label>
+                                <input type="file" id="image">
+                                <input type="url" id="url" placeholder="Enter related link to service">
+                                <div class="buttons">
+                                    <button class="cancel">Cancel</button>
+                                    <button type="submit" class="submit" formnovalidate>Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/admin.js" type="module"></script>
+</body>
+
+</html>

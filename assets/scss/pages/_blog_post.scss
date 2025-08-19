@@ -32,6 +32,12 @@
           flex: 1 1 32%;
           gap: 35px;
           margin-top: 20px;
+          cursor: pointer;
+          &:hover {
+            .arrowCircle {
+              background-color: $colorOrange;
+            }
+          }
           .cardImg {
             position: relative;
             max-width: 350px;

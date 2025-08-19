@@ -7,8 +7,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  z-index: -20;
   border-radius: 50px;
+  // height: 100%;
   &::after {
     content: "";
     opacity: 80%;
@@ -24,11 +24,12 @@
     border-radius: 50px;
     top: 0;
     left: 0;
-    z-index: -15;
+    z-index: 1;
   }
   .container {
-    padding-top: 116px;
-    padding-bottom: 116px;
+    padding: 116px 71px;
+    position: relative;
+    z-index: 2;
     .row {
       display: flex;
       flex-direction: column;
@@ -51,25 +52,20 @@
         }
       }
       .serviceSlide {
-        display: flex;
-        flex-direction: column;
-        gap: 39px;
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
         .serviceCards {
-          display: flex;
-          justify-content: space-between;
-          gap: 39px;
-          flex-wrap: wrap;
           .card {
             cursor: pointer;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            position: relative;
             background-color: rgba(255, 255, 255, 0.3);
             border-radius: 35px;
             border: 2px solid $colorWhite;
-            max-width: 50%;
-            flex: 1 1 30%;
+            width: 33%;
             .cardTitle {
               font-size: 32px;
               font-weight: 500;
@@ -81,9 +77,15 @@
               border-radius: 35px;
               overflow: hidden;
               position: relative;
-
+              .img {
+                position: relative;
+                z-index: 10;
+              }
               img {
                 border-radius: 35px;
+              }
+              .arrowCircle {
+                z-index: 12;
               }
             }
             .cardImg::before {
@@ -92,7 +94,6 @@
               display: block;
               margin: 23px 0;
               position: relative;
-              z-index: -10;
             }
             .cardImgShadow {
               width: 100%;
@@ -104,62 +105,20 @@
               background-color: #757575;
               opacity: 50%;
               top: 0;
-              z-index: -5;
             }
             .light {
               background-color: #9e9d9d;
               top: 20px;
-              z-index: -3;
             }
           }
-        }
-        .dots {
-          width: fit-content;
-          align-self: center;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .services {
-    .container {
-      padding-top: 66px;
-      padding-bottom: 66px;
-      .row {
-        gap: 48px;
-        .serviceHeading {
-          text-align: center;
-          justify-content: center;
-          .titleWhite,
-          .text {
-            flex: 0 0 90%;
-          }
-          .text {
-            font-size: 18px;
-          }
-          .titleWhite {
-            font-size: 36px;
-          }
-        }
-        .serviceSlide {
-          .serviceCards {
-            justify-content: center;
-            .card {
-              flex: 1 1 70%;
-              max-width: 70%;
-              .cardTitle {
-                text-align: center;
-                font-size: 24px;
-
-                padding: 20px;
-                text-wrap: wrap;
+          .card:hover {
+            background-color: $colorOrange;
+            .cardImg {
+              .img {
+                transform: scaleY(1.04);
               }
-              .cardImg {
-                .arrowCircle {
-                  padding: 10px;
-                }
+              .arrowCircle {
+                background-color: $colorOrange;
               }
             }
           }
@@ -168,3 +127,57 @@
     }
   }
 }
+
+// @media (max-width: 1024px) {
+//   .services {
+//     .container {
+//       padding: 116px 0;
+//     }
+//   }
+// }
+// @media (max-width: 768px) {
+//   .services {
+//     .container {
+//       padding-top: 66px;
+//       padding-bottom: 66px;
+//       .row {
+//         gap: 48px;
+//         .serviceHeading {
+//           text-align: center;
+//           justify-content: center;
+//           .titleWhite,
+//           .text {
+//             flex: 0 0 90%;
+//           }
+//           .text {
+//             font-size: 18px;
+//           }
+//           .titleWhite {
+//             font-size: 36px;
+//           }
+//         }
+//         .serviceSlide {
+//           .serviceCards {
+//             justify-content: center;
+//             .card {
+//               flex: 1 1 70%;
+//               max-width: 70%;
+//               .cardTitle {
+//                 text-align: center;
+//                 font-size: 24px;
+
+//                 padding: 20px;
+//                 text-wrap: wrap;
+//               }
+//               .cardImg {
+//                 .arrowCircle {
+//                   padding: 10px;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
