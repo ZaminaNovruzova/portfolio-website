@@ -24,24 +24,21 @@
         display: flex;
         flex-direction: column;
         gap: 48px;
-        // align-items: center;
         .portfolioCards {
           display: flex;
           justify-content: space-between;
           gap: 24px;
-          width: 100%;
           .card {
-            background-image: url("/assets/images/portfolio.png");
-            background-repeat: no-repeat;
             border-radius: 20px;
             position: relative;
-            background-size: cover;
-            background-position: center;
             cursor: pointer;
-            flex: 1 1 40%;
-            min-width: 200px;
+            flex: 0 0 45%;
             overflow: hidden;
             max-height: 371px;
+            .cardImg {
+              position: absolute;
+              inset: 0;
+            }
             &::after {
               content: "";
               background: linear-gradient(
@@ -54,7 +51,7 @@
               position: absolute;
               top: 0;
               left: 0;
-              z-index: 2;
+              z-index: 1;
             }
             display: flex;
             flex-direction: column;
@@ -71,6 +68,8 @@
               align-self: flex-end;
               gap: 10px;
               padding: 10px;
+              position: relative;
+              z-index: 3;
               a {
                 svg {
                   stroke: none;
@@ -79,7 +78,7 @@
               }
             }
             height: 371px;
-            .lirante {
+            .brand {
               display: flex;
               flex-direction: column;
               gap: 10px;
@@ -87,18 +86,15 @@
               border-radius: 25px;
               margin: 0 10px;
               position: relative;
-              z-index: 5;
-
-              .liranteTitle {
+              z-index: 3;
+              .brandTitle {
                 font-size: 70px;
                 font-weight: 700;
                 position: relative;
-                z-index: 4;
                 color: $colorWhite;
               }
-              .liranteText {
+              .brandText {
                 display: none;
-                width: 90%;
                 color: $colorWhite;
               }
             }
@@ -113,13 +109,13 @@
                 }
               }
             }
-            .lirante {
+            .brand {
               background: linear-gradient(
                 rgba(0, 0, 0, 0.72),
                 rgba(0, 0, 0, 0.72)
               );
               transform: scale(1.02);
-              .liranteText {
+              .brandText {
                 display: block;
               }
             }
@@ -196,10 +192,10 @@
               justify-content: center;
               .card {
                 flex: 0 1 60%;
-                .lirante {
+                .brand {
                   padding: 5px;
                   margin: 0px;
-                  .liranteTitle {
+                  .brandTitle {
                     font-size: 50px;
                   }
                 }
@@ -242,8 +238,8 @@
           .portfolioSlide {
             .portfolioCards {
               .card {
-                .lirante {
-                  .liranteTitle {
+                .brand {
+                  .brandTitle {
                     font-size: 35px;
                   }
                 }

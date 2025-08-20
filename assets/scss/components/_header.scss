@@ -36,59 +36,65 @@
               transform: scale(1.1);
             }
           }
+          .active {
+           @include btn($colorOrange);
+            border-radius: 50px;
+            &:hover {
+              background-color: $colorOrange;
+              opacity: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
-       
-        }
-      }
-    }
-  }
-}
-@media (max-width: 1230px) {
-  .header {
-    .container {
-      .row {
-        .navBar {
-          display: flex;
-          justify-content: space-between;
-          .buttons {
-            .btn {
-              display: none;
-            }
-            .logo {
-              display: block;
-            }
-          }
-          .burger {
-            display: flex;
-            cursor: pointer;
-            .menu {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              justify-content: center;
-              padding: 20px;
-              gap: 8px;
-              span {
-                padding-right: 10px;
-                display: block;
-                width: 30px;
-                height: 2px;
-                border: 2px solid white;
-                border-radius: 10px;
-              }
-            }
-          }
-          #checked:checked ~ .buttons {
-            display: flex;
-          }
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 1230px) {
+//   .header {
+//     .container {
+//       .row {
+//         .navBar {
+//           display: flex;
+//           justify-content: space-between;
+//           .buttons {
+//             .btn {
+//               display: none;
+//             }
+//             .logo {
+//               display: block;
+//             }
+//           }
+//           .burger {
+//             display: flex;
+//             cursor: pointer;
+//             .menu {
+//               display: flex;
+//               flex-direction: column;
+//               align-items: flex-end;
+//               justify-content: center;
+//               padding: 20px;
+//               gap: 8px;
+//               span {
+//                 padding-right: 10px;
+//                 display: block;
+//                 width: 30px;
+//                 height: 2px;
+//                 border: 2px solid white;
+//                 border-radius: 10px;
+//               }
+//             }
+//           }
+//           #checked:checked ~ .buttons {
+//             display: flex;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 //*burger duzelmelidir
 //* logo hover edende yazilar surusmemelidir
-// .buttons btn:active {
-//   background-color: $colorOrange;
-// }
-
+html {
+  scroll-behavior: smooth;
+}

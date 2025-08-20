@@ -1,6 +1,5 @@
 // import { userData } from "../db/data.js";
 // const serviceBox = document.querySelector(".serviceBox"); //*htmle kartlari yazmaq ucun
-
 // const add = document.querySelector(".add"); //*add butonuna basanda modal window acilmasi ucun
 // const modalWindow = document.querySelector(".modalWindow"); //*modal window acilmasi ucun
 // const input = document.querySelectorAll(".addServiceWindow input"); //*butun inputlardan sonra error mesaji cixara bilmek ucun
@@ -10,7 +9,7 @@
 // const url = document.querySelector("#url");  //*add metodunda isletdim
 // const image = document.querySelector("#image"); //*add metodunda isletdim
 // const overlay = document.querySelector(".overlay"); //*bunu cancel butonunun altenativi kimi istifade edeceyik
-// const inputTextValidation = /^(?=(?:.*[a-zA-Z]){6,}).+$/;
+// const inputTextValidation = /^(?=(?:.*[a-zA-Z]){6,}).+$/; 
 // const urlValidation =
 //   /^(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)$/;
 // // const deleteObject = document.querySelector(".delete");

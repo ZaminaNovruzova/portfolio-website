@@ -33,9 +33,7 @@
   font-family: "Lufga", sans-serif;
   transition: 0.3s ease;
 }
-// html {
-//   scroll-behavior: smooth;
-// }
+
 body {
   background-color: $colorWhite;
   padding-top: 40px;
@@ -105,11 +103,18 @@ h2 {
 .grayBtn {
   @include buttonGray();
   color: $colorBlack;
-
+  cursor: pointer;
   a {
     color: $colorBlack;
   }
   &:hover {
+    background-color: $colorBlack;
+    color: $colorWhite;
+    a {
+      color: $colorWhite;
+    }
+  }
+  &.active {
     background-color: $colorBlack;
     color: $colorWhite;
     a {

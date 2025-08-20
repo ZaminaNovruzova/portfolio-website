@@ -1,8 +1,5 @@
 import { userData } from "../db/data.js";
 
-//*arrowcircle her bir service in url in saxlayir basanda hemin service sehifesine gedir bu ya portfolio ya da blogpost olacaq
-
-//*arrowcircle basanda get portfoliodan ux desing buttonu nun islerini goster
 const aboutText = document.querySelector(".aboutText");
 const personImgIcons = document.querySelector(".personDetails .personImgIcons");
 const serviceHeading = document.querySelector(".serviceHeading .titleWhite");
@@ -10,10 +7,20 @@ const serviceCards = document.querySelector(".serviceCards");
 const expInfosLeft = document.querySelector(".expInfosLeft");
 const expInfosRight = document.querySelector(".expInfosRight");
 const hireRow = document.querySelector(".whyHire .row");
-const portfolioCards = document.querySelector(".portfolioCards");
-const portfolioLinks = document.querySelector(".portfolioLinks");
-const aboutBrand = document.querySelector(".aboutBrand");
+const footerText = document.querySelector(".footerText");
+const contactList = document.querySelector(".contactList");
+const buttons = document.querySelectorAll(".buttons .btn");
 
+buttons.forEach((item) => {
+  item.addEventListener("click", () => {
+    buttons.forEach((btn) => {
+      if (btn.classList.contains("active")) {
+        btn.classList.remove("active");
+      }
+    });
+    item.classList.add("active");
+  });
+});
 
 //*herodaki experience year dinamike cevrildi done
 
@@ -142,55 +149,32 @@ const hireButtonToHtml = () => {
 
 hireButtonToHtml();
 
-const portfolioToHtml = () => {
-  portfolioCards.innerHTML = "";
-  userData.portfolioDatas.map((item) => {
-    portfolioCards.innerHTML += ` <div class="card">
-                                <div class="arrowRight">
-                                    <a href="${item.brand_url}" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
-                                            viewBox="0 0 34 34" fill="none">
-                                            <path
-                                                d="M5.66667 15.5833C4.88426 15.5833 4.25 16.2176 4.25 17C4.25 17.7824 4.88426 18.4167 5.66667 18.4167L25.6215 18.4167L18.8316 25.2066C18.2784 25.7598 18.2784 26.6568 18.8316 27.2101C19.3848 27.7633 20.2818 27.7633 20.8351 27.2101L29.0417 19.0035C30.1481 17.897 30.1482 16.103 29.0417 14.9965L20.8351 6.78993C20.2818 6.23669 19.3848 6.23669 18.8316 6.78993C18.2784 7.34318 18.2784 8.24016 18.8316 8.7934L25.6215 15.5833L5.66667 15.5833Z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div class="lirante">
-                                    <h3 class="liranteTitle">${item.brand_name}</h3>
-                                    <p class="liranteText">${item.about_brand}</p>
-                                </div>
-                            </div>`;
+const footerWriteToHtml = () => {
+  footerText.innerHTML = "";
+  footerText.innerHTML = `<a href="index.html">
+                            <div class="btn logo"><a href="index.html">
+                                    <div class="logoPng"><img src="assets/images/logo.png" alt="logo-png"></div>
+                                    <div class="logoName"><img src="assets/images/logo-name.png" alt="logo-name"></div>
+                                    <div class="logoAuthor">
+                                        <span class="madeBy">Made by</span>
+                                        <h5 class="authorName">Jayesh Patil</h5>
+                                    </div>
+                                </a></div>
+                        </a>
+                        <p>${userData.footer_text}</p>
+                        <ul class="socials"></ul>`;
+                        
+  const socials = document.querySelector(".socials"); //* bele edende kod isleyir bes bu ne derecede duzgundur 
+
+  socials.innerHTML = "";
+  userData.social_links.map((item) => {
+    socials.innerHTML += `<li class="socialItem" id="${item.social_media_id}"><a href="${item.social_platform}" target="_blank">${item.social_media_icon}</a></li>`;
   });
-  portfolioLinks.innerHTML = "";
-  userData.categories.map((item) => {
-    portfolioLinks.innerHTML += `<li class="grayBtn" id=${item.id}><a href="#">${item.category_name}</a></li>`;
-  });
-};
 
-portfolioToHtml();
-
-const lastProjectToHtml = (id) => {
-  aboutBrand.innerHTML = "";
-  userData.portfolioDatas.find((item) => {
-
-    if(item.id===id){
-           aboutBrand.innerHTML = `<div class="subtitle" id="${item.portfolio_id}">
-                                <h4>${item.brand_name} - ${item.brand_service}</h4>
-                                <div class="arrowOrange">
-                                    <a href="${item.brand_url}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" fill="none">
-                                            <path d="M7.17 17L17 7" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <p>${item.about_brand}</p>`;
-    }
- 
+  contactList.innerHTML = "";
+  userData.contact.map((item) => {
+    contactList.innerHTML += ` <li class="contactItem" id="${item.contact_id}"> <a href="${item.contact_url}" target="_blank">${item.contact_details}</a>`;
   });
 };
 
-lastProjectToHtml()
+footerWriteToHtml();

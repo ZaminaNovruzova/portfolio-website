@@ -1,4 +1,5 @@
-const swiper = new Swiper(".mySwiper", { //*bu niye compile error verir
+const swiper = new Swiper(".mySwiper", {
+  //*bu niye compile error verir
   slidesPerView: 3,
   spaceBetween: 20,
   pagination: {
@@ -7,7 +8,6 @@ const swiper = new Swiper(".mySwiper", { //*bu niye compile error verir
   breakpoints: {
     500: {
       slidesPerView: 1,
-      centeredSlides: true,
     },
     768: {
       slidesPerView: 2,

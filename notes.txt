@@ -43,4 +43,9 @@ component
 blog
 //*list style-color nese alinmadi
 
-is bitenden sonra butun ahrefleri yoxla
+
+
+mene ne lazimdir 
+bir function olsun hemin function id deyeri qebul etsin 
+mene lazimdir ki men category e click edirem duzdur click edende hemin item id ===  
+userdata.portfolioDatas.category id e mene ilk 2 dene hemin portfolioDatasdaki itemlari getirsin  

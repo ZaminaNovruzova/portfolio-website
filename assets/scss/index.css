@@ -112,6 +112,7 @@ h2 {
   width: -moz-fit-content;
   width: fit-content;
   color: #000000;
+  cursor: pointer;
 }
 .grayBtn a {
   color: #000000;
@@ -121,6 +122,13 @@ h2 {
   color: #ffffff;
 }
 .grayBtn:hover a {
+  color: #ffffff;
+}
+.grayBtn.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+.grayBtn.active a {
   color: #ffffff;
 }
 
@@ -259,42 +267,23 @@ svg {
   width: fit-content;
   transform: scale(1.1);
 }
-
-@media (max-width: 1230px) {
-  .header .container .row .navBar {
-    display: flex;
-    justify-content: space-between;
-  }
-  .header .container .row .navBar .buttons .btn {
-    display: none;
-  }
-  .header .container .row .navBar .buttons .logo {
-    display: block;
-  }
-  .header .container .row .navBar .burger {
-    display: flex;
-    cursor: pointer;
-  }
-  .header .container .row .navBar .burger .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 20px;
-    gap: 8px;
-  }
-  .header .container .row .navBar .burger .menu span {
-    padding-right: 10px;
-    display: block;
-    width: 30px;
-    height: 2px;
-    border: 2px solid white;
-    border-radius: 10px;
-  }
-  .header .container .row .navBar #checked:checked ~ .buttons {
-    display: flex;
-  }
+.header .container .row .navBar .buttons .active {
+  background-color: #fd853a;
+  border-radius: 60px;
+  padding: 20px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50px;
 }
+.header .container .row .navBar .buttons .active:hover {
+  background-color: #fd853a;
+  opacity: 80%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .footer {
   background-color: #272727;
   border-top-left-radius: 24px;
@@ -1113,18 +1102,12 @@ svg {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  width: 100%;
 }
 .portfolio .container .row .portfolioDetails .portfolioCards .card {
-  background-image: url("/assets/images/portfolio.png");
-  background-repeat: no-repeat;
   border-radius: 20px;
   position: relative;
-  background-size: cover;
-  background-position: center;
   cursor: pointer;
-  flex: 1 1 40%;
-  min-width: 200px;
+  flex: 0 0 45%;
   overflow: hidden;
   max-height: 371px;
   display: flex;
@@ -1132,6 +1115,10 @@ svg {
   justify-content: space-between;
   padding: 10px;
   height: 371px;
+}
+.portfolio .container .row .portfolioDetails .portfolioCards .card .cardImg {
+  position: absolute;
+  inset: 0;
 }
 .portfolio .container .row .portfolioDetails .portfolioCards .card::after {
   content: "";
@@ -1141,7 +1128,7 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 .portfolio .container .row .portfolioDetails .portfolioCards .card .arrowRight {
   border: 1px solid #fd853a;
@@ -1154,12 +1141,14 @@ svg {
   align-self: flex-end;
   gap: 10px;
   padding: 10px;
+  position: relative;
+  z-index: 3;
 }
 .portfolio .container .row .portfolioDetails .portfolioCards .card .arrowRight a svg {
   stroke: none;
   fill: #fd853a;
 }
-.portfolio .container .row .portfolioDetails .portfolioCards .card .lirante {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .brand {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1167,18 +1156,16 @@ svg {
   border-radius: 25px;
   margin: 0 10px;
   position: relative;
-  z-index: 5;
+  z-index: 3;
 }
-.portfolio .container .row .portfolioDetails .portfolioCards .card .lirante .liranteTitle {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .brand .brandTitle {
   font-size: 70px;
   font-weight: 700;
   position: relative;
-  z-index: 4;
   color: #ffffff;
 }
-.portfolio .container .row .portfolioDetails .portfolioCards .card .lirante .liranteText {
+.portfolio .container .row .portfolioDetails .portfolioCards .card .brand .brandText {
   display: none;
-  width: 90%;
   color: #ffffff;
 }
 .portfolio .container .row .portfolioDetails .portfolioCards .card:hover .arrowRight {
@@ -1188,11 +1175,11 @@ svg {
   fill: #ffffff;
   stroke: #ffffff;
 }
-.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .lirante {
+.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .brand {
   background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72));
   transform: scale(1.02);
 }
-.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .lirante .liranteText {
+.portfolio .container .row .portfolioDetails .portfolioCards .card:hover .brand .brandText {
   display: block;
 }
 .portfolio .container .row .portfolioDetails .dots {
@@ -1259,11 +1246,11 @@ svg {
   .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card {
     flex: 0 1 60%;
   }
-  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante {
+  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .brand {
     padding: 5px;
     margin: 0px;
   }
-  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
+  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .brand .brandTitle {
     font-size: 50px;
   }
   .portfolio .container .row .portfolioDetails .aboutBrand .subtitle {
@@ -1290,7 +1277,7 @@ svg {
     font-size: 36px;
     text-align: center;
   }
-  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .lirante .liranteTitle {
+  .portfolio .container .row .portfolioDetails .portfolioSlide .portfolioCards .card .brand .brandTitle {
     font-size: 35px;
   }
   .portfolio .container .row .portfolioDetails .aboutBrand .subtitle {
