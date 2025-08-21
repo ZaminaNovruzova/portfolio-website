@@ -1,5 +1,5 @@
 import { userData } from "../db/data.js";
-import { showError, inputValidation } from "./check_validation.js";
+import { showError, inputValidation, createError } from "./check_validation.js";
 
 const form = document.querySelectorAll("form"); //*form prevent default etmek ucun
 const serviceBox = document.querySelector(".serviceBox"); //*htmle kartlari yazmaq ucun
@@ -13,87 +13,45 @@ const serviceTitle = document.querySelector("#serviceTitle"); //*add metodunda i
 const url = document.querySelector("#url"); //*add metodunda isletdim
 const image = document.querySelector("#image"); //*add metodunda isletdim
 
-let editingId = null;
-
 form.forEach((form) => {
   form.addEventListener("submit", (e) => e.preventDefault());
 });
 
-// //* localStorage de saxla
+//* localStorage de saxla
 
-// const checkSavedServices = () => {
-//   const saved = JSON.parse(localStorage.getItem("services"));
-//   if (saved) {
-//     userData.services = saved;
-//   }
-// };
+const checkSavedServices = () => {
+  const saved = JSON.parse(localStorage.getItem("services"));
+  if (saved) {
+    userData.services = saved;
+  }
+};
 
-// //*evvelce data varmi yoxmu yoxla;
-// //*varsa avtomatik getir mene
+//*evvelce data varmi yoxmu yoxla;
+//*varsa avtomatik getir mene
 
-// checkSavedServices();
+checkSavedServices();
 
-// //*yoxdursa yadda saxla
+//*yoxdursa yadda saxla
 
-// const saveServiceCard = () => {
-//   localStorage.setItem("services", JSON.stringify(userData.services));
-// };
+const saveServiceCard = () => {
+  localStorage.setItem("services", JSON.stringify(userData.services));
+};
 
 //*yeni service elave etmek ucun button
 
 function openModalWindow() {
-  add.addEventListener("click", () => {
-    modalWindow.classList.add("active");
-    overlay.classList.add("active");
-  });
+  modalWindow.classList.add("active");
+  overlay.classList.add("active");
 }
-
 function closeModalWindow() {
-  overlay.addEventListener("click", () => {
-    modalWindow.classList.remove("active");
-    overlay.classList.remove("active");
-    input.forEach((item) => (item.value = ""));
-    editingId = null;
-  });
-
-  cancel.addEventListener("click", () => {
-    modalWindow.classList.remove("active");
-    overlay.classList.remove("active");
-    input.forEach((item) => (item.value = ""));
-  });
+  modalWindow.classList.remove("active");
+  overlay.classList.remove("active");
+  input.forEach((item) => (item.value = ""));
 }
 
-function addService() {
-  if (!inputValidation()) return;
-
-  let titleInput = serviceTitle.value.trim();
-  let imgInput = image;
-  let urlInput = url.value.trim();
-  let file = imgInput.files[0];
-
-  const imagePreviewUrl = file ? URL.createObjectURL(file) : "";
-
-  const existingservice = userData.services.find(
-    (item) => item.title.toLowerCase() === titleInput?.toLowerCase()
-  );
-  if (existingservice) {
-    showError(serviceTitle, "Bu xidmet artiq movcuddur");
-    return;
-  } else {
-    userData.services.push({
-      id: userData.services.length + 1,
-      title: titleInput,
-      image: imagePreviewUrl,
-      url: urlInput,
-    });
-  }
-
-  closeModalWindow();
-  //   saveServiceCard();
-  writeToHtml();
-}
-
-submit.addEventListener("click", addService);
+add.addEventListener("click", openModalWindow);
+overlay.addEventListener("click", closeModalWindow);
+cancel.addEventListener("click", closeModalWindow);
 
 function writeToHtml() {
   serviceBox.innerHTML = "";
@@ -125,43 +83,9 @@ function writeToHtml() {
 }
 writeToHtml();
 
-function editService(id) {
-  let finded = userData.services.find((item) => item.id === id); //*tapildi
-  if (!finded) return;
-  editingId = finded.id; //*finded id ni editing idye menimsetdi
-  serviceTitle.value = finded.title; //*bunlarin hamsini tekrar doldurur open modalda gorunmesi ucun
-  url.value = finded.url;
-  image.value = finded.image;
-  console.log("salam", serviceTitle.value);
-  console.log("salam", url.value);
-  console.log("salam", image.value);
-  console.log("salam");
-
-  //   openModalWindow();
-  // serviceBox.addEventListener("click", openModalWindow())
-
-  // submit.addEventListener("click", (e) => {
-  //   e.preventDefault();
-  //   if (!inputValidation()) return;
-  //   const index = userData.services.findIndex((item) => {
-  //     console.log(item.id, editingId);
-  //     if (index === -1) return;
-  //     console.log(index);
-  //   });
-
-  //   userData.services[index].title = serviceTitle.value.trim();
-  //   userData.services[index].url = url.value.trim();
-  //   const file = image.files?.[0];
-  //   if (file) {
-  //     userData.services[index].image = URL.createObjectURL(file);
-  //     // əgər gerçek faylı saxlamaq istəyirsənsə:
-  //     // userData.services[idx].image = file;  // amma renderdə src kimi işləməyəcək
-  //   }
-  // });
-
-  //*change basanda modalWinodw acilsin, boxun datalari icinde olmaq serti ile
-  writeToHtml();
-  closeModalWindow();
+function capitalize(str) {
+  if (!str) return "";
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
 function deleteService(id) {
@@ -172,6 +96,72 @@ function deleteService(id) {
       userData.services = userData.services.filter((item) => item.id !== id);
     }
   }
+  saveServiceCard();
+  writeToHtml();
+}
+
+function addService() {
+  if (!inputValidation()) return;
+
+  let titleInput = serviceTitle.value.trim();
+  let urlInput = url.value.trim();
+  let file = image.files[0]; //*file obyektinden 0ci indexi yeni sekli getir
+
+  openModalWindow();
+
+  const imagePreviewUrl = file ? URL.createObjectURL(file) : "";
+  //*seklin muveqqeti url i muveqqeti oldugu ucun qalmir tez bir zamanda yoxa cixir daimi url lazimdir
+
+  const existingservice = userData.services.find(
+    (item) => item.title.toLowerCase() === titleInput?.toLowerCase()
+  );
+  //*men isteyirem ki bu error diger setirlerde xeta olanda da qalmaga davam etsin amma yoxa cixir
+
+  if (existingservice) {
+    createError(serviceTitle, "Bu xidmet artiq movcuddur");
+    return;
+  } else {
+    userData.services.push({
+      id: userData.services.length + 1,
+      title: capitalize(titleInput),
+      image: imagePreviewUrl,
+      url: urlInput,
+    });
+  }
+  saveServiceCard();
+  closeModalWindow();
+  writeToHtml();
+}
+
+let currentEditId = null;
+
+function getServiceİnfo(id) {
+  //*yalniz formu doldurur
+  let finded = userData.services.find((item) => item.id === id); //*tapildi
+  if (!finded) return;
+
+  currentEditId = finded.id;
+  serviceTitle.value = finded.title; //*bunlarin hamsini tekrar doldurur open modalda gorunmesi ucun
+  url.value = finded.url;
+  document.querySelector("#image").src = finded.image;
+  openModalWindow();
+}
+
+function editService(id) {
+  const finded = userData.services.find((item) => item.id === id);
+  if (!finded) return;
+
+  if (!inputValidation()) return;
+
+  const file = image.files?.[0];
+  if (file) {
+    finded.image = URL.createObjectURL(file);
+  }
+  finded.title = capitalize(serviceTitle.value.trim());
+  finded.url = url.value.trim();
+
+  saveServiceCard();
+  closeModalWindow();
   writeToHtml();
 }
 
@@ -179,12 +169,26 @@ serviceBox.addEventListener("click", (e) => {
   const deleteBtn = e.target.closest(".delete");
   if (deleteBtn) {
     //*eger deletebtn varsa
-    deleteBtn.addEventListener("click", deleteService(Number(deleteBtn.id))); //*id string oldugu ucun numbere cevirdim
-  } //*ve bu idli deletebtn a click edende  getsin funksiyani isletsin
-
+    deleteService(Number(deleteBtn.id)); //*id string oldugu ucun numbere cevirdim
+    //*ve bu idli deletebtn a click edende  getsin funksiyani isletsin
+    return;
+  }
   const changeBtn = e.target.closest(".change");
   if (changeBtn) {
-    changeBtn.addEventListener("click", editService(Number(changeBtn.id)));
+    currentEditId = Number(changeBtn.id);
+    getServiceİnfo(currentEditId);
+    return;
   }
   writeToHtml();
 });
+
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (currentEditId) {
+    editService(currentEditId);
+    currentEditId = null;
+  } else {
+    addService();
+  }
+});
+//*unutma her click in ozunun funksiyasi olmalidir

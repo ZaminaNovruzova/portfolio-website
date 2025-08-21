@@ -4,12 +4,9 @@ const urlValidation =
 const emailValidation =
   /^[A-Za-z0-9._%+-]+@(gmail\.com|icloud\.com|mail\.ru|yahoo\.com|outlook\.com|hotmail\.com)$/;
 
-export function showError(element, message) {
-  let next = element.nextElementSibling;
-  while (next && next.classList?.contains("error")) {
-    const toRemove = next;
-    next = next.nextElementSibling;
-    toRemove.remove();
+export function createError(element, message) {
+  if (element.nextElementSibling?.classList.contains("error")) {
+    element.nextElementSibling.remove();
   }
   let error = document.createElement("p");
   error.className = "error";
@@ -17,9 +14,19 @@ export function showError(element, message) {
   element.after(error);
 }
 
+export function showError(element, message) {
+  let next = element.nextElementSibling; //*inputdan sonra p butonun nexte  menimset
+  while (next && next.classList?.contains("error")) {
+    const toRemove = next; //* meseleen 3 dene  error classi varsa to remove a menimset
+    next = next.nextElementSibling; //*her defe yeni erroru gedib yoxlayir?
+    toRemove.remove(); //*hemin elementi silir
+  }
+  createError(element, message);
+}
+
 //*validation yoxlayaq
 
-export const inputValidation = (root = document) => {
+export const inputValidation = () => {
   const inputs = document.querySelectorAll("input"); //*butun inputlardan sonra error mesaji cixara bilmek ucun
   let isValid = true;
   inputs.forEach((item) => {

@@ -1,6 +1,6 @@
 const swiper = new Swiper(".mySwiper", {
   //*bu niye compile error verir
-  
+
   slidesPerView: 3,
   spaceBetween: 20,
   pagination: {

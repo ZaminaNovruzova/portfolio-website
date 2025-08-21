@@ -1943,12 +1943,4 @@ html {
 }
 .adminBody main .serviceAdmin .container .row .modalWindow.active {
   display: block;
-}
-
-.allPortfolio .container .row .portfolioBox {
-  display: flex;
-}
-.allPortfolio .container .row .portfolioBox .card .cardImg {
-  position: absolute;
-  inset: 0;
 }/*# sourceMappingURL=index.css.map */

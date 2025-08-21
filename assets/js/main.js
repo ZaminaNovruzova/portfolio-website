@@ -6,7 +6,9 @@ const footerButtons = document.querySelectorAll(".footerButtons .btn");
 //*header ve footer ucun
 
 function findHeaderBtnByHref(href) {
-  return [...headerButtons].find((btn) => btn.getAttribute("href") === href);
+  return [...headerButtons].find(
+    (btn) => btn.querySelector("a")?.getAttribute("href") === href
+  );
 }
 
 headerButtons.forEach((item) => {
@@ -23,15 +25,17 @@ headerButtons.forEach((item) => {
 footerButtons.forEach((item) => {
   item.addEventListener("click", () => {
     headerButtons.forEach((btn) => {
-      btn.classList.remove("active");
+      if (btn.classList.contains("active")) {
+        btn.classList.remove("active");
+      }
     });
 
-    const href = item.getAttribute("href");
+    let href = item.querySelector("a")?.getAttribute("href");
+    console.log(href, "oxu");
     const headerBtn = findHeaderBtnByHref(href);
     if (headerBtn) {
       headerBtn.classList.add("active");
     }
-    
     footerButtons.forEach((btn) => btn.classList.remove("active"));
     item.classList.add("active");
   });

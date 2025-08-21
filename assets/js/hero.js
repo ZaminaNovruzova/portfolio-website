@@ -4,7 +4,7 @@ import { experienceYearCalculate } from "./main.js";
 const aboutText = document.querySelector(".aboutText");
 const personImgIcons = document.querySelector(".personDetails .personImgIcons");
 
-experienceYearCalculate()
+experienceYearCalculate();
 
 const heroWriteToHtml = () => {
   aboutText.innerHTML = "";

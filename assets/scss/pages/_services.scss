@@ -8,7 +8,6 @@
   background-position: center;
   position: relative;
   border-radius: 50px;
-  // height: 100%;
   &::after {
     content: "";
     opacity: 80%;
@@ -127,57 +126,3 @@
     }
   }
 }
-
-// @media (max-width: 1024px) {
-//   .services {
-//     .container {
-//       padding: 116px 0;
-//     }
-//   }
-// }
-// @media (max-width: 768px) {
-//   .services {
-//     .container {
-//       padding-top: 66px;
-//       padding-bottom: 66px;
-//       .row {
-//         gap: 48px;
-//         .serviceHeading {
-//           text-align: center;
-//           justify-content: center;
-//           .titleWhite,
-//           .text {
-//             flex: 0 0 90%;
-//           }
-//           .text {
-//             font-size: 18px;
-//           }
-//           .titleWhite {
-//             font-size: 36px;
-//           }
-//         }
-//         .serviceSlide {
-//           .serviceCards {
-//             justify-content: center;
-//             .card {
-//               flex: 1 1 70%;
-//               max-width: 70%;
-//               .cardTitle {
-//                 text-align: center;
-//                 font-size: 24px;
-
-//                 padding: 20px;
-//                 text-wrap: wrap;
-//               }
-//               .cardImg {
-//                 .arrowCircle {
-//                   padding: 10px;
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
