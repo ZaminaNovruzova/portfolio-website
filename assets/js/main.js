@@ -3,6 +3,9 @@ import { inputValidation } from "./check_validation.js";
 
 const headerButtons = document.querySelectorAll(".buttons .btn");
 const footerButtons = document.querySelectorAll(".footerButtons .btn");
+const infoBtn = document.querySelector(".infoBtn");
+const email = document.querySelector("#email");
+
 //*header ve footer ucun
 
 function findHeaderBtnByHref(href) {
@@ -65,3 +68,19 @@ export const experienceYearCalculate = () => {
   let years = Math.round(experienceYear / 1000 / 60 / 60 / 24 / 365);
   return (userData.experienceYear = years);
 };
+
+//*email form
+userData.emailList = [];
+
+function addEmail() {
+  if (!inputValidation()) return;
+
+  let emailValue = email.value.trim();
+  userData.emailList.push({
+    email_id: userData.emailList.length + 1,
+    email_addres: emailValue,
+  });
+  emailValue = "";
+
+}
+infoBtn.addEventListener("click", addEmail);
