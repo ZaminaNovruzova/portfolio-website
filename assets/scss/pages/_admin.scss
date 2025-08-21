@@ -1,215 +1,209 @@
 @use "../variables" as *;
+
 .adminBody {
   background-color: $colorBlack;
-}
-
-.serviceAdmin {
-  height: 100%;
-  position: relative;
-  .overlay {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #000000a4, #00000093);
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    display: none;
-  }
-  .active {
-    display: block;
-  }
-
-  .container {
-    padding: 71px;
-    .row {
+  height: 100vh;
+  main {
+    height: 100vh;
+    .serviceAdmin {
       position: relative;
-      .serviceBox {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 39px;
-        position: relative;
-        .card {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          background-color: rgba(255, 255, 255, 0.3);
-          border-radius: 35px;
-          border: 2px solid $colorWhite;
-          flex: 0 0 25%;
-          height: 400px;
-          width: 300px;
-          position: relative;
-          .cardTitle {
-            font-size: 32px;
-            font-weight: 500;
-            color: $colorWhite;
-            padding: 37px;
-            text-wrap: nowrap;
-          }
-          .cardImg {
-            border-radius: 35px;
-            overflow: hidden;
-            position: relative;
-            .img {
-              position: relative;
-              z-index: 10;
-              height: 300px;
-              width: 100%;
-              bottom: 0;
-            }
-            img {
-              border-radius: 35px;
-              width: 100%;
-              height: 100%;
-            }
-            .arrowCircle {
-              z-index: 12;
-            }
-          }
-          .cardImg::before {
-            content: "";
-            border: 2px solid rgba(249, 250, 251, 0.3);
-            display: block;
-            margin: 23px 0;
-            position: relative;
-          }
-          .cardImgShadow {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            border-radius: 35px;
-          }
-          .dark {
-            background-color: #757575;
-            opacity: 50%;
-            top: 0;
-          }
-          .light {
-            background-color: #9e9d9d;
-            top: 20px;
-          }
-          .changeCard {
-            position: absolute;
-            z-index: 20;
-            background-color: rgba(255, 255, 255, 0.3);
-            width: 100%;
-            height: 100%;
-            border-radius: 35px;
-            display: none;
-            .setItem {
-              width: 100%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 20px;
-              button {
-                border: none;
-                outline: none;
-                font-size: 20px;
-                padding: 10px;
-                background-color: rgba(0, 0, 0, 0.8);
-                color: white;
-                border-radius: 10px;
-                cursor: pointer;
-              }
-            }
-          }
-        }
-        .card:hover {
-          .changeCard {
-            display: block;
-          }
-        }
-      }
-      .addBtn {
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-        z-index: 30;
-        .add {
-          cursor: pointer;
-          font-size: 30px;
-          width: 50px;
-          height: 50px;
-          border: none;
-          outline: none;
-          border-radius: 100%;
-        }
-      }
-      .modalWindow {
-        background-color: rgba(0, 0, 0, 0.8);
-        position: fixed;
-        z-index: 40;
+      .overlay {
         width: 100%;
-        height: 100%;
-        top: 50px;
-        display: flex;
-        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(to bottom,#000000a4, #00000093);
+        opacity: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 40;
         display: none;
-        .modalContent {
-          background-color: rgb(245, 229, 229);
-          position: absolute;
-          z-index: 45;
-          width: 40%;
-          top: 0;
-          border-radius: 20px;
-          padding: 20px;
-          h3 {
-            text-align: center;
-            text-transform: uppercase;
-            margin: 6px 0 16px;
-          }
-          .addServiceWindow {
+        &.active {
+          display: block;
+        }
+      }
+      .container {
+        padding: 71px;
+        .row {
+          position: relative;
+          .serviceBox {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-            height: 100%;
-            .error {
-              color: red;
-              background-color: white;
-              margin: 5px;
-              font-size: 16px;
-            }
-            label {
-              border-radius: 10px;
-              outline: none;
-              border: none;
-              width: fit-content;
-
-              font-size: 16px;
-            }
-            input {
-              width: 100%;
-              border-radius: 10px;
-              outline: none;
-              border: none;
-              height: 35px;
-              &::placeholder {
-                font-size: 16px;
+            flex-wrap: wrap;
+            gap: 39px;
+            position: relative;
+            .card {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              background-color: rgba(255, 255, 255, 0.3);
+              border-radius: 35px;
+              border: 2px solid $colorWhite;
+              flex: 0 0 25%;
+              height: 400px;
+              width: 300px;
+              position: relative;
+              .cardTitle {
+                font-size: 32px;
+                font-weight: 500;
+                color: $colorWhite;
+                padding: 37px;
+                text-wrap: nowrap;
+              }
+              .cardImg {
+                border-radius: 35px;
+                overflow: hidden;
+                position: relative;
+                .img {
+                  position: relative;
+                  z-index: 10;
+                  height: 300px;
+                  width: 100%;
+                  bottom: 0;
+                }
+                img {
+                  border-radius: 35px;
+                  width: 100%;
+                  height: 100%;
+                }
+                .arrowCircle {
+                  z-index: 12;
+                }
+              }
+              .cardImg::before {
+                content: "";
+                border: 2px solid rgba(249, 250, 251, 0.3);
+                display: block;
+                margin: 23px 0;
+                position: relative;
+                z-index: 10;
+              }
+              .cardImgShadow {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border-radius: 35px;
+              }
+              .dark {
+                background-color: #757575;
+                opacity: 50%;
+                top: 0;
+              }
+              .light {
+                background-color: #9e9d9d;
+                top: 20px;
+              }
+              .changeCard {
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.3);
+                width: 100%;
+                height: 100%;
+                border-radius: 35px;
+                display: none;
+                z-index: 20;
+                .setItem {
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 20px;
+                  button {
+                    border: none;
+                    outline: none;
+                    font-size: 20px;
+                    padding: 10px;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+                  }
+                }
               }
             }
-            .buttons {
+            .card:hover {
+              .changeCard {
+                display: block;
+              }
+            }
+          }
+          .addBtn {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            z-index: 35;
+            .add {
+              cursor: pointer;
+              font-size: 30px;
+              width: 50px;
+              height: 50px;
+              border: none;
+              outline: none;
+              border-radius: 100%;
+            }
+          }
+          .modalWindow {
+            background-color: pink;
+            position: relative;
+            z-index: 55;
+            position: fixed;
+            width: 600px;
+            top: 50px;
+            display: flex;
+            justify-self: center;
+            flex-direction: column;
+            gap: 30px;
+            display: none;
+            height: max-content;
+            border-radius: 20px;
+            padding: 20px;
+            h3 {
+              text-align: center;
+              text-transform: uppercase;
+              margin: 6px 0 16px;
+            }
+            .addServiceWindow {
               display: flex;
-              justify-content: space-between;
-              width: 100%;
-              button {
+              flex-direction: column;
+              gap: 20px;
+              .error {
+                color: red;
+                background-color: white;
+                margin: 5px;
+                font-size: 16px;
+              }
+              label {
+                width: min-content;
+                text-wrap: nowrap;
+              }
+              input {
                 border-radius: 10px;
                 outline: none;
                 border: none;
-                background-color: white;
-                padding: 10px 15px;
-                font-size: 16px;
-                cursor: pointer;
+                height: 35px;
+                padding: 5px;
+                font-size: 18px;
+                &::placeholder {
+                  font-size: 16px;
+                }
               }
+              .buttons {
+                display: flex;
+                justify-content: space-between;
+                button {
+                  border-radius: 10px;
+                  outline: none;
+                  border: none;
+                  padding: 10px 15px;
+                  font-size: 16px;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            &.active {
+              display: block;
             }
           }
         }
-      }
-
-      .active {
-        display: flex;
       }
     }
   }

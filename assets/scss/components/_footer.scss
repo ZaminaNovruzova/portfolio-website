@@ -98,7 +98,7 @@
           flex-direction: column;
           gap: 28px;
         }
-        .navList .navLinks,
+        .navList .footerButtons,
         .contact .contactList {
           display: flex;
           flex-direction: column;
@@ -139,6 +139,16 @@
             }
           }
         }
+        // .navList {
+        //   .active {
+        //     @include btn($colorOrange);
+        //     border-radius: 50px;
+        //     &:hover {
+        //       background-color: $colorOrange;
+        //       opacity: 80%;
+        //     }
+        //   }
+        // }
       }
       .copyright {
         display: flex;

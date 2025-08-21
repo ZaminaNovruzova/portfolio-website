@@ -190,6 +190,16 @@ svg {
 }
 //*done
 
+.error {
+  color: red;
+  background-color: rgb(203, 203, 203);
+  height: fit-content;
+  padding: 5px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
 @media (max-width: 920px) {
   .container {
     padding: 0 30px;

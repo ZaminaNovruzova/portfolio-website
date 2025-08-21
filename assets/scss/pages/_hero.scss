@@ -3,8 +3,8 @@
 @use "../animations/animation" as *;
 
 .hero {
-  margin-top: 100px;
-  height: 90vh;
+  margin-top: 90px;
+  height: 85vh;
   .container {
     .row {
       display: flex;
@@ -44,7 +44,7 @@
             font-weight: 600;
             font-size: 95.57px;
           }
-          //           //*vector 2 de problem var responsiv deyil
+                   //*vector 2 de problem var responsiv deyil
           .vectorTwo {
             width: fit-content;
             position: absolute;
@@ -116,13 +116,9 @@
           position: absolute;
           bottom: 0;
         }
-        // .personImg {
-        //   // width: 600px;
-        //   // height: 500px;
-        // }
+  
         .ellipse {
           z-index: -2;
-          // width: 60%;
         }
         .personImgIcons {
           z-index: -1;
@@ -130,6 +126,7 @@
         }
         .personImg {
           z-index: 0;
+          width: 62%;
         }
         .buttons {
           position: absolute;
@@ -146,12 +143,7 @@
           .btn {
             display: flex;
             align-items: center;
-            padding: 10px 20px;
-            a {
-              color: $colorWhite;
-            }
-          }
-          .hire {
+            padding: 20px 40px;
             svg {
               display: none;
             }
@@ -161,6 +153,9 @@
               svg {
                 display: block;
               }
+            }
+            a {
+              color: $colorWhite;
             }
           }
         }
@@ -243,21 +238,15 @@
         .aboutText {
           //*nece edim ki yaazilar qalsin amma seliqeli gorunsun?
           display: none;
-          // flex-direction: column; // Məzmunu sütun formatına keçir
-          // gap: 20px; // Hissələr arasındakı boşluğu azaldır
-
-          // .quoteCard {
-          //   width: 100%; // quoteCard elementini tam genişlikdə göstər
-          //   margin-bottom: 20px; // Alt hissədə boşluq əlavə et
-          // }
+        
         }
         .personDetails {
           .buttons {
             bottom: 20px;
           }
-          // .personImg {
-          //   width: 100%;
-          // }
+          .personImg {
+            width: 100%;
+          }
         }
       }
     }
@@ -272,5 +261,4 @@
 //* icon qaldi
 //* icon hover edende h1 yoxa cixsin ve quote card flex start olsun
 //* seklin olcusu teyin olunmalidir
-//*buttonlar ucun js tetbiq edeceyik birine hover edende digerinden active classsi remove olsun hover edilene elave olunsun
 //*responsivlik qaldi

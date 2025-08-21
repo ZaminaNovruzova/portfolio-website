@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/scss/index.css">
-    <title>Portfolio | Admin</title>
+    <title>Portfolio | Admin Panel</title>
 </head>
 
 <body class="adminBody">
@@ -20,20 +20,19 @@
                         <button class="add" type="submit">+</button>
                     </form>
                     <div class="modalWindow">
-                        <div class="modalContent">
-                            <h3>Add new service</h3>
-                            <form class="addServiceWindow" novalidate>
-                                <input type="text" id="serviceTitle" placeholder="Enter service title">
-                                <label for="image">Enter the image:</label>
-                                <input type="file" id="image">
-                                <input type="url" id="url" placeholder="Enter related link to service">
-                                <div class="buttons">
-                                    <button class="cancel">Cancel</button>
-                                    <button type="submit" class="submit" formnovalidate>Submit</button>
-                                </div>
-                            </form>
-                        </div>
+                        <h3>Add new service</h3>
+                        <form class="addServiceWindow" novalidate>
+                            <input type="text" id="serviceTitle" placeholder="Enter service title">
+                            <label for="image" id="file">Enter the image:</label>
+                            <input type="file" id="image">
+                            <input type="url" id="url" placeholder="Enter related link to service">
+                            <div class="buttons">
+                                <button class="cancel">Cancel</button>
+                                <button type="submit" class="submit" formnovalidate>Submit</button>
+                            </div>
+                        </form>
                     </div>
+
                 </div>
             </div>
         </section>

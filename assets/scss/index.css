@@ -216,6 +216,17 @@ svg {
   background-color: #fd853a;
 }
 
+.error {
+  color: red;
+  background-color: rgb(203, 203, 203);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
 @media (max-width: 920px) {
   .container {
     padding: 0 30px;
@@ -378,7 +389,7 @@ html {
   flex-direction: column;
   gap: 28px;
 }
-.footer .container .row .footerNav .navList .navLinks,
+.footer .container .row .footerNav .navList .footerButtons,
 .footer .container .row .footerNav .contact .contactList {
   display: flex;
   flex-direction: column;
@@ -510,8 +521,8 @@ html {
   }
 }
 .hero {
-  margin-top: 100px;
-  height: 90vh;
+  margin-top: 90px;
+  height: 85vh;
 }
 .hero .container .row {
   display: flex;
@@ -633,6 +644,7 @@ html {
 }
 .hero .container .row .personDetails .personImg {
   z-index: 0;
+  width: 62%;
 }
 .hero .container .row .personDetails .buttons {
   position: absolute;
@@ -650,15 +662,12 @@ html {
 .hero .container .row .personDetails .buttons .btn {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 40px;
 }
-.hero .container .row .personDetails .buttons .btn a {
-  color: #ffffff;
-}
-.hero .container .row .personDetails .buttons .hire svg {
+.hero .container .row .personDetails .buttons .btn svg {
   display: none;
 }
-.hero .container .row .personDetails .buttons .hire:hover {
+.hero .container .row .personDetails .buttons .btn:hover {
   background-color: #fd853a;
   border-radius: 60px;
   padding: 20px 40px;
@@ -666,8 +675,11 @@ html {
   width: fit-content;
   padding: 10px 20px;
 }
-.hero .container .row .personDetails .buttons .hire:hover svg {
+.hero .container .row .personDetails .buttons .btn:hover svg {
   display: block;
+}
+.hero .container .row .personDetails .buttons .btn a {
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -709,6 +721,9 @@ html {
   }
   .hero .container .row .personDetails .buttons {
     bottom: 20px;
+  }
+  .hero .container .row .personDetails .personImg {
+    width: 100%;
   }
 }
 @media (max-width: 375px) {
@@ -1181,10 +1196,6 @@ html {
 }
 .portfolio .container .row .portfolioDetails .portfolioCards .card:hover .brand .brandText {
   display: block;
-}
-.portfolio .container .row .portfolioDetails .dots {
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .portfolio .container .row .portfolioDetails .portfolioLinks {
   display: flex;
@@ -1725,38 +1736,41 @@ html {
 }
 .adminBody {
   background-color: #000000;
+  height: 100vh;
 }
-
-.serviceAdmin {
-  height: 100%;
+.adminBody main {
+  height: 100vh;
+}
+.adminBody main .serviceAdmin {
   position: relative;
 }
-.serviceAdmin .overlay {
+.adminBody main .serviceAdmin .overlay {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6431372549), rgba(0, 0, 0, 0.5764705882));
+  opacity: 50%;
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none;
+  z-index: 40;
   display: none;
 }
-.serviceAdmin .active {
+.adminBody main .serviceAdmin .overlay.active {
   display: block;
 }
-.serviceAdmin .container {
+.adminBody main .serviceAdmin .container {
   padding: 71px;
 }
-.serviceAdmin .container .row {
+.adminBody main .serviceAdmin .container .row {
   position: relative;
 }
-.serviceAdmin .container .row .serviceBox {
+.adminBody main .serviceAdmin .container .row .serviceBox {
   display: flex;
   flex-wrap: wrap;
   gap: 39px;
   position: relative;
 }
-.serviceAdmin .container .row .serviceBox .card {
+.adminBody main .serviceAdmin .container .row .serviceBox .card {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1768,65 +1782,66 @@ html {
   width: 300px;
   position: relative;
 }
-.serviceAdmin .container .row .serviceBox .card .cardTitle {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .cardTitle {
   font-size: 32px;
   font-weight: 500;
   color: #ffffff;
   padding: 37px;
   text-wrap: nowrap;
 }
-.serviceAdmin .container .row .serviceBox .card .cardImg {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .cardImg {
   border-radius: 35px;
   overflow: hidden;
   position: relative;
 }
-.serviceAdmin .container .row .serviceBox .card .cardImg .img {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .cardImg .img {
   position: relative;
   z-index: 10;
   height: 300px;
   width: 100%;
   bottom: 0;
 }
-.serviceAdmin .container .row .serviceBox .card .cardImg img {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .cardImg img {
   border-radius: 35px;
   width: 100%;
   height: 100%;
 }
-.serviceAdmin .container .row .serviceBox .card .cardImg .arrowCircle {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .cardImg .arrowCircle {
   z-index: 12;
 }
-.serviceAdmin .container .row .serviceBox .card .cardImg::before {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .cardImg::before {
   content: "";
   border: 2px solid rgba(249, 250, 251, 0.3);
   display: block;
   margin: 23px 0;
   position: relative;
+  z-index: 10;
 }
-.serviceAdmin .container .row .serviceBox .card .cardImgShadow {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .cardImgShadow {
   width: 100%;
   height: 100%;
   position: absolute;
   border-radius: 35px;
 }
-.serviceAdmin .container .row .serviceBox .card .dark {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .dark {
   background-color: #757575;
   opacity: 50%;
   top: 0;
 }
-.serviceAdmin .container .row .serviceBox .card .light {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .light {
   background-color: #9e9d9d;
   top: 20px;
 }
-.serviceAdmin .container .row .serviceBox .card .changeCard {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .changeCard {
   position: absolute;
-  z-index: 20;
   background-color: rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 100%;
   border-radius: 35px;
   display: none;
+  z-index: 20;
 }
-.serviceAdmin .container .row .serviceBox .card .changeCard .setItem {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .changeCard .setItem {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1834,7 +1849,7 @@ html {
   align-items: center;
   gap: 20px;
 }
-.serviceAdmin .container .row .serviceBox .card .changeCard .setItem button {
+.adminBody main .serviceAdmin .container .row .serviceBox .card .changeCard .setItem button {
   border: none;
   outline: none;
   font-size: 20px;
@@ -1844,16 +1859,16 @@ html {
   border-radius: 10px;
   cursor: pointer;
 }
-.serviceAdmin .container .row .serviceBox .card:hover .changeCard {
+.adminBody main .serviceAdmin .container .row .serviceBox .card:hover .changeCard {
   display: block;
 }
-.serviceAdmin .container .row .addBtn {
+.adminBody main .serviceAdmin .container .row .addBtn {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  z-index: 30;
+  z-index: 35;
 }
-.serviceAdmin .container .row .addBtn .add {
+.adminBody main .serviceAdmin .container .row .addBtn .add {
   cursor: pointer;
   font-size: 30px;
   width: 50px;
@@ -1862,78 +1877,78 @@ html {
   outline: none;
   border-radius: 100%;
 }
-.serviceAdmin .container .row .modalWindow {
-  background-color: rgba(0, 0, 0, 0.8);
+.adminBody main .serviceAdmin .container .row .modalWindow {
+  background-color: pink;
+  position: relative;
+  z-index: 55;
   position: fixed;
-  z-index: 40;
-  width: 100%;
-  height: 100%;
+  width: 600px;
   top: 50px;
   display: flex;
-  justify-content: center;
+  justify-self: center;
+  flex-direction: column;
+  gap: 30px;
   display: none;
-}
-.serviceAdmin .container .row .modalWindow .modalContent {
-  background-color: rgb(245, 229, 229);
-  position: absolute;
-  z-index: 45;
-  width: 40%;
-  top: 0;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 20px;
   padding: 20px;
 }
-.serviceAdmin .container .row .modalWindow .modalContent h3 {
+.adminBody main .serviceAdmin .container .row .modalWindow h3 {
   text-align: center;
   text-transform: uppercase;
   margin: 6px 0 16px;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow {
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow .error {
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow .error {
   color: red;
   background-color: white;
   margin: 5px;
   font-size: 16px;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow label {
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 16px;
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow label {
+  width: -moz-min-content;
+  width: min-content;
+  text-wrap: nowrap;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow input {
-  width: 100%;
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow input {
   border-radius: 10px;
   outline: none;
   border: none;
   height: 35px;
+  padding: 5px;
+  font-size: 18px;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow input::-moz-placeholder {
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow input::-moz-placeholder {
   font-size: 16px;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow input::placeholder {
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow input::placeholder {
   font-size: 16px;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow .buttons {
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow .buttons {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
-.serviceAdmin .container .row .modalWindow .modalContent .addServiceWindow .buttons button {
+.adminBody main .serviceAdmin .container .row .modalWindow .addServiceWindow .buttons button {
   border-radius: 10px;
   outline: none;
   border: none;
-  background-color: white;
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
 }
-.serviceAdmin .container .row .active {
+.adminBody main .serviceAdmin .container .row .modalWindow.active {
+  display: block;
+}
+
+.allPortfolio .container .row .portfolioBox {
   display: flex;
+}
+.allPortfolio .container .row .portfolioBox .card .cardImg {
+  position: absolute;
+  inset: 0;
 }/*# sourceMappingURL=index.css.map */

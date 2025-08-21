@@ -44,8 +44,10 @@ blog
 //*list style-color nese alinmadi
 
 
+bosluqlar-muellimden sorus
 
-mene ne lazimdir 
-bir function olsun hemin function id deyeri qebul etsin 
-mene lazimdir ki men category e click edirem duzdur click edende hemin item id ===  
-userdata.portfolioDatas.category id e mene ilk 2 dene hemin portfolioDatasdaki itemlari getirsin  
+1. header de btn da href e file elave edende background color deyismir ve js de active classi tetbiq olunmur. sebeb nedir?
+2. hire me ve bu kimi buttonlar lazim geldiyi halda divin icinde yazilir ve buna gore de hemin butonun ustunde olsaq da yazinin ustune gelmediyimiz muddetce cursor pointer olmur ve link asagida gorunmur bunun ucun de a nin icinde div yazmaq lazim gele biler bezi hallarda umumiyyetle bu nederecede duzgundur ?
+3. itemlar ozunde url saxlayir amma hazirda elimde bir url yoxdur yenede urller data.js den gelir
+4. admin html de input image olcusu butun setri tutur vve buna gore de bosluga da vuranda file isteyir bunu nece duzeldim
+overlayin olcusu niye body qeder olmur?

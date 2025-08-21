@@ -15,9 +15,9 @@
         <div class="container">
             <div class="row">
                 <nav class="navBar">
-                    <input type="checkbox" name="checked" id="checked">
+                    <!-- <input type="checkbox" name="checked" id="checked"> -->
                     <ul class="buttons">
-                        <li class="btn"><a href="#about">Home</a></li>
+                        <li class="btn"><a href="index.html">Home</a></li>
                         <li class="btn"><a href="#about">About</a></li>
                         <li class="btn"><a href="#service">Service</a></li>
                         <li class="btn logo"><a href="index.html">
@@ -63,7 +63,7 @@
                         <div class="ellipse"><img src="assets/images/hero-ellipse.png" alt="image"></div>
                         <div class="personImgIcons"><img src="assets/images/hero-img-icons.png" alt="woman"></div>
                         <div class="buttons blurred">
-                            <div class="btn orangeBtn">
+                            <div class="btn">
                                 <a href="#portfolio">Portfolio
                                 </a>
                                 <a href="#portfolio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -140,7 +140,7 @@
                 <div class="row">
                     <div class="portfolioHeading">
                         <h2 class="title">Lets have a look at my <span class="orange">Portfolio</span></h2>
-                        <div class="orangeBtn"><a href="#" target="_blank">See All</a></div>
+                        <div class="orangeBtn seeAll"><a href="portfolio.html" target="_blank">See All</a></div>
                     </div>
                     <div class="portfolioDetails">
                         <div class="portfolioCards">
@@ -281,7 +281,7 @@
                 <div class="row">
                     <h2 class="title">Have an Awesome Project Idea? <span class="orange">Let’s Discuss</span></h2>
                     <div class="projectCard">
-                        <form class="emailForm">
+                        <form class="emailForm" novalidate>
                             <div class="enterInput">
                                 <label class="emailIcon" for="emailInput"> <svg xmlns="http://www.w3.org/2000/svg"
                                         width="32" height="32" viewBox="0 0 32 33" fill="none">
@@ -290,9 +290,9 @@
                                             fill="#FD853A" />
                                     </svg>
                                 </label>
-                                <input id="emailInput" type="email" placeholder="Enter Email Address" required>
+                                <input id="emailInput" type="email" class="email" placeholder="Enter Email Address" >
                             </div>
-                            <button class="orangeBtn" type="submit">Send</button>
+                            <button class="orangeBtn send" type="button">Send</button>
                         </form>
                         <div class="projectIdeaInfos">
                             <div class="ideaInfo">
@@ -493,12 +493,12 @@
                     </div>
                     <div class="navList">
                         <h6>Navigation</h6>
-                        <ul class="navLinks">
-                            <li class="navItem"><a href="index.html">Home</a></li>
-                            <li class="navItem"><a href="#about">About Us</a></li>
-                            <li class="navItem"><a href="#service">Service</a></li>
-                            <li class="navItem"><a href="#resume">Resume</a></li>
-                            <li class="navItem"><a href="#project">Project</a></li>
+                        <ul class="footerButtons">
+                            <li class="btn"><a href="index.html">Home</a></li>
+                            <li class="btn"><a href="#about">About Us</a></li>
+                            <li class="btn"><a href="#service">Service</a></li>
+                            <li class="btn"><a href="#resume">Resume</a></li>
+                            <li class="btn"><a href="#project">Project</a></li>
                         </ul>
                     </div>
                     <div class="contact">
@@ -508,9 +508,9 @@
                     </div>
                     <div class="latestInfo">
                         <h6>Get the latest information</h6>
-                        <form>
-                            <input type="email" name="email" id="email" placeholder="Email Address" required>
-                            <button class="infoBtn" type="">
+                        <form class="emailFooter" novalidate>
+                            <input type="email" id="email" class="email" placeholder="Email Address" disabled>
+                            <button class="infoBtn" type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none">
                                     <path
@@ -531,7 +531,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/slide.js"></script>
     <script src="assets/js/main.js" type="module"></script>
+    <script src="assets//js/hero.js" type="module"></script>
+    <script src="assets//js/service.js" type="module"></script>
+    <script src="assets//js/experience.js" type="module"></script>
+    <script src="assets//js/hire.js" type="module"></script>
     <script src="assets//js/portfolio.js" type="module"></script>
+    <script src="assets//js/footer.js" type="module"></script>
+
+
 </body>
 
 </html>
